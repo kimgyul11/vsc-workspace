@@ -2,9 +2,8 @@
     --text-color :#f0f4f5;
     --background-color: #263343;
     --accent-color: #d49466;
-
 }
-
+/* root를 사용하면 한번에 변경해야할 때 편해진다,... */
 body{
     margin: 0;
     font-family: 'Source Sans Pro', sans-serif;
