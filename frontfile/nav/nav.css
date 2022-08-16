@@ -5,9 +5,8 @@
 }
 body{
     margin: 0;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Dongle', sans-serif;
     box-sizing: border-box;
-
 }
 a{
     text-decoration: none;
@@ -22,7 +21,7 @@ a{
     padding:8px 16px;
 }
 .navbar_icon{
-    font-size: 20px;
+    font-size: 30px;
 }
 .navbar_icon i{
     color: var(--accent-color);
@@ -63,32 +62,43 @@ a{
 .navbar_togglebtn i{
     color: #fafafa;
 }
-.toptext1{
-    position: absolute;
-    right: 50px;
-    font-size: 50px;
-    color:white;
-    opacity: 0.5;
-    text-shadow: 1px 1px 3px white;
-}
-.toptext2{
-    position: absolute;
-    font-size: 32px;
-    color: white;
-    top: 50px;
-    right: 50px;
-    opacity: 0.5;
+.tap{
+    margin: 300px;
 }
 
+
+
+
+
+/* 배너 */
 .backcol{
     height: 450px;
     background: rgb(253,187,45);
     background: linear-gradient(0deg, rgba(253,187,45,1) 0%, rgba(172,139,65,1) 0%, rgba(34,124,195,1) 100%);
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     
 }
+.backcol h1{
+    right: 50px;
+    font-size: 90px;
+    color:white;
+    opacity: 0.5;
+    text-shadow: 1px 1px 3px white;
+    margin: 0;
+}
+.backcol h2{
+    font-size: 60px;
+    color: white;
+    top: 50px;
+    right: 50px;
+    opacity: 0.5;
+    margin: 0;
+}
+
 
 .topimg{
     width: 200px;
@@ -98,35 +108,33 @@ a{
     
 }
 
-.custom-shape-divider-bottom-1660478165 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
+/* 전등있는 소개글 */
+.topline{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    
 }
-
-.custom-shape-divider-bottom-1660478165 svg {
+.topline_text{
+    font-size: 50px;
+}
+.topline_img{
+    width:100px;
     position: relative;
-    display: block;
-    width: calc(197% + 1.3px);
-    height: 132px;
-}
-
-.custom-shape-divider-bottom-1660478165 .shape-fill {
-    fill: #FFFFFF;
+    top:-26px;    
 }
 
 
+/* 소개영역 */
 .middleBx{
     display: flex;
     justify-content:center ;
     align-items: center;
     flex-wrap: wrap;
     min-height:600px;
-    background-color: gray;
+
 
 }
 .box{
