@@ -1,0 +1,104 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+.navbar{
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+    padding: 8px 16px;
+    background: skyblue;
+    height: 80px;
+}
+li{
+    list-style: none;
+}
+.navbar a{
+    text-decoration: none;
+    color: black;
+}
+.navbar_icon{
+    font-size: 24px;
+}
+.navbar_centerMenu{
+    display: flex;
+    padding-left: 0;
+}
+.navbar_centerMenu li:hover{
+    background: white;
+    border-radius: 10px;
+}
+.navbar_centerMenu li{
+    padding: 8px 16px;
+}
+
+/* 오른쪽 상태창 */
+.navbar_rightState{
+    display: flex;
+}
+.profile{
+    border: 1px solid;
+    height: 50px;
+    width: 50px;
+    position: relative;
+    top: 10px;
+    left: 20px;
+    border-radius: 30px;
+}
+.profile img{
+    overflow: hidden;
+    width: 100%;
+}
+.state{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.container{
+    width:90%;
+    height: 100%;
+    margin-left: 80px;
+    justify-content: center;
+    align-items: center;
+    
+    justify-content: center;
+}
+.dashboard{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.border{
+    border: 1px solid;
+    width: 200px;
+    height: 200px;
+    margin: 25px;
+    text-align: center;
+}
+.border ul{
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin:0;
+    justify-content: start;
+    align-items: center;
+    height: 100%;
+}
+.border li{
+    padding: 16px 12px;
+    font-size: 24px;
+}
+.weeklybox{
+    display: flex;
+    justify-content: center;
+}
+.boadertablebox{
+    display:flex;
+    justify-content: center;
+}
+
+.boadertable tr,th,td{
+    border: 1px solid;
+}
