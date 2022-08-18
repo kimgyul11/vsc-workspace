@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        box-sizing: border-box;
+    }
+    table{
+        border: 1px solid black ;
+        border-collapse: collapse;
+    }
+    th,td,tr{
+        border: 1px  solid;
+    }
+    th{
+        background: gray;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+    .btnbox{
+        display: flex;
+        justify-content: center;
+    }
+    .btnbox button{
+        margin: 15px;
+    }
+    
+
+</style>
+<body>
+    <nav class="navbar">
+        <a href="#" class="navbar_icon">
+            <i class="fa-solid fa-plane-departure"></i>
+            <span>Air Language</span>        
+        </a>
+        <ul class="navbar_centerMenu">
+            <li><a href="#">1:1문의</a></li>
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">질문게시판</a></li>
+            <li><a href="#">회원관리</a></li>
+        </ul>
+        <div class="navbar_rightState">
+            <a href="#" class="navbar_togglebtn">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+            <div class="profile">
+                <img src="" alt="">
+            </div>
+            <ul class="state">
+                <li>관리자1님 환영합니다.</li>
+                <li><button class="logout">로그아웃</button></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <table class="member_table">
+            <tr>
+                <th>아이디</th>
+                <td><input type="text"></td>
+                <th>비밀번호</th>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <th>이름</th>
+                <td><input type="text"></td>
+                <th>회원등급</th>
+                <td>
+                    <select name="" id="">
+                        <option value="">회원등급</option>
+                        <option value="">초보</option>
+                        <option value="">중수</option>
+                        <option value="">고수</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>국적</th>
+                <td><input type="text"></td>
+                <th>게시글수</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>전화번호</th>
+                <td>
+                    <ul>
+                        <li>
+                            <span>전화번호1</span> 
+                            <input type="tel" name="" id="">
+                        </li>
+                        <li>
+                            <span>전화번호2</span> 
+                            <input type="tel" name="" id="">
+                        </li>
+                    </ul>
+                </td>
+                <th>주소</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>이메일</th>
+                <td colspan="3">d</td>
+            </tr>
+            <tr>
+                <th>이메일 수신여부</th>
+                <td colspan="3">d</td>
+            </tr>
+            <tr>
+                <th>SMS 수신여부</th>
+                <td colspan="3">
+                    <input type="checkbox" name="" id="">
+                    <input type="checkbox" name="" id="">
+                </td>
+            </tr>
+            <tr>
+                <th>생년월일</th>
+                <td colspan="3">d</td>
+            </tr>
+            <tr>
+                <th>관리자 메모</th>
+                <td colspan="3">d</td>
+            </tr>
+        </table> 
+            <div class="btnbox">
+                <button>확인</button>
+                <button>목록</button>
+            </div>
+    </main>
+</body>
+</html>
