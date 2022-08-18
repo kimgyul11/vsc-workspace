@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 10px;
+}
+ul,li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+.board_wrap{
+    width: 1000px;
+    margin: 100px auto;
+
+}
+.board_title{
+    margin-bottom: 30px;
+}
+
+
+.board_title strong{
+    /* 3rem이란 최상위(HTML)태그의 배수값 */
+    font-size: 3rem;
+}
+.board_title p{
+    margin-top: 5px;
+    font-size: 1.4rem;
+}
+.btn_wrap{
+    margin-top: 30px;
+    /* btn_warp의a버튼을 속성주고나면 여백이 생기는데 폰트사이즈0을하면 사라진다.  */
+    font-size: 0;
+    text-align: center;
+}
+.btn_wrap a{
+    display: inline-block;
+    min-width: 80px;
+    margin-left: 10px;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    font-size: 1.4rem;
+}
+/* 첫번째 속성에는 왼쪽으로 마진을 주지 않는다는 뜻. */
+.btn_wrap a:first-child{
+    margin-left: 0;
+}
+.btn_wrap a.on{
+    background-color: #000;
+    color: #fff;
+}
+
+.board_list{
+    width: 100%;
+    border-top: 2px solid #000;
+}
+
+.board_list>div{
+    border-bottom: 1px solid #ddd;
+}
+.board_list div.top{
+    border-color:#999;
+}
+.board_list>div:last-child{
+    border-bottom: 2px solid #000;
+}
+.board_list
