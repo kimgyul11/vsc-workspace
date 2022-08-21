@@ -65,7 +65,7 @@ a{
     padding-left: 10px;
 }
 .searchArea form span{
-    width:50px;
+    justify-content: end;
     color: #fff;
     font-weight: bold;
     cursor: pointer;
@@ -146,8 +146,9 @@ top: 14px;
     background-color: #e0e0e0;
     border-radius: 5px;
     cursor: pointer;
+
 }
-.bubble:before:hover{
+.bubble:after:hover{
     background-color: #e0e0e0;
     border-radius: 5px;
 }
