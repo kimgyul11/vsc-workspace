@@ -1,0 +1,156 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+ul{
+    display: flex;
+}
+li{
+    list-style: none;
+}
+.info_head{
+    display: flex;
+}
+.container1{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    border: 1px solid #f5f5f5;
+    margin: 150px auto 0 auto;
+    background: #eeeeee;
+}
+.info_head{
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin: 15px auto;
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.05);
+    
+}
+.info_haed_nav{
+    flex-direction: column;
+    padding-left: 0;
+    text-align: center;
+}
+.info_head_profile{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.info_head_profile img{
+    width: 100%;
+    height: 100%;
+}
+
+.info_main{
+    width: 90%;
+    margin: 15px auto;
+}
+.main_item1{
+    height: 150px;
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.05);
+    margin-bottom: 35px;
+}
+.main_item1_head{
+
+    font-weight: bold;
+    margin: 0;
+    padding: 15px;
+}
+.main_item1_head li{
+    margin-left: 5px;
+}
+.main_item1_body{
+    border-top:1px solid #f5f5f5;
+}
+.main_item2{
+    display: flex;
+    height: 90px;
+}
+.main_item2_quetion{
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.05);
+}
+.que_title{
+    flex-direction: column;
+    width: 60px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+.que_body{
+    font-size: 35px;
+    color: red;
+}
+
+.main_item2_answer{
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.05);
+}
+.ans_title{
+    flex-direction: column;
+    width: 60px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+.ans_body{
+    font-size: 35px;
+    color: red;
+}
+
+
+.main_item2_answer{
+    flex: 1;
+    margin-left: 15px;
+    background: white;
+}
+.main_itembox{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+    font-weight: bold;
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.05);
+}
+.main_itembox span{
+    font-size: 35px;
+    color: red;
+}
+
+
+.container2{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+
+    margin: auto;
+}
+
+
+.itembox_list{
+    padding-left:0;
+    margin:0;
+    font-size: 24px;
+}
+.infobox{
+    width:90%;
+    margin:15px auto;
+    border-bottom: 1px solid gainsboro;
+}
+.infobox_head{
+    padding-left: 0;
+    font-weight: bold;
+}
