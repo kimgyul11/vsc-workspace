@@ -9,19 +9,18 @@ li{
     list-style: none;
 }
 .container{
-    width: 90%;
+    width: 50%;
     margin:auto;
     display: flex;
 }
 .questionbox{
     background: blue;
-    width: 70%;
+    width: 100%;
     margin: auto;
     display: flex;
-    flex-direction: column;
 }
 .questionbox_profile{
-    width: 20%;
+    width: 30%;
     height: 211px;
     margin: auto;
     background: purple;
