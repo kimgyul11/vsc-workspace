@@ -5,41 +5,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap" rel="stylesheet">
     <title>AirLanguage</title>
 </head>
 <body>
-    <nav class="navbar">
-        <a href="#" class="navbar__logo">
-            <i class="fa-solid fa-plane-departure"></i>
-            <span>AirLanguage</span>
-        </a>
-        <div class="navbar__seacrhbox">
-            <select name="" id="">
-                <option value="">관심언어로 선택</option>
-                <option value="">영어</option>
-            </select>
-            <input type="search">
+    <!-- 네비게이션바 -->
+    <div class="navbar">
+        <div class="logo">
+            <a href="#"><i class="fa-solid fa-plane-departure"></i>AirLanguage</a>
         </div>
-        <ul class="navbar__list">
-            <li><i class="fa-solid fa-house"></i></li>
-            <li><i class="fa-solid fa-bell"></i></li>
-            <li>
-                프로필
-                <img src="" alt="" class="navbar__list__profile">
-            </li>
-            <li></li>
-        </ul>
-    </nav>
-    <div class="container">
-        <section class="top__quefinder">
-            <select name="" id="" class="quefinder_select">
-                <option value="">관심언어로 검색</option>
-            </select>
-            <input type="text" class="quefinder_search" id="">
-            <a href="#" class="quefinder_btn">검색</a>
-        </section>
-        
+        <div class="search_box">
+            <div class="dropdown">
+                <div class="default_option">관심언어로 검색</div>  
+                <ul>
+                    <li>All</li>
+                    <li>Recent</li>
+                    <li>Popular</li>
+                </ul>
+            </div>
+            <div class="search_field">
+                <input type="text" class="input" placeholder="Search">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+        <div class="nav_right">
+            <ul>
+                <li class="nr_li dd_main">
+                    <img src="https://post-phinf.pstatic.net/MjAxODA5MTBfMTk4/MDAxNTM2NTcwNjUwMDUy.F2G6NyAsR5sRYmOL-A8tQJxz6NuHVDARJ3g28EOBoNgg.g2JnkXNFM6A4C7ZloyowHQc_4skHr1PtOsKG0vA641sg.JPEG/%EC%84%B8%EC%A2%85.jpg?type=w1200" alt=""class="info_head_profile" alt="profile_img">
+                    <!-- 메뉴리스트 -->
+                    <div class="dd_menu">
+                        <div class="dd_left">
+                            <ul>
+                                <li><i class="fa-solid fa-user"></i></li>
+                                <li><i class="fa-solid fa-gear"></i></li>
+                                <li><i class="fas fa-sign-out-alt"></i></li>
+                            </ul>
+                        </div>
+                        <div class="dd_right">
+                            <ul>
+                                <li>내정보</li>
+                                <li>설정</li>
+                                <li>Logout</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="nr_li">
+                    <i class="fa-solid fa-bell"></i>
+                </li>
+                <li class="nr_li">
+                    <i class="fa-solid fa-house"></i>
+                </li>
+                <li>
+                    <div class="btn_wraper">
+                        <div class="btn btn_1">
+                            <a href="">질문하기</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
 
+
+    <!-- 질문리스트 -->
+    <div class="container">
         <div class="quelist_box">
             <div class="quelist_profile">
                 <a href="#">
