@@ -1,40 +1,78 @@
 <!DOCTYPE html>
-<html lang="kr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/mypage.css">
+    <link rel="stylesheet" href="css/newmypage.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Sunflower&display=swap" rel="stylesheet">
-    <title>AirLanguage</title>
+    <title>마이페이지</title>
 </head>
 <body>
-    <nav class="navbar">
-        <a href="#" class="navbar__logo">
-            <i class="fa-solid fa-plane-departure"></i>
-            <span>AirLanguage</span>
-        </a>
-        <div class="navbar__seacrhbox">
-            <select name="" id=""> 
-            </select>
-            <input type="search">
+        <div class="navbar">
+            <div class="logo">
+                <a href="#"><i class="fa-solid fa-plane-departure"></i>AirLanguage</a>
+            </div>
+            <div class="search_box">
+                <div class="dropdown">
+                    <div class="default_option">관심언어로 검색</div>  
+                    <ul>
+                        <li>영어</li>
+                        <li>한국어</li>
+                    </ul>
+                </div>
+                <div class="search_field">
+                    <input type="text" class="input" placeholder="Search">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+            <div class="nav_right">
+                <ul>
+                    <li class="nr_li dd_main">
+                        <img src="https://t1.daumcdn.net/cfile/tistory/132C56244AAB40B35D">
+                        <!-- 메뉴리스트 -->
+                        <div class="dd_menu">
+                            <div class="dd_left">
+                                <ul>
+                                    <li><i class="fa-solid fa-user"></i></li>
+                                    <li><i class="fa-solid fa-gear"></i></li>
+                                    <li><i class="fas fa-sign-out-alt"></i></li>
+                                </ul>
+                            </div>
+                            <div class="dd_right">
+                                <ul>
+                                    <li>내정보</li>
+                                    <li>설정</li>
+                                    <li>Logout</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nr_li">
+                        <i class="fa-solid fa-bell"></i>
+                    </li>
+                    <li class="nr_li">
+                        <i class="fa-solid fa-house"></i>
+                    </li>
+                    <li>
+                        <div class="btn_wraper">
+                            <div class="btn btn_1">
+                                <a href="">질문하기</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <ul class="navbar__list">
-            <li><i class="fa-solid fa-house"></i></li>
-            <li><i class="fa-solid fa-bell"></i></li>
-            <li>
-                프로필
-                <img src="" alt="" class="navbar__list__profile">
-            </li>
-        </ul>
-    </nav>
+    
+    <!--마이페이지 리스트  -->
     <div class="container1">
         <div class="info_head">
             <ul class="info_haed_nav">
                 <li>
-                <img src="https://post-phinf.pstatic.net/MjAxODA5MTBfMTk4/MDAxNTM2NTcwNjUwMDUy.F2G6NyAsR5sRYmOL-A8tQJxz6NuHVDARJ3g28EOBoNgg.g2JnkXNFM6A4C7ZloyowHQc_4skHr1PtOsKG0vA641sg.JPEG/%EC%84%B8%EC%A2%85.jpg?type=w1200" alt=""class="info_head_profile">
+                <img src="https://t1.daumcdn.net/cfile/tistory/132C56244AAB40B35D" alt=""class="info_head_profile">
                 </li>
                 <li>세종대왕</li>
                 <li>한국어,상급자</li>
@@ -116,13 +154,13 @@
                 <li><a href="#"+>추가하기</a></li>
             </ul>
             <div class="infobox_body">
-                <p>한국어</p>
+                <p>영어</p>
             </div> 
         </div>
         <div class="infobox">
             <ul class="infobox_head2">
-                <li><i class="fa-solid fa-earth-asia"></i></li>
-                <li>거주중인 국가</li>
+                <li><i class="fa-solid fa-earth-asia"></i><span>거주국가</span></li>
+                
             </ul>
             <div class="infobox_body">
                 <p>한국</p>
@@ -130,15 +168,17 @@
         </div>
         <div class="infobox">
             <ul class="infobox_head2">
-                <li><i class="fa-solid fa-face-smile"></i></li>
-                <li>자기소개</li>
+                <li><i class="fa-solid fa-face-smile"></i><span>자기소개</span></li>
             </ul>
-            <div class="infobox_body">
-                <p>백성들을 위해 한글을 창조하였다.</p>
+            <div class="infobox_body_introduce">
+                <p>일본어 공부중
+                </p>
             </div> 
         </div>
     </div>    
     </div>
+
     <script src="https://kit.fontawesome.com/86d85c3d85.js" crossorigin="anonymous"></script>
+    <script src="js/rensyu.js"></script>
 </body>
 </html>

@@ -73,13 +73,14 @@ a{
 
 .search_box .dropdown ul{
     position: absolute;
-    top: 70px;
+    top: 50x;
     left: -10px;
     background: #fff;
-    width: 230px;
+    width: 160px;
     border-radius: 5px;
     padding: 20px;
     display: none;
+    text-align: center;
     box-shadow: 8px 8px 6px -10px #b3c6ff;
 }
 
@@ -162,6 +163,7 @@ color: #9fa3b1;
 
 .navbar .nav_right ul li img{
 	width: 35px;
+    height: 35px;
 	vertical-align: middle;
     border-radius: 50px;
 }
@@ -418,10 +420,10 @@ top: 14px;
 
 /* Style the active/current link */
     .pagination a.active {
-    background-color:;
+
     border-radius: 50%;
     border: 2px solid black;
 }
 
 /* Add a grey background color on mouse-over */
-.pagination a:hover:not(.active) {background-color:#b3e5fc;;}
+.pagination a:hover:not(.active) {background-color:#b3e5fc;}
