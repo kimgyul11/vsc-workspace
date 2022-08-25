@@ -14,7 +14,7 @@
     <!-- 네비게이션바 -->
     <div class="navbar">
         <div class="logo">
-            <a href="#"><i class="fa-solid fa-plane-departure"></i>AirLanguage</a>
+            <a href="#">AirLanguage</a>
         </div>
         <div class="search_box">
             <div class="dropdown">
@@ -130,7 +130,6 @@
                     <p>사고가 나서 늦을것 같아<<< 이게 무슨 뜻인가요?? </p>
                 </a>
                 <ul class="bubble_footer">
-                    <li><a href=""><i class="fa-solid fa-thumbs-up"></i></a></li>
                     <li><a href=""><i class="fa-solid fa-bookmark"></i></a></li>
                     <li><a href=""><i class="fa-solid fa-comment"></i></a></li>
                 </ul>
@@ -155,16 +154,69 @@
                     </p>
                 </a>
                 <ul class="bubble_footer">
-                    <li><a href=""><i class="fa-solid fa-thumbs-up"></i></a></li>
+                    <li><a href=""><i class="fa-solid fa-bookmark"></i></a></li>
+                    <li><a href=""><i class="fa-solid fa-comment"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="quelist_box">
+            <div class="quelist_profile">
+                <img src="https://wikidocs.net/images/page/127728/smile.png" alt="" class="">
+            </div>
+            <div class="bubble">
+                <ul class="bubble_head">
+                    <li>질문 언어 : 영어</li>
+                    <li>작성일 : 2022-08-15</li>
+                    <li>작성자 : jopkim1023</li>
+                </ul>
+                <a href="#" class="bubble_content">
+                    <p>
+                        A painful lack of rain and relentless
+                        heat waves are drying up rivers in the US, Europe, Asia and the Middle East. Many are shrinking in length and breadth. Patches of riverbed poking out above the water are a common sight. 
+                        Some rivers are so desiccated,
+                        they have become virtually impassable.
+                    </p>
+                </a>
+                <ul class="bubble_footer">
                     <li><a href=""><i class="fa-solid fa-bookmark"></i></a></li>
                     <li><a href=""><i class="fa-solid fa-comment"></i></a></li>
                 </ul>
             </div>
         </div>
     </div>
-    <div class="nextpage">
-        
+    <div class="pagination_wrap">
+        <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">&raquo;</a>
+        </div>
     </div>
+
     <script src="https://kit.fontawesome.com/86d85c3d85.js" crossorigin="anonymous"></script>
+    <script>
+    var dd_main = document.querySelector(".dd_main");
+
+    dd_main.addEventListener("click", function(){
+        this.classList.toggle("active");
+    })
+
+
+
+    // 서치박스
+        $(".default_option").click(function(){
+        $(".dropdown ul").addClass("active");
+    });
+
+    $(".dropdown ul li").click(function(){
+        var text = $(this).text();
+        $(".default_option").text(text);
+        $(".dropdown ul").removeClass("active");
+    });        
+    </script>
 </body>
 </html>
