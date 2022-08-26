@@ -6,11 +6,12 @@
 	font-family: 'Gowun Dodum', sans-serif;
     text-decoration: none;
 }
+
 a{
     color: black;
 }
 .navbar{
-	background: #bbdefb;
+	background: #616161;
 	width: 100%;
 	height: 80px;
 	display: flex;
