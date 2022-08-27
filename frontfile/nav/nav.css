@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300");
 :root{
     --text-color:#263343;
     --background-color:#bbdefb;
@@ -5,7 +6,7 @@
 }
 body{
     margin: 0;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
     box-sizing: border-box;
 }
 a{
@@ -13,11 +14,18 @@ a{
     color:var(--text-color);
     
 }
+svg{
+    position: absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    margin: auto;
+}
 .navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #227cc3;
     padding:8px 16px;
 }
 .navbar_icon{
@@ -71,34 +79,51 @@ a{
 
 /* 배너 */
 .backcol{
-    height: 450px;
-    background: rgb(253,187,45);
-    background: linear-gradient(0deg, rgba(253,187,45,1) 0%, rgba(172,139,65,1) 0%, rgba(34,124,195,1) 100%);
+    height: 100vh;
+    background-image: url('https://images.unsplash.com/photo-1564500617448-e541b1df7cee?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+	background-size : cover;  
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    font-size: 12px;
-    
+    margin-bottom: 150px;
 }
-.backcol h1{
-    font-size: 2.5rem;
-    color:white;
-    opacity: 0.5;
-    text-shadow: 1px 1px 3px black;
-    margin: 0;
+.title {
+	-webkit-align-self: center;
+	-ms-flex-item-align: center;
+	align-self: center;
+	padding: 2rem;
+    margin: auto;
+	max-width: 960px;
+	text-align: center;
 }
-.backcol h2{
-    color: white;
-    opacity: 0.5;
-    margin: 0;
-    font-size: 2rem;
+.title .smallsep {
+	background: #fff;
+	height: 2px;
+	width: 70px;
+	margin: auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.title h1 {
+	font-size: 70px;
+	font-weight: 300;
+	text-transform: uppercase;
+	line-height: 0.85;
+	margin-bottom: 28px;
+	margin: 0;
+	padding: 0;
+	color: #FFFFFF;
+}
+.title h2 {
+	color: #FFFFFF;
+	font-size: 16px;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	margin-top: 50px;
 }
 
 /* 전등있는 소개글 */
 .topline{
-    margin-top: 150px;
+    margin: 150px 0 0 30px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -106,6 +131,7 @@ a{
 }
 .topline_text{
     font-size: 50px;
+    font-weight: 300;
 }
 .topline_img{
     width:100px;
@@ -114,7 +140,6 @@ a{
     left: 750px;    
 }
 
-
 /* 소개영역 */
 .middleBx{
     display: flex;
@@ -122,8 +147,6 @@ a{
     align-items: center;
     flex-wrap: wrap;
     min-height:600px;
-
-
 }
 .box{
     position: relative;
@@ -137,7 +160,6 @@ a{
 }
 .box:hover{
     height: 400px;
-
 }
 .box .imgBx{
     position: absolute;
@@ -204,9 +226,181 @@ a{
     letter-spacing: 1px;
 }
 
+/* 카드영역입니다. */
+.card_head{
+    display: flex;
+    flex-direction: column;   
+    justify-content: end;
+    align-items:flex-end;
+    background: pink;
+}
+
+
+.card_container {
+    width: 1090px;
+    min-width: 600px;
+    height: 430px;
+    
+    margin: 150px auto 150px ;
+}
+.card_container .card {
+    width: 330px;
+    height: 430px;
+    float: left;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    text-align: center;
+    transition: all 0.25s;
+}
+.card_container .card:nth-child(2) {
+    margin: 0 50px;
+}
+.card_container .card:hover {
+    top: -15px;
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+.card_container .card h4 {
+    font-weight: 600;
+}
+.card_container .card p {
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 300;
+}
+.card_container .card a {
+    font-weight: 500;
+    text-decoration: none;
+    color: #3498db;
+}
 
 
 
+/* 회원가입 페이지 */
+.signup_container{
+    width: 100%;
+    height: 300px;
+    background: #eeeeee;
+    margin: 300px auto 100px auto;
+    text-align: center;
+}
+
+.signup_head h3{
+    font-weight: 300;
+    font-size: 60px;
+    position: relative;
+    color: black;
+    z-index: 1;
+}
+
+.signup_body img{
+    position: relative;
+    top: -250px;
+    
+}
+
+
+.check{
+    opacity: 0;
+    animation: 1s check-ok forwards;
+    transition-timing-function: ease-in;
+    animation-delay: 3.5s;
+    transform-origin: 79% 25%;
+}
+
+@keyframes check-ok {
+    0%{
+    transform: translate(156.5 25.5);
+    transform: scale(1);
+    opacity: 0;
+    }
+        40%{
+    transform: translate(156.5 25.5);
+    transform: scale(1.1);
+    opacity: 1;
+    }  
+    100%{
+    transform: translate(156.5 25.5);
+    transform: scale(1.1);
+    opacity: 1;
+    } 
+}
+
+.pass-animate {
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    opacity: 0;
+}
+.pass-1{
+    animation-name: pass-1;
+}
+
+@keyframes pass-1 {
+    0%{
+    transform: translateX(250px);
+    }
+    40%{
+    transform: translateX(0px);
+    }
+    60%{
+    transform: translateX(0px);
+    }  
+    100%{
+    transform: translateX(-230px);
+    } 
+}
+
+.pass-2{
+    animation-name: pass-1;
+    animation-delay: 1.2s;
+}
+
+@keyframes pass-1 {
+    0%{
+    transform: translateX(250px);
+    opacity: 1;
+    }
+    40%{
+    transform: translateX(0px);
+    opacity: 1;
+    }
+    60%{
+    transform: translateX(0px);
+    opacity: 1;
+    }  
+    100%{
+    transform: translateX(-230px);
+    opacity: 1;
+    } 
+}
+
+.passOK{
+    animation-name: passOK;
+    animation-delay: 2.4s;
+}
+
+@keyframes passOK {
+    0%{
+        transform: translateX(250px);
+        opacity: 1;
+    }
+    40%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    60%{
+        transform: translateX(0px);
+        opacity: 1;
+    }  
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    } 
+}
 
 
 
@@ -264,5 +458,7 @@ a{
         top:-26px;
         left: 750px;    
     }
-
+    svg{
+        display: none;
+    }
 }
