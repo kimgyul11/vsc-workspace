@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/AirLanguage/css/questionlist.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Sunflower&display=swap" rel="stylesheet">
@@ -196,24 +196,21 @@
         </div>
     </div>
 
-    <script src="https://kit.fontawesome.com/86d85c3d85.js" crossorigin="anonymous"></script>
-    <script>
+<script src="https://kit.fontawesome.com/86d85c3d85.js" crossorigin="anonymous"></script>
+<script>
     var dd_main = document.querySelector(".dd_main");
 
     dd_main.addEventListener("click", function(){
         this.classList.toggle("active");
     })
-
-
-
     const toggleBtn = document.querySelector('.default_option');
-const menu = document.querySelector('.dropdown ul');
-const icons = document.querySelector('.navbar_linkicon');
+    const menu = document.querySelector('.dropdown ul');
+    const icons = document.querySelector('.navbar_linkicon');
 
-toggleBtn.addEventListener('click', () => {
+    toggleBtn.addEventListener('click', () => {
     menu.classList.toggle('active');
     icons.classList.toggle('active');
-});  
-    </script>
+    });  
+</script>
 </body>
 </html>
