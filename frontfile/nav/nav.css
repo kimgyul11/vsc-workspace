@@ -238,18 +238,19 @@ option {
     margin: 150px 0 0 30px;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
 }
-.topline_text{
-    font-size: 50px;
+.topline_text h1{
+    font-size: 40px;
     font-weight: 300;
+    text-align: center;
 }
 .topline_img{
     width:100px;
     position: relative;
     top:-26px;
-    left: 750px;    
+    left: 490px;    
 }
 
 /* 소개영역 */
@@ -343,9 +344,17 @@ option {
     display: flex;
     flex-direction: column;   
     justify-content: end;
-    align-items:flex-end;
-    background: pink;
+    align-items:center;
     margin-top: 300px;
+}
+.card_head h1{
+    font-size: 40px;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+.card_head p{
+    margin-top: 0;
+    color: #ff7043;
 }
 .card_container {
     width: 1090px;
