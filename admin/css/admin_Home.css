@@ -15,6 +15,10 @@ body{
 li{
     list-style: none;
 }
+table{
+    border-collapse: collapse;    
+}
+
 .navbar a{
     text-decoration: none;
     color: black;
@@ -102,5 +106,16 @@ li{
 }
 
 .boadertable tr,th,td{
-    border: 1px solid;
+
+}
+.boadertable {
+    width: 80%;
+    height: 150px;
+}
+.backgroudblack{
+    background: gray;
+}
+.borderline{
+    border-top: 1px solid;
+    border-bottom: 1px solid;
 }

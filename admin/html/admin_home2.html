@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/admin/css/admin_home2.css">
+    <title>Document</title>
+</head>
+<body>
+<!-- Header - Start  -->
+<header id="header">
+    <div class="menu-button">
+    <div id="nav-icon3">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    </div>
+</div>
+<div id="top-bar">
+    <h3>Dashboard</h3>
+</div>
+</header>
+<!-- Header - End  -->
+<!-- Navigation - Start  -->
+<nav id="sidemenu">
+<div class="main-menu">
+    <ul class='main-menu'>
+    <li class="link-active">
+    <a href="#">
+    <span class='glyphicon glyphicon-home'></span> Dashboard
+    </a>
+    </li>
+    <li>
+    <a href="#">
+    <span class='glyphicon glyphicon-pushpin'></span> Posts
+    </a>
+    </li>
+    <li>
+    <a href="#">
+    <span class='glyphicon glyphicon-picture'></span> Media
+    </a>
+    </li>
+    <li>
+    <a href="#">
+    <span class='glyphicon glyphicon-book'></span> Pages
+    </a>
+    </li>
+    <li>
+    <a href="#">
+    <span class='glyphicon glyphicon-comment'></span> Comments
+    </a>
+    </li>
+    </ul>
+    <ul class='main-menu bottom'>
+    <li>
+    <a href="#">
+    <span class='glyphicon glyphicon-user'></span> Profile
+    </a>
+    </li>
+    <li>
+    <a href="#">
+    <span class='glyphicon glyphicon-cog'></span> Settings
+    </a>
+    </li>
+    </ul>
+</div>
+<p class="copyright">&copy; 2017</p>
+</nav>
+<!-- Navigation - End  -->
+<!-- Content - Start  -->
+<div id="content-wrapper">
+<div class="container-fluid">
+    <h1>Content</h1>
+</div>
+</div>
+<script>
+$("#header>.menu-button").click(function() {
+	$("#sidemenu").toggleClass("open");
+	$(".copyright").toggleClass("show");
+});
+$("#sidemenu, #top-bar, #content-wrapper").click(function(e) {
+	$("#sidemenu").removeClass("open");
+	$(".copyright").removeClass("show");
+});
+</script>
+</body>
+</html>
