@@ -1,0 +1,13 @@
+body{
+    margin: 0;   
+}
+th,tr,td{
+    height: 50px;
+}
+li{
+    list-style: none;
+}
+.member_table{
+    width: 80%;
+    margin: auto;
+}
