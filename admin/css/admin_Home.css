@@ -1,15 +1,26 @@
+@font-face {
+    font-family: 'SUIT-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 *{
     box-sizing: border-box;
 }
 body{
     margin: 0;
+    font-family: 'SUIT-Medium';
+}
+a{
+    text-decoration: none;
+    color: black;
 }
 .navbar{
     display: flex;
     justify-content:space-between ;
     align-items: center;
     padding: 8px 16px;
-    background: skyblue;
+    background: #616161;
     height: 80px;
 }
 li{
@@ -18,13 +29,14 @@ li{
 table{
     border-collapse: collapse;    
 }
-
-.navbar a{
-    text-decoration: none;
-    color: black;
+td,th,tr{
+    text-align: center;
 }
+
+
 .navbar_icon{
     font-size: 24px;
+    color: #fafafa;
 }
 .navbar_centerMenu{
     display: flex;
@@ -60,39 +72,40 @@ table{
     flex-direction: column;
     align-items: flex-end;
 }
-
-
 .container{
     width:90%;
     height: 100%;
     margin-left: 80px;
     justify-content: center;
     align-items: center;
-    
     justify-content: center;
 }
-.dashboard{
+.dashboard_wrap{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
-.border{
-    border: 1px solid;
-    width: 200px;
-    height: 200px;
-    margin: 25px;
-    text-align: center;
-}
-.border ul{
+.dashboard_box{
     display: flex;
     flex-direction: column;
-    padding-left: 0;
-    margin:0;
-    justify-content: start;
-    align-items: center;
-    height: 100%;
+    padding: 12px 6px;
+    font-size: 24px;
+    border:1px solid #eeeeee;
+    margin: 15px;
+    width:250px;
+    text-align: center;
 }
-.border li{
+.dashboard_box i{
+    font-size: 90px;
+}
+.dashboard_img img{
+    width: 100%;
+    height: 90px;
+}
+.dashboard_img img{
+    width: 100%;
+}
+.border {
     padding: 16px 12px;
     font-size: 24px;
 }
