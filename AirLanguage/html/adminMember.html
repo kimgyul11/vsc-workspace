@@ -39,7 +39,7 @@
     .num, .checkbox{
         width: 30px;
     }
-    .userId, .userName,{
+    .userId, .userName{
         width:10%;
     }
 
@@ -55,7 +55,7 @@
         list-style-type: none;
         background: #263238;
         overflow: hidden;
-        transition: width .3s;
+        transition: width .4s;
     }
     .side-menu:hover {
         width: 170px;
@@ -107,7 +107,7 @@
 /* 네비게이션바 e */
 
     .table_wrap{
-        padding: 250px 30px 35px 85px;
+        padding: 250px 30px 50px 85px;
     }
     .search_wrap{
         width: 70%;
@@ -139,6 +139,80 @@
         cursor: pointer;
     }
     
+    /* 페이지네이션 s*/
+    .pagination_wrap{
+        margin: auto;
+        text-align: center;
+    }
+    .pagination {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    margin: 70px;
+    }
+    .pagination li {
+        display: inline;
+        text-align: center;
+    }
+    .pagination a {
+        float: left;
+        display: block;
+        font-size: 14px;
+        text-decoration: none;
+        padding: 5px 12px;
+        color: #fff;
+        margin-left: -1px;
+        border: 1px solid transparent;
+        line-height: 1.5;
+    }
+    .pagination a.active {
+        cursor: default;
+    }
+    .pagination a:active {
+        outline: none;
+    }
+    .modal-2 li:first-child a {
+        -moz-border-radius: 50px 0 0 50px;
+        -webkit-border-radius: 50px;
+        border-radius: 50px 0 0 50px;
+    }
+    .modal-2 li:last-child a {
+        -moz-border-radius: 0 50px 50px 0;
+        -webkit-border-radius: 0;
+        border-radius: 0 50px 50px 0;
+    }
+    .modal-2 a {
+        border-color: #ddd;
+        color: #999;
+        background: #fff;
+    }
+    .modal-2 a:hover {
+        color: #263238;
+        background-color: #eee;
+    }
+    .modal-2 a.active, .modal-2 a:active {
+        border-color: #263238;
+        background: #263238;
+        color: #fff;
+    }
+    .button_wrap{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 25px;
+    }
+    .button_wrap button{
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+        background: white;
+        border: 1px solid #e0e0e0;
+        border-radius: 5px;
+    }
+    .button_wrap button:hover{
+        color: #fafafa;
+        background: #455a64;
+    }
+    /* 페이지네이션 e*/
 </style>
 <body>
     <nav class="nav_warp">
@@ -202,13 +276,31 @@
                 <td>-</td>
                 <td>-</td>
                 <td>-</td>
-                <td>ㅁㄴㅇ</td>
-                <td>ㅁㄴㅇ</td>
-                <td>ㅁㄴㅇ</td>
-                <td>ㅁㄴㅇ</td>
-                <td>ㅁㄴㅇ</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
             </tr>
-        </table>    
+        </table>
+        <div class="button_wrap">
+            <button><i class="fa-solid fa-folder-plus"></i></button>
+        </div>
+        <div class="pagination_wrap">
+            <ul class="pagination modal-2">
+                <li><a href="#" class="prev">&laquo </a></li>
+                <li><a href="#">1</a></li>
+                <li> <a href="#">2</a></li>
+                <li> <a href="#" class="active">3</a></li>
+                <li> <a href="#">4</a></li>
+                <li> <a href="#">5</a></li>
+                <li> <a href="#">6</a></li>
+                <li> <a href="#">7</a></li>
+                <li> <a href="#">8</a></li>
+                <li> <a href="#">9</a></li>
+                <li><a href="#" class="next">  &raquo;</a></li>
+            </ul><br> 
+        </div>
     </div>    
     
     <script src="https://kit.fontawesome.com/86d85c3d85.js" crossorigin="anonymous"></script>
