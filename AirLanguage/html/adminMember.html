@@ -7,11 +7,23 @@
     <title>Document</title>
 </head>
 <style>
+    body{
+        margin: 0; 
+        box-sizing: border-box;
+        height: 150vh;
+    }    
     table{
         width: 100%;
         text-align: center;
-
+        margin-top: 50px;
     }
+    a{
+        text-decoration: none;
+        color:white;
+    }
+    li{
+        list-style: none;
+    }    
     table,th,td,tr{
         border: 1px solid #e0e0e0;
         border-collapse: collapse;
@@ -19,6 +31,7 @@
     th{
         height: 50px;
         font-weight: bold;
+        background: #eceff1;
     }
     td{
         height: 30px;
@@ -29,33 +42,175 @@
     .userId, .userName,{
         width:10%;
     }
+
+    /* 왼쪽 사이드 메뉴s */
+    .side-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin-top: 120px;
+        padding: 0;
+        height: 100%;
+        width: 60px;
+        list-style-type: none;
+        background: #263238;
+        overflow: hidden;
+        transition: width .3s;
+    }
+    .side-menu:hover {
+        width: 170px;
+    }
+    .side-menu li {
+    width: 300px;
+    }
+    .side-menu li i {
+    font-size: 1rem;
+    margin: 20px 30px 0 22px;
+    }
+    .side-menu li a {
+    display: block;
+    font-size: .9rem;
+    text-decoration: none;
+    color: #FFF;
+    height: 60px;
+    }
+    .side-menu li a:hover{
+    background: #fafafa;
+    color: black;
+    display: block;
+    }
+    /* 왼쪽사이드메뉴e */
+    
+    /* 네비게이션바s */
+    .nav_warp{
+        height: 120px;
+        background: #263238;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+    }
+    .nav_list{
+        margin:30px 15px 0 15px;
+        display: flex;
+        justify-content: right;
+        padding-left: 0;
+    }
+    .nav_list li{
+        margin-left: 15px;
+        font-size: 1.5rem;
+    }
+    .nav_logo{
+        font-size: 1.5rem;
+        margin: 30px 0 0 15px;
+    }
+/* 네비게이션바 e */
+
+    .table_wrap{
+        padding: 250px 30px 35px 85px;
+    }
+    .search_wrap{
+        width: 70%;
+        margin: 0px auto 50px auto;
+
+    }
+
+    .search_wrap input {
+        width: 20%;
+        height: 30px;
+        margin: 15px;
+        border: 1px solid  #e0e0e0;
+        border-radius: 5px;
+    }
+    select{
+        width:256px;
+        height: 34px;
+        margin:15px;
+        border: 1px solid  #e0e0e0;
+        border-radius: 5px;
+    }
+    .search_wrap button{
+        width: 34px;
+        height: 34px;
+        margin-left: 15px;
+        border: 1px solid #e0e0e0;
+        border-radius: 5px;
+        background: white;
+        cursor: pointer;
+    }
     
 </style>
 <body>
-    <table>
-        <tr>
-            <th class="checkbox"></th>
-            <th class="num">번호</th>
-            <th class="userId">유저ID</th>
-            <th class="userName">유저Name</th>
-            <th class="country">국적</th>
-            <th class="useNy">사용여부</th>
-            <th class="delNy">삭제여부</th>
-            <th class="signupDate">가입일</th>
-            <th class="userMod">수정일</th>
-        </tr>
-        <tr>
-            <td>정보</td>
-            <td>정보</td>
-            <td>입력란</td>
-            <td>ㅁㄴㅇ</td>
-            <td>ㅁㄴㅇ</td>
-            <td>ㅁㄴㅇ</td>
-            <td>ㅁㄴㅇ</td>
-            <td>ㅁㄴㅇ</td>
-            <td>ㅁㄴㅇ</td>
-        </tr>
+    <nav class="nav_warp">
+        <div class="nav_logo">
+            <a href=""><i class="fa-solid fa-plane-departure"></i>AirLanguage</a>
+        </div>
+        <ul class="nav_list">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">메뉴</a></li>
+            <li><a href="#">추가하기</a></li>
+            <li><a href="#">프로필</a></li>
+        </ul>
+    </nav>
 
-    </table>
+    <!-- 사이드 메뉴 -->
+    <ul class="side-menu">
+        <li><a href="#"><i class="fa-solid fa-house"></i>홈</a></li>
+        <li><a href="#"><i class="fa-solid fa-folder"></i>코드관리</a></li>
+        <li><a href="#"><i class="fa-regular fa-folder"></i>코드그룹관리</a></li>
+        <li><a href="#"><i class="fa-solid fa-user-group"></i>멤버관리</a></li>
+    </ul>
+
+    <div class="table_wrap">
+        <div class="search_wrap">
+            <select name="" id="">
+                <option value="">사용여부</option>
+                <option value="0">N</option>
+                <option value="1">Y</option>
+            </select>
+            <select name="" id="">
+                <option value="">사용여부</option>
+                <option value="0">N</option>
+                <option value="1">Y</option>
+            </select>
+            <input type="text">
+            <input type="text"><br>
+            <select name="" id="">
+                <option value="">검색조건</option>
+                <option value="0">N</option>
+                <option value="1">Y</option>
+            </select>
+            <input type="text">
+            <button type="button"><i class="fa-brands fa-searchengin"></i></button>
+            <button ><i class="fa-solid fa-arrow-rotate-right"></i></button>
+        </div>
+        <hr>
+        <table class="tablelist">
+            <tr>
+                <th class="checkbox"></th>
+                <th class="num">번호</th>
+                <th class="userId">ID</th>
+                <th class="userName">Name</th>
+                <th class="country">공란</th>
+                <th class="useNy">사용여부</th>
+                <th class="delNy">삭제여부</th>
+                <th class="signupDate">가입일</th>
+                <th class="userMod">수정일</th>
+            </tr>
+            <tr>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>ㅁㄴㅇ</td>
+                <td>ㅁㄴㅇ</td>
+                <td>ㅁㄴㅇ</td>
+                <td>ㅁㄴㅇ</td>
+                <td>ㅁㄴㅇ</td>
+            </tr>
+        </table>    
+    </div>    
+    
+    <script src="https://kit.fontawesome.com/86d85c3d85.js" crossorigin="anonymous"></script>
 </body>
 </html>
