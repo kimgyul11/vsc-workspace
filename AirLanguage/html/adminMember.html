@@ -4,226 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/css/adminMember.css">
+    <title>AIRLANGUAGE</title>
 </head>
-<style>
-    body{
-        margin: 0; 
-        box-sizing: border-box;
-        height: 150vh;
-    }    
-    table{
-        width: 100%;
-        text-align: center;
-        margin-top: 50px;
-    }
-    a{
-        text-decoration: none;
-        color:white;
-    }
-    li{
-        list-style: none;
-    }    
-    table,th,td,tr{
-        border: 1px solid #e0e0e0;
-        border-collapse: collapse;
-    }
-    th{
-        height: 50px;
-        font-weight: bold;
-        background: #eceff1;
-    }
-    td{
-        height: 30px;
-    }
-    .num, .checkbox{
-        width: 30px;
-    }
-    .userId, .userName{
-        width:10%;
-    }
-
-    /* 왼쪽 사이드 메뉴s */
-    .side-menu {
-        position: fixed;
-        top: 0;
-        left: 0;
-        margin-top: 120px;
-        padding: 0;
-        height: 100%;
-        width: 60px;
-        list-style-type: none;
-        background: #263238;
-        overflow: hidden;
-        transition: width .4s;
-    }
-    .side-menu:hover {
-        width: 170px;
-    }
-    .side-menu li {
-    width: 300px;
-    }
-    .side-menu li i {
-    font-size: 1rem;
-    margin: 20px 30px 0 22px;
-    }
-    .side-menu li a {
-    display: block;
-    font-size: .9rem;
-    text-decoration: none;
-    color: #FFF;
-    height: 60px;
-    }
-    .side-menu li a:hover{
-    background: #fafafa;
-    color: black;
-    display: block;
-    }
-    /* 왼쪽사이드메뉴e */
-    
-    /* 네비게이션바s */
-    .nav_warp{
-        height: 120px;
-        background: #263238;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        position: fixed;
-    }
-    .nav_list{
-        margin:30px 15px 0 15px;
-        display: flex;
-        justify-content: right;
-        padding-left: 0;
-    }
-    .nav_list li{
-        margin-left: 15px;
-        font-size: 1.5rem;
-    }
-    .nav_logo{
-        font-size: 1.5rem;
-        margin: 30px 0 0 15px;
-    }
-/* 네비게이션바 e */
-
-    .table_wrap{
-        padding: 250px 30px 50px 85px;
-    }
-    .search_wrap{
-        width: 70%;
-        margin: 0px auto 50px auto;
-
-    }
-
-    .search_wrap input {
-        width: 20%;
-        height: 30px;
-        margin: 15px;
-        border: 1px solid  #e0e0e0;
-        border-radius: 5px;
-    }
-    select{
-        width:256px;
-        height: 34px;
-        margin:15px;
-        border: 1px solid  #e0e0e0;
-        border-radius: 5px;
-    }
-    .search_wrap button{
-        width: 34px;
-        height: 34px;
-        margin-left: 15px;
-        border: 1px solid #e0e0e0;
-        border-radius: 5px;
-        background: white;
-        cursor: pointer;
-    }
-    
-    /* 페이지네이션 s*/
-    .pagination_wrap{
-        margin: auto;
-        text-align: center;
-    }
-    .pagination {
-    list-style: none;
-    display: inline-block;
-    padding: 0;
-    margin: 70px;
-    }
-    .pagination li {
-        display: inline;
-        text-align: center;
-    }
-    .pagination a {
-        float: left;
-        display: block;
-        font-size: 14px;
-        text-decoration: none;
-        padding: 5px 12px;
-        color: #fff;
-        margin-left: -1px;
-        border: 1px solid transparent;
-        line-height: 1.5;
-    }
-    .pagination a.active {
-        cursor: default;
-    }
-    .pagination a:active {
-        outline: none;
-    }
-    .modal-2 li:first-child a {
-        -moz-border-radius: 50px 0 0 50px;
-        -webkit-border-radius: 50px;
-        border-radius: 50px 0 0 50px;
-    }
-    .modal-2 li:last-child a {
-        -moz-border-radius: 0 50px 50px 0;
-        -webkit-border-radius: 0;
-        border-radius: 0 50px 50px 0;
-    }
-    .modal-2 a {
-        border-color: #ddd;
-        color: #999;
-        background: #fff;
-    }
-    .modal-2 a:hover {
-        color: #263238;
-        background-color: #eee;
-    }
-    .modal-2 a.active, .modal-2 a:active {
-        border-color: #263238;
-        background: #263238;
-        color: #fff;
-    }
-    .button_wrap{
-        display: flex;
-        justify-content: space-between;
-        margin-top: 25px;
-    }
-    .button_wrap button{
-        width: 50px;
-        height: 50px;
-        font-size: 25px;
-        background: white;
-        border: 1px solid #e0e0e0;
-        border-radius: 5px;
-    }
-    .button_wrap button:hover{
-        color: #fafafa;
-        background: #455a64;
-    }
-    /* 페이지네이션 e*/
-</style>
 <body>
     <nav class="nav_warp">
         <div class="nav_logo">
             <a href=""><i class="fa-solid fa-plane-departure"></i>AirLanguage</a>
         </div>
         <ul class="nav_list">
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">메뉴</a></li>
-            <li><a href="#">추가하기</a></li>
-            <li><a href="#">프로필</a></li>
+            <li><a href="#">프로필이미지</a></li>
+            <li><a href="#">로그아웃</a></li>
         </ul>
     </nav>
 
@@ -261,7 +52,7 @@
         <hr>
         <table class="tablelist">
             <tr>
-                <th class="checkbox"></th>
+                <th class="checkbox"><input type="checkbox"></th>
                 <th class="num">번호</th>
                 <th class="userId">ID</th>
                 <th class="userName">Name</th>
@@ -272,7 +63,7 @@
                 <th class="userMod">수정일</th>
             </tr>
             <tr>
-                <td>-</td>
+                <td><input type="checkbox"></td>
                 <td>-</td>
                 <td>-</td>
                 <td>-</td>
@@ -284,7 +75,8 @@
             </tr>
         </table>
         <div class="button_wrap">
-            <button><i class="fa-solid fa-folder-plus"></i></button>
+            <button class="btn_delete" type="button"><i class="fa-solid fa-trash"></i></button>
+            <button class="btn_reg"><i class="fa-solid fa-folder-plus"></i></button>
         </div>
         <div class="pagination_wrap">
             <ul class="pagination modal-2">
