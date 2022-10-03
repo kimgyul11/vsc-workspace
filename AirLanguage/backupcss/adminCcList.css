@@ -15,7 +15,7 @@ body{
 table{
     width: 100%;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 50px; 
     table-layout: fixed;
 }
 a{
@@ -146,7 +146,7 @@ select{
     
 }
 .num, .checkbox{
-    width: 8%;
+    width: 30px;
 }
 .codename{
     width:19%;
