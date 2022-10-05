@@ -17,6 +17,12 @@
     flex-wrap: wrap;
 }
 
+.divas{
+	display: flex;
+	flex-direction: column;
+	
+}
+
 .navbar .logo a{
 	display: block;
 	text-decoration: none;
@@ -27,9 +33,6 @@
 	text-transform: uppercase;
     margin-right: 200px;
 }
-
-
-
 
 /* -----------------검색창 시작---------------- */
 .search_box{
