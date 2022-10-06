@@ -1,0 +1,50 @@
+.filewrap {
+    padding: 20px 30px;
+    display: block;
+    width: 600px;
+    margin: 5vh auto;
+    border: 1px solid #dbdbdb;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.filewrap .file-list {
+
+    height: 80%;
+    overflow: auto;
+    border: 1px solid #dbdbdb;
+    margin-top:15px;
+    padding:  10px;
+
+}
+label.imgupload{
+    font-size:1.0rem;
+    margin-bottom: 50px;
+    padding: 5px;
+    border: 1px solid #dbdbdb;
+    border-radius:5px;
+    width:25%;
+}
+label.imgupload:hover{
+    color: #e8eaf6;
+    background: #424242;
+}
+
+.filewrap .file-list .filebox p {
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    background-color:#efebe9 ;
+    width: 80%;
+    height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.filewrap .file-list .filebox .delete i{
+    color: #212121;
+    margin-left: 5px;
+}
+.filewrap .file-list .filebox .delete i:hover{
+    color: #ff5353;
+}
