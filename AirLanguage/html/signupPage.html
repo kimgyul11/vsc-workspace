@@ -6,26 +6,175 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>signup</title>
     <style>
+        @font-face {
+        font-family: 'SUIT-Medium';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+}
         *{
             margin: 0;
+            font-family: 'SUIT-Medium';
         }
-        input{
-            border-bottom:1px solid ;
-            width: 150px;
-            height: 35px;
+        li{
+            list-style: none;
+        }
+        ul{
+            padding-left: 0;
+        }
+        .profileWrap{
+            margin: auto;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
 
+        }
+        .profileCircle{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #ff5722;
+        }
+        .inputWrap{
+            display: flex;
+            justify-content: center;
+            width: 80%;
+            height: 100%;
+            margin: auto;
+            padding: 35px;
+        }
+
+        .profileImgUpload label{
+            font-size: 15px;
+            font-weight: 200;
+            cursor: pointer;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .profileImgUpload label:hover{
+            color: #ff5722;
+        }
+        .input_box{
+            width:60%;
+            background: white;
+            text-align: center;
+            padding: 30px;
+            box-shadow: ;
+        }
+        .input_box input[type=text]{
+            margin: 12px;
+            border: none;
+            border-bottom:1px solid #e0e0e0;
+            width: 40%;
+            height: 40px;
+            text-align: left;
+        }
+        .input_box input::placeholder{
+            margin-top: 0;
+            vertical-align: bottom;
+            color: #212121;
+        }
+        .btn_wrap{
+            margin-top: 50px;
+        }
+        .btn_wrap button{
+            width: 100px;
+            height: 35px;
+            background:black;
+            color: #fff;
+        }
+        .btn_wrap button:hover{
+            color: black;
+            background: #fff;
+        }
+        .radiowrap{
+            width: 40%;
+            margin: auto;
+            text-align: left;
+        }
+        h1{
+            font-size: 14px;
+            font-weight: lighter;
+            color: #212121;
+        }
+        .radiowrap label {
+        font-size: 15px;
+        line-height: 1.2rem;
+        padding: 0.2em 0.4em;
+        cursor: pointer;
+        }
+        li [type="radio"] {
+            vertical-align: middle;
+            appearance: none;
+            border: max(2px, 0.1em) solid gray;
+            border-radius: 50%;
+            width: 1.25em;
+            height: 1.25em;
+            transition: border 0.2s ease-in-out;
+            
+        }
+        [type="radio"]:checked {
+        border: 0.4em solid tomato;
+        }
+
+        [type="radio"]:hover {
+        box-shadow: 0 0 0 max(4px, 0.2em) lightgray;
+        cursor: pointer;
+        }
+
+        [type="radio"]:focus-visible {
+        outline-offset: max(2px, 0.1em);
+        outline: max(2px, 0.1em) dotted #ff5722;
+        }
+
+        [type="file"]{
+            display: none;
         }
     </style>
 </head>
-    <div class="inputWrap">
-        <div class="input_box">
-            <input type="text" placeholder="아이디를 입력하세요">
-            <input type="text" placeholder="비밀번호를 입력해주세요">
-            <input type="text" placeholder="비밀번호 재입력">
-            <input type="text" placeholder="">
-        </div>    
-    </div>
 <body>
-    
+    <div class="inputWrap">
+        <ul class="input_box">
+            <li>
+                <div class="profileWrap">
+                    <div class="profileCircle">
+                        <img class="profileImg"src="" alt="">
+                    </div>
+                    <div class="profileImgUpload">
+                        <input id="img" type="file" >
+                        <label for="img">이미지선택<i class="fa-regular fa-file-image"></i></label>
+                    </div>
+                </div>
+            </li>
+            <li><input type="text" placeholder="아이디를 입력하세요">
+            <li><input type="text" placeholder="비밀번호를 입력해주세요">
+            <li><input type="text" placeholder="비밀번호 재입력">
+            <li><input type="text" placeholder="이름">
+            <li>
+                <div class="radiowrap">
+                    <h1>성별을 선택하세요</h1>
+                    <input type="radio" id="man" name="contact" value="man" />
+                    <label for="man">남성</label>
+                    <input type="radio" id="girl" name="contact" value="girl" />
+                    <label for="girl">여성</label>
+                </div>  
+            </li>
+            <li><input type="text" placeholder="이메일">
+            <li><input type="text" placeholder="생년월일">
+            <li><input type="text" placeholder="주로 사용하는 언어를 선택하세요">
+            <li><input type="text" placeholder="배우는 언어를 선택하세요">
+            <li>
+                <div class="btn_wrap">
+                    <button>취소</button>
+                    <button>확인</button>
+                </div>
+            </li>
+                    
+        </ul>
+    </div>
+    <script src="https://kit.fontawesome.com/86d85c3d85.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
