@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/backupcss/adminCodeGroup.css">
+    <link rel="stylesheet" href="/DODAMDODAM/css/codegroup.css">
     <title>AIRLANGUAGE</title>
 </head>
 <body>
@@ -13,14 +13,13 @@
         <div class="nav_logo">
             <a href="">DODAMDODAM</a>
         </div>
-        <ul class="nav_list">
-            <li class="profile_wrap"><img class="profile_img"src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" alt=""></li>
-            <li>
-                <ul class="nav_logout">
-                    <li><div>유저아이디_환영합니다.</div></li>
-                    <li><a href="#">로그아웃</a></li>
-                </ul>
-            </li>
+        <div class="nav_list">
+            <div class="profile_wrap">
+                <img class="profile_img"src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" alt="">
+            </div>
+        <ul class="nav_logout">
+            <li>(유저아이디)님 환영합니다.</li>
+            <li><button>log out</button></li>
         </ul>
     </nav><!-- 상단 네비게이션e -->
 
@@ -32,31 +31,54 @@
         <li><a href="#"><i class="fa-solid fa-user-group"></i>멤버관리</a></li>
         <li><a href="#"><i class="fa-solid fa-people-roof"></i>스페이스관리</a></li>
     </ul><!-- 사이드메뉴e -->
-    <div class="table_wrap">
+
+
+
+    <div class="container">
         <div class="search_wrap">
-            <select name="" id="">
-                <option value="">사용여부</option>
-                <option value="0">N</option>
-                <option value="1">Y</option>
-            </select>
-            <select name="" id="">
-                <option value="">삭제여부</option>
-                <option value="0">N</option>
-                <option value="1">Y</option>
-            </select>
-            <input type="text" id="startDate">
-            <input type="text" id="endDate"><br>
-            <select name="" id="">
-                <option value="">검색조건</option>
-                <option value="0">코드번호</option>
-                <option value="1">코드그룹명(한글)</option>
-                <option value="2">코드그룹명(영어)</option>
-            </select>
-            <input type="text">
-            <button type="button"><i class="fa-brands fa-searchengin"></i></button>
-            <button ><i class="fa-solid fa-arrow-rotate-right"></i></button>
+            <ul class="search_item_top">
+                <li>
+                    <select name="" id="">
+                        <option value="">사용여부</option>
+                        <option value="0">N</option>
+                        <option value="1">Y</option>
+                    </select>
+                </li>
+                <li>
+                    <select name="" id="">
+                        <option value="">삭제여부</option>
+                        <option value="0">N</option>
+                        <option value="1">Y</option>
+                    </select>
+                </li>
+                <li>
+                    <input type="text" id="startDate">
+                </li>
+                <li>
+                    <input type="text" id="endDate"><br>
+                </li>
+            </ul>
+            <ul class="search_item_bottom">
+                <li>
+                <select name="" id="">
+                    <option value="">검색조건</option>
+                    <option value="0">코드번호</option>
+                    <option value="1">코드그룹명(한글)</option>
+                    <option value="2">코드그룹명(영어)</option>
+                </select>
+                </li>
+                <li>
+                <input type="text">
+                </li>
+                <li>
+                <button type="button"><i class="fa-brands fa-searchengin"></i></button>
+                <button ><i class="fa-solid fa-arrow-rotate-right"></i></button>
+                </li>
+            </ul>
         </div>
-        <hr>
+
+
+
         <div class="tablelist">
             <table>
                 <tr>
@@ -84,24 +106,25 @@
             </table>
         </div>
         <div class="button_wrap">
-            <button class="btn_delete" type="button"><i class="fa-solid fa-trash"></i></button>
+            <button class="btn_delete" type="button"><i class="fa-regular fa-trash-can"></i></button>
+            <div class="pagination_wrap">
+                <ul class="pagination modal-2">
+                    <li><a href="#" class="prev">&laquo </a></li>
+                    <li><a href="#">1</a></li>
+                    <li> <a href="#">2</a></li>
+                    <li> <a href="#" class="active">3</a></li>
+                    <li> <a href="#">4</a></li>
+                    <li> <a href="#">5</a></li>
+                    <li> <a href="#">6</a></li>
+                    <li> <a href="#">7</a></li>
+                    <li> <a href="#">8</a></li>
+                    <li> <a href="#">9</a></li>
+                    <li><a href="#" class="next">  &raquo;</a></li>
+                </ul><br> 
+            </div>    
             <button class="btn_reg"><i class="fa-solid fa-folder-plus"></i></button>
         </div>
-        <div class="pagination_wrap">
-            <ul class="pagination modal-2">
-                <li><a href="#" class="prev">&laquo </a></li>
-                <li><a href="#">1</a></li>
-                <li> <a href="#">2</a></li>
-                <li> <a href="#" class="active">3</a></li>
-                <li> <a href="#">4</a></li>
-                <li> <a href="#">5</a></li>
-                <li> <a href="#">6</a></li>
-                <li> <a href="#">7</a></li>
-                <li> <a href="#">8</a></li>
-                <li> <a href="#">9</a></li>
-                <li><a href="#" class="next">  &raquo;</a></li>
-            </ul><br> 
-        </div>
+        
     </div>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" />    
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
