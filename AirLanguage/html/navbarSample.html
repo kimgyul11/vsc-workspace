@@ -8,48 +8,29 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- 네비게이션바 -->
+    <!-- 네비게이션바 영역 시작-->
     <div class="navbar">
         <div class="logo">
             <a href="#">AirLanguage</a>
         </div>
-        <ul class="nav_middel_menu">
-            <li class="nav_search_box">
-                <select name="" id="" >
-                    <option value="">언어선택</option>
-                    <option value="">한국어</option>
-                    <option value="">중국어</option>
-                    <option value="">일본어</option>
-                    <option value="">영어</option>
-                </select>
-                <input type="text"
-            </li>
-        </ul>
-        <div class="btn_wraper">
-            <div class="btn btn_1">
-                <a href="">질문하기</a>
-            </div>
+        <div class="nav_search_box">
+            <select name="" id="" >
+                <option value="">언어선택</option>
+                <option value="">한국어</option>
+                <option value="">중국어</option>
+                <option value="">일본어</option>
+                <option value="">영어</option>
+            </select>
+            <input type="text" placeholder="단어를 입력해보세요.">
         </div>
-    </div>
-    
-    <!--  -->
-
-
+        <ul class="nav_right_Wrap">
+            <li><a href="">HOME</a>
+            <li><a href="">MY PAGE</a>
+            <li><a href="">로그아웃</a>
+            <li><a href="">질문하기</a>
+        </ul>
+    </div><!-- 네비게이션바 영역 종료-->
     <script src="https://kit.fontawesome.com/86d85c3d85.js" crossorigin="anonymous"></script>
-    <script>
-        var dd_main = document.querySelector(".dd_main");
-    
-        dd_main.addEventListener("click", function(){
-            this.classList.toggle("active");
-        })
-        const toggleBtn = document.querySelector('.default_option');
-        const menu = document.querySelector('.dropdown ul');
-        const icons = document.querySelector('.navbar_linkicon');
-    
-        toggleBtn.addEventListener('click', () => {
-        menu.classList.toggle('active');
-        icons.classList.toggle('active');
-        });  
-    </script>
+
 </body>
 </html>
