@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+*{
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.newQue_wrap{
+    width: 50%;
+    height: 750px;
+    border: 1px solid #e0e0e0;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.newQus_items{
+    width: 50%;
+    height: 150px;
+    flex: 1 auto;
+    padding: 15px;
+    cursor: pointer;
+    }
+.items_box{
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    height: 100%;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 10px;
+    border-radius: 15px;
+}   
+.items_box p{
+    overflow: auto;
+}
+.items_footer{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: tomato;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.queContainer h1, 
+.queContainer h3{
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+<div class="queContainer">
+    <h1>최근 질문</h1>
+    <h3>최근에 올라온 질문을 확인해보세요</h3>
+    <div class="newQue_wrap" onclick="quelist">
+        <div class="newQus_items">
+            <div class="items_box">
+                <p>sad</p>
+                <div class="items_footer">1</div>
+            </div>
+        </div>
+        <div class="newQus_items">
+            <div class="items_box">
+                <p>sad</p>
+                <div class="items_footer">1</div>
+            </div>
+        </div>
+
+    </div>
+</div>    
+</body>
+</html>
