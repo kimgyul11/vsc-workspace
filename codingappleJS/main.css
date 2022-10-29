@@ -1,0 +1,12 @@
+.alert-box{
+    background-color: rgba(106, 106, 140, 0.576);
+    color: rgb(197, 224, 216);
+    padding: 20px;
+    border-radius: 5px;
+    display: none;
+}
+p{
+    font-size: 15px;
+    color: red;
+    
+}
