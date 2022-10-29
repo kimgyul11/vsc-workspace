@@ -1,0 +1,47 @@
+/* 메뉴 */
+.menu{
+    display: flex;
+}
+.menu-item{
+    background: #000;
+    transition: 0.5s;
+    width: 25%;
+}
+.menu-item:hover{
+    background: blue;
+    width: 35%;
+}
+.menu-link{
+    display: block;
+    padding: 1em; 
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #555;
+    text-decoration: none;
+    text-align: center;
+}
+.menu-link:hover{
+    color: #fff;
+}
+
+
+/* search */
+.search-form{
+    display: flex;
+    height: 40px;
+}
+.search-form input[type='search']{
+    flex:1;
+    margin-right: 10px;
+    border: 0;
+    border-radius: 0.3em;
+    font-size: 1rem;
+
+}
+.search-form input[type='submit']{
+    width: 4em;
+    border: 0;
+    border-radius: 0.3em;
+    font-size: 1rem;
+    background: gold;
+}

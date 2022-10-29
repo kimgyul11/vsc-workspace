@@ -11,7 +11,7 @@
 <body>
 
     
-
+    <h4 id="test">안녕하세요</h4>
 
     <div id="alert" class="alert-box">
         <p id="textname">입력</p>
@@ -20,9 +20,10 @@
     <button onclick="알림창열기('block','아이디를 입력해주세요')">버튼1</button>
     <button onclick="알림창열기('block' ,'비밀번호를 입력해주세요')">버튼2</button>
 
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script>
 
-
+        $('#test').addClass('yellow-bg');
         document.getElementById('close').addEventListener('mouseover',function(){
             document.getElementById('alert').style.display = 'none';
         });
