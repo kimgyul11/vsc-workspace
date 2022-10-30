@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        ul{
+            padding-left: 0;
+
+        }
+        li{
+            list-style: none;
+        }
+        body{
+        }
+        .answerbox{
+            width: 50%;
+            border: 1px solid;
+        }
+        .answer-header{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: 70px;
+            background: #000;
+            color: #fff;
+            
+                    
+        }
+        .profile-item{
+            display: flex;
+            margin-left: 1.5em;
+        }
+        .user-photo{ 
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            border: 2px solid #333;
+            border-radius: 50%;
+            background: gold;
+            background: center;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 150%;
+        }
+        .answer-body{
+            min-height: 200px;
+            max-height: 500px;
+            overflow: auto;
+        }
+        .answer-body p{
+            font-size: 1.2rem;
+            color: #fff;
+        }
+        .footer{
+            height:50px;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .footer button{
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="answerbox">
+        <ul class="answer-header">
+            <li class="profile-item">
+                <figure class="user-photo"style="background-image: url(http://t1.daumcdn.net/friends/prod/editor/dc8b3d02-a15a-4afa-a88b-989cf2a50476.jpg);"></figure>
+            </li> 
+            <li class="profile-item">아이디</li>
+            <li class="profile-item">날짜</li>
+        </ul>
+        <div class="answer-body">
+            <p></p>
+        </div>
+        <div class="footer">
+            <button>신고하기</button>
+            <button>좋아요</button>
+        </div>
+    </div>
+</body>
+</html>
