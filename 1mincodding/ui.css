@@ -75,6 +75,13 @@
     background-size: 150%;
 }
 
+.container{
+    width: 100%;
+    background: #fff;
+}
+.hidden{
+    display:none;
+}
 .modal{
     display: flex;
     justify-content: center;

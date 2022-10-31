@@ -9,10 +9,21 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="modal">
+<div class="container">
+    <div class="itembox">안녕</div>
+    <button onclick="알림창열기('block')">버튼1</button>
+</div>
+<div class="hidden" id="hidden">
+    <div class="modal" id="modal">
         <div class="dialog">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto ex perspiciatis dicta, a tempore mollitia iure soluta aut, maxime corporis assumenda atque accusamus, numquam aperiam? Perspiciatis doloremque iste officia dicta.
         </div>
     </div>
+</div>
 </body>
+<script>
+    function 알림창열기(name){
+            document.getElementById('hidden').style.display =name;
+        }      
+</script>
 </html>
