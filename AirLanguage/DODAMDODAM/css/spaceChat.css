@@ -339,20 +339,20 @@
 }
 
 
-  #close-modal {
-      float: right;
-      font-size: 1.8rem;
-      font-weight: bold;
-      cursor: pointer;
-      color: red;
-  }
+#close-modal {
+    float: right;
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: red;
+}
 
-  @keyframes scale {
-      from {
-      transform: scale(0);
-      }
-  
-      to {
-          transform: scale(1);
-      }
-  }
+@keyframes scale {
+    from {
+    transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
