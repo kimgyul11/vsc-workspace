@@ -56,11 +56,11 @@
                         ></div>
                     
                         <div class="msg-bubble">
+                            <!-- 작성자 -->
                             <div class="msg-info">
-                            <div class="msg-info-name">BOT</div>
-                            <div class="msg-info-time">12:45</div>
+                                <div class="msg-info-name">BOT</div>
+                                <div class="msg-info-time">12:45</div>
                             </div>
-                    
                             <div class="msg-text">
                             Hi, welcome to SimpleChat! Go ahead and send me a message. 😄
                             </div>
@@ -82,7 +82,35 @@
                                 You can change your name in JS section!
                             </div>
                         </div>
+                        
                         </div>
+                        <div class="msg right-msg">
+                            <div
+                                class="msg-img"
+                                style="background-image: url()"
+                            ></div>
+                        
+                            <div class="msg-bubble">
+                                <div class="msg-info">
+                                    <div class="msg-info-name">Sajad</div>
+                                    <div class="msg-info-time">12:46</div>
+                                </div>
+                                <div class="msg-text">
+                                    <div class="send-imgbox" id="open-modal">
+                                        <img src="/AirLanguage/img/poster.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal">
+                                <div class="modal-content">
+                                    <span id="close-modal">&times;</span>
+                                    
+                                    <div class="modal-body">
+                                        <img src="/AirLanguage/img/poster.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
                     </main>
                 </section>
                 <ul class="chaticon">
@@ -102,6 +130,20 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        const modal = document.querySelector(".modal");
+        const openModalBtn = document.querySelector("#open-modal");
+        const closeModalBtn = document.querySelector("#close-modal");
+        
+        openModalBtn.addEventListener("click", function () {
+        modal.style.display = "block";
+        });
+        
+        closeModalBtn.addEventListener("click", function () {
+        modal.style.display = "none";
+        });
+        
+        </script>
 </script>
 </body>
 </html>
