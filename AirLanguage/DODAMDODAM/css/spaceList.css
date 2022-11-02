@@ -1,0 +1,105 @@
+@font-face {
+    font-family: 'SUIT-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+} * {
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'SUIT-Medium';
+    margin: 0;
+}
+ul{
+    padding-left: 0;
+}
+li{
+    list-style: none;
+}
+
+@media (max-width:700px){
+    .startSpace{
+        min-height: 500px;
+        background: red;
+    }
+    .stspace-box{
+        width: 100%;
+    }
+    .space{
+        margin: auto;
+        width: 95%;
+        border: 1px solid #e0e0e0;
+        height: 90px;
+        margin-top: 25px;
+        display: flex;
+    }
+    .endSpace{
+        min-height: 500px;
+        background: blanchedalmond;
+    }
+}
+
+
+
+/* 중간사이즈 : 700픽셀 이상이고 1439px이하 일때 */
+@media (min-width:700px )and (max-width:1439px){ 
+    
+}
+
+/* 큰사이즈 : 1440px이상부터 적용 */
+@media (min-width:1440px){ 
+    .spaceWrap{
+        display: flex;
+    }
+    .startSpace{
+        text-align: center;
+        flex: 1;
+        background: green;
+    }
+    .startSpace{
+        overflow: auto;
+    }
+    .stspace-box{
+        width:100%;
+        background: red;
+        min-height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .space{
+        width: 70%;
+        margin: auto;
+        border: 1px solid;
+        height: 150px;
+        margin-top: 15px;
+    }
+
+
+
+    .endSpace{
+        overflow: auto;
+        text-align: center;
+        flex: 1;
+        background: darkred;
+    }
+    .endSpace{
+        overflow: auto;
+    }
+    .space-box{
+        width:100%;
+        background: blue;
+        min-height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .space{
+        width: 70%;
+        margin: auto;
+        border: 1px solid;
+        height: 150px;
+        margin-top: 15px;
+    }
+}
