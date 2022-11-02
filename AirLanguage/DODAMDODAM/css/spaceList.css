@@ -16,90 +16,286 @@ li{
     list-style: none;
 }
 
-@media (max-width:700px){
-    .startSpace{
-        min-height: 500px;
-        background: red;
-    }
-    .stspace-box{
-        width: 100%;
-    }
-    .space{
-        margin: auto;
-        width: 95%;
-        border: 1px solid #e0e0e0;
-        height: 90px;
-        margin-top: 25px;
-        display: flex;
-    }
-    .endSpace{
-        min-height: 500px;
-        background: blanchedalmond;
-    }
-}
 
 
 
-/* 중간사이즈 : 700픽셀 이상이고 1439px이하 일때 */
-@media (min-width:700px )and (max-width:1439px){ 
-    
-}
-
-/* 큰사이즈 : 1440px이상부터 적용 */
-@media (min-width:1440px){ 
+@media (max-width:700px ){
+    h1 {
+        font-size: 1.5rem;
+    }
+    h3{
+        font-size: 0.8rem;
+        color: tomato;
+    }
+    .spacebackground{
+        display: none;
+    }
     .spaceWrap{
         display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 50px auto;
     }
+    /* D-Day전 스페이스s */
     .startSpace{
         text-align: center;
         flex: 1;
-        background: green;
+        margin: 35px;
+
     }
     .startSpace{
         overflow: auto;
     }
     .stspace-box{
         width:100%;
-        background: red;
-        min-height: 300px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
     .space{
-        width: 70%;
-        margin: auto;
-        border: 1px solid;
+        border-radius: 7px;
+        margin: 15px;
+        width: 100%;
+        max-width: 600px;
+        border: 2px solid #000;
         height: 150px;
-        margin-top: 15px;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        font-size: 0.8rem;
+        
     }
+    .travel-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+    }
+    .travel-info li{
+        padding-top: 5px;
+    }
+    .space-item{
+        font-weight: bold;
+    }
+    
+    .space-info{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .space-info li:nth-child(2){
+        width: 90px;
+        height: 90px;
+        border-radius: 5px;
+        border: 2px solid #e0e0e0;
+        overflow: hidden;
+    }
+    .space-info li:nth-child(2) img{
+        width: 100%;
+        height: 100%;
+    }/* D-Day전 스페이스end */
 
 
-
+/* 종료된 스페이스 영역 */
     .endSpace{
         overflow: auto;
         text-align: center;
         flex: 1;
-        background: darkred;
+        overflow: auto;
+        background: #e0e0e0;
+        margin: 35px;
+
     }
-    .endSpace{
+
+}
+@media (min-width:701px )and (max-width:1439px){ 
+    h1 {
+        font-size: 2rem;
+    }
+    h3{
+        font-size: 0.9rem;
+        color: tomato;
+    }
+    .spacebackground{
+        display: none;
+    }
+    .spaceWrap{
+        display: flex;
+        width: 100%;
+        margin: 50px auto;
+    }
+    /* D-Day전 스페이스s */
+    .startSpace{
+        text-align: center;
+        flex: 1;
+        margin: 35px;
+
+    }
+    .startSpace{
         overflow: auto;
     }
-    .space-box{
+    .stspace-box{
         width:100%;
-        background: blue;
-        min-height: 300px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
     .space{
-        width: 70%;
-        margin: auto;
-        border: 1px solid;
+        border-radius: 7px;
+        margin: 15px;
+        width: 100%;
+        max-width: 600px;
+        border: 2px solid #000;
         height: 150px;
-        margin-top: 15px;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        font-size: 0.8rem;
+        
     }
+    .travel-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+    }
+    .travel-info li{
+        padding-top: 5px;
+    }
+    .space-item{
+        font-weight: bold;
+    }
+    
+    .space-info{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .space-info li:nth-child(2){
+        width: 90px;
+        height: 90px;
+        border-radius: 5px;
+        border: 2px solid #e0e0e0;
+        overflow: hidden;
+    }
+    .space-info li:nth-child(2) img{
+        width: 100%;
+        height: 100%;
+    }/* D-Day전 스페이스end */
+
+
+/* 종료된 스페이스 영역 */
+    .endSpace{
+        overflow: auto;
+        text-align: center;
+        flex: 1;
+        overflow: auto;
+        background: #e0e0e0;
+        margin: 35px;
+
+    }
+
+}    
+
+
+
+/* 큰사이즈 : 1440px이상부터 적용 */
+@media (min-width:1440px ){ 
+
+     h1 {
+        font-size: 2rem;
+    }
+    h3{
+        font-size: 0.9rem;
+        color: tomato;
+    }
+
+
+    .spacebackground{
+        display: none;
+    }
+    .spaceWrap{
+        display: flex;
+        width: 80%;
+        margin: 50px auto;
+    }
+    /* D-Day전 스페이스s */
+    .startSpace{
+        text-align: center;
+        flex: 1;
+
+    }
+    .startSpace{
+        overflow: auto;
+    }
+    .stspace-box{
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .space{
+        border-radius: 7px;
+        margin: 15px;
+        width: 70%;
+        max-width: 600px;
+        border: 2px solid #000;
+        height: 150px;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        font-size: 0.9rem;
+    }
+    .travel-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+    }
+    .travel-info li{
+        padding-top: 5px;
+    }
+    .space-item{
+        font-weight: bold;
+    }
+    
+    .space-info{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .space-info li:nth-child(2){
+        width: 90px;
+        height: 90px;
+        border-radius: 5px;
+        border: 2px solid #e0e0e0;
+        overflow: hidden;
+    }
+    .space-info li:nth-child(2) img{
+        width: 100%;
+        height: 100%;
+    }/* D-Day전 스페이스end */
+
+
+/* 종료된 스페이스 영역 */
+    .endSpace{
+        overflow: auto;
+        text-align: center;
+        flex: 1;
+        overflow: auto;
+        background: #e0e0e0;
+    }
+
 }
