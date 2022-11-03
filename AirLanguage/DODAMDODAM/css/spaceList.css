@@ -9,11 +9,23 @@
     font-family: 'SUIT-Medium';
     margin: 0;
 }
+a{
+    text-decoration: none;
+}
 ul{
     padding-left: 0;
 }
 li{
     list-style: none;
+}
+.space{
+    color: #212121;
+}
+.space:hover{
+    transition: 0.5s;
+    font-weight: bold;
+    transition: .0s;
+    box-shadow: 2px 5px 5px #000;
 }
 
 
@@ -22,25 +34,35 @@ li{
 @media (max-width:700px ){
     h1 {
         font-size: 1.5rem;
+        
     }
     h3{
         font-size: 0.8rem;
         color: tomato;
     }
     .spacebackground{
-        display: none;
+        display: block;
+        background: #000;
+        color: #fff;
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 120px;
     }
     .spaceWrap{
         display: flex;
         flex-direction: column;
         width: 100%;
-        margin: 50px auto;
+        margin: 0 auto;
     }
     /* D-Day전 스페이스s */
     .startSpace{
         text-align: center;
         flex: 1;
-        margin: 35px;
+        margin: 5px;
+        margin-top: 80px;
+        min-height: 250px;
 
     }
     .startSpace{
@@ -106,11 +128,32 @@ li{
         text-align: center;
         flex: 1;
         overflow: auto;
-        background: #e0e0e0;
-        margin: 35px;
-
+        margin: 5px;
+        margin-top: 80px;
     }
-
+    .spbutton{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .spbutton button{
+        width: 40px;
+        height: 40px;
+        background: #fff;
+        border: 1px solid #e0e0e0;
+        border-radius: 50%;
+        margin: 2px;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+    .spbutton li:nth-child(1) button:hover{
+        color: #fff;
+        background: #c4001d;
+    }
+    .spbutton li:nth-child(2) button:hover{
+        color: #000;
+        background: #fff9c4;
+    }
 }
 @media (min-width:701px )and (max-width:1439px){ 
     h1 {
@@ -132,7 +175,7 @@ li{
     .startSpace{
         text-align: center;
         flex: 1;
-        margin: 35px;
+        margin: 5px;
 
     }
     .startSpace{
@@ -198,9 +241,30 @@ li{
         text-align: center;
         flex: 1;
         overflow: auto;
-        background: #e0e0e0;
-        margin: 35px;
-
+        margin: 5px;
+    }
+    .spbutton{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .spbutton button{
+        width: 40px;
+        height: 40px;
+        background: #fff;
+        border: 1px solid #e0e0e0;
+        border-radius: 50%;
+        margin: 2px;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+    .spbutton li:nth-child(1) button:hover{
+        color: #fff;
+        background: #c4001d;
+    }
+    .spbutton li:nth-child(2) button:hover{
+        color: #000;
+        background: #fff9c4;
     }
 
 }    
@@ -210,7 +274,7 @@ li{
 /* 큰사이즈 : 1440px이상부터 적용 */
 @media (min-width:1440px ){ 
 
-     h1 {
+    h1 {
         font-size: 2rem;
     }
     h3{
@@ -248,7 +312,7 @@ li{
         margin: 15px;
         width: 70%;
         max-width: 600px;
-        border: 2px solid #000;
+        border: 2px solid #424242;
         height: 150px;
         display: flex;
         justify-content: space-between;
@@ -295,7 +359,28 @@ li{
         text-align: center;
         flex: 1;
         overflow: auto;
-        background: #e0e0e0;
     }
-
+    .spbutton{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .spbutton button{
+        width: 40px;
+        height: 40px;
+        background: #fff;
+        border: 1px solid #e0e0e0;
+        border-radius: 50%;
+        margin: 2px;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+    .spbutton li:nth-child(1) button:hover{
+        color: #fff;
+        background: #c4001d;
+    }
+    .spbutton li:nth-child(2) button:hover{
+        color: #000;
+        background: #fff9c4;
+    }
 }
