@@ -6,113 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/AirLanguage/backupcss/modalrensyu.css">
     <style>
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "Open Sans", sans-serif;
-  min-height: 100vh;
-}
-
-#open-modal {
-  border: none;
-  background-color: #000;
-  border-radius: 1.5rem;
-  padding: 1.1rem 3.3rem;
-  font-size: 1.1rem;
-  font-weight: bold;
-  cursor: pointer;
-  color: #fff;
-  user-select: none;
-  transition: all 0.3s ease-in-out;
-}
-
-#open-modal:hover {
-  background-color: #eeeeee;
-  color: #000;
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.modal-content {
-  margin: 20% auto;
-  max-width: 500px;
-  background-color: #fff;
-  padding: 20px;
-  animation: scale 0.5s ease;
-  border-radius: 10px;
-  box-shadow: 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.02),
-    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.03),
-    100px 100px 80px rgba(0, 0, 0, 0.05);
-}
-
-.modal-body {
-    margin-top: 5px;
-}
-.modal-list{
-    display: flex;
-    list-style: none;
-    margin: 5px;
-}
-.modal-list button{
-    width: 60px;
-    height: 45px;
-    font-size: 1.5rem;
-    margin-left: 15px;
-    border-radius: 5px;
-    background: white;
-    border: 1px solid #e0e0e0;
-}
-.modal-list button:hover{
-    background: #212121;
-    color:#fafafa;
-}
-#close-modal {
-    float: right;
-    font-size: 1.8rem;
-    font-weight: bold;
-    cursor: pointer;
-    color: red;
-}
-textarea{
-    width: 100%;
-    height: 90%;
-    border: 1px solid #eeeeee;
-    padding:10px;
-    resize: none;
-
-}
-textarea::placeholder{
-    color:#d32f2f;
-    font-weight: bold;
-}
-@keyframes scale {
-    from {
-    transform: scale(0);
-    }
-
-    to {
-        transform: scale(1);
-    }
-}
-
 
     </style>
 </head>
@@ -120,13 +15,16 @@ textarea::placeholder{
     <button type="button" id="open-modal">Open Modal</button>
     <div class="modal">
         <div class="modal-content">
+            <ul class="HeaderList">
+                <li><h3>경고!</h3></li>
+                <li><span id="close-modal">&times;</span></li>
+            </ul>    
             <div class="modal-header">
-                <h3>AIRLANGUAGE</h3>
-            <span id="close-modal">&times;</span>
-            
+                <p>정말로 삭제하시겠습니까?</p>
             </div>
             <div class="modal-body">
-                
+                <button>취소</button>
+                <button>삭제</button>
             </div>
         </div>
     </div>
