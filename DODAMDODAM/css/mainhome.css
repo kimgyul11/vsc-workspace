@@ -101,7 +101,7 @@ p{
     color: #000;
     text-align: center;
     margin-top: 850px;
-    transition: all 3.5s;
+    transition: all 3.7s;
     opacity: 0;
 }
 .imgbox{
@@ -113,7 +113,15 @@ p{
 h2{
     color: tomato;
 }
-
+.coment button{
+    width: 200px;
+    height: 50px;
+    border: 1px solid #e0e0e0;
+    background: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
 
 /* 제일 작은사이즈 : 700px이하 */
 @media (max-width:700px){
