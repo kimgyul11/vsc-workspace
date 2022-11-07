@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/AirLanguage/backupcss/mypageque.css">
+
+    <title>Document</title>
+</head>
+<body>
+<dl>
+    <dt>나의 질문목록</dt>
+    <dd>
+    <ul>
+        <li class="item">2021년 제3회 임기제공무원 경력경쟁임용시험 최종합격</li>
+    </ul>
+    </dd>
+    <dt>나의 답변 목록</dt>
+    <dd>
+    <ul>
+        <li>보직교사 수당 인상 제안</li>
+        <li>[참고]21.5.14.(금) 코로나19 대책 관련 일일 브리핑 자료</li>
+        <li>[입장문]중앙고 이대부고 판결에 대한 서울시교육청 입장</li>
+        <li>2021 신규교사 성장지원을 위한 멘토 운영</li>
+    </ul>
+    </dd>
+    <dt>좋아요 받은 게시물</dt>
+    <dd>
+    <ul>
+        <li>기타1</li>
+        <li>기타2</li>
+        <li>기타3</li>
+        <li>기타4</li>
+    </ul>
+    </dd>
+    <dt>채택된 답변</dt>
+    <dd>
+    <ul>
+        <li>기타1</li>
+        <li>기타2</li>
+        <li>기타3</li>
+        <li>기타4</li>
+    </ul>
+    </dd>
+</dl>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    $('dd:not(:first)').css('display', 'none');
+
+$(function () {
+  $('dd:not(:first)').css('display', 'none');
+  $('dl dt').on('click', function () {
+    if ($('+dd', this).css('display') == 'none') {
+      $('dl dd').slideUp('slow');
+      $('+dd', this).slideDown('slow');
+    }
+  });
+});
+</script>
+
+</body>
+</html>
