@@ -7,6 +7,10 @@ ul{
 li{
     list-style: none;
 }
+p{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
 .spaceWrap{
     margin: auto;
     width: 50%;
@@ -14,7 +18,7 @@ li{
 }
 .spaceEnter{
     flex: 1;
-    height: 400px;
+    height: 600px;
     border: 1px solid #e0e0e0;
     text-align: center;
     margin: 20px;
@@ -29,7 +33,7 @@ li{
 }
 .boardEnter{
     flex: 1;
-    height: 400px;
+    height: 600px;
     border: 1px solid #e0e0e0;
     text-align: center;
     margin: 20px;
@@ -37,6 +41,10 @@ li{
 }
 .boardEnter h1{
     font-size: 1.2rem
+}
+.boardEnter h2{
+    font-size: 0.8rem;
+    color: tomato;
 }
 .boarditembody{
     overflow: hidden;
@@ -46,7 +54,7 @@ li{
 }
 .itembody{
     width: 100%;
-    height: 300px;
+    height: 500px;
     overflow: auto;
 }
 
@@ -79,3 +87,48 @@ li{
     border-radius: 5px;
     margin-top:10px;
 }
+.backimg{
+    margin-top: 300px;
+    height: 800px;
+    background: green;
+    
+}
+.comentWrap{
+    height: 5500px;
+}
+
+.coment{
+    color: #000;
+    text-align: center;
+    margin-top: 850px;
+    transition: all 3.5s;
+    opacity: 0;
+}
+.imgbox{
+    width: 50%;
+    border-radius: 5px;
+    height: 500px;
+    margin: auto;
+}
+h2{
+    color: tomato;
+}
+
+
+/* 제일 작은사이즈 : 700px이하 */
+@media (max-width:700px){
+
+    .spaceWrap{
+        display: flex;
+        flex-direction: column;
+    }
+    .imgbox{
+        width: 100%;
+    }
+    .spaceWrap{
+        width: 90%;
+    }    
+    p{
+        font-size: 1rem;
+    }
+}    

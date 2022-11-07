@@ -8,6 +8,11 @@
     <title>Document</title>
 </head>
 <body>
+<nav>
+
+
+</nav>
+
     <div class="spaceWrap">
         <div class="spaceEnter">
             <h1>스페이스</h1>
@@ -21,9 +26,75 @@
         </div>
         <div class="boardEnter">
             <h1>게시판</h1>
-            <div class="boarditembody">
+            <h2>종료된 게시물들이 표시됩니다.</h2>
+            <ul class="itembody">
+                <li class="item">d</li>
+            </ul>
+            <div class="btnWrap">
+                <button>스페이스 생성</button>
             </div>
         </div>
     </div>
+    <div class="backimg">
+        이부분이 허전해서 이미지를 넣을려고 한다
+    </div>
+    <div class="comentWrap">
+        <div class="coment">
+            <h1>DODAM에서 여행 계획을 세워보세요</h1>
+            <h2>새로운 세상이 펼쳐집니다. </h2><br>
+            <div class="imgbox">
+                <img src="https://cdn-icons-png.flaticon.com/512/502/502050.png">
+            </div>
+            <p>여행을 계획하고 출발 할 준비가 되었나요? 지도에 핀을 꽂고 여행계획을 세워보세요</p>
+            
+        </div>
+        <div class="coment">
+            <h1>DODAM에서는 경비계산 어렵지않습니다.</h1>
+            <h2>멤버들과 쉽게 나누고 분배하세요</h2>
+            <br>
+            <div class="imgbox">
+                <img src="https://cdn-icons-png.flaticon.com/512/3136/3136007.png">
+            </div>
+            <br>
+        </div>
+        <div class="coment">
+            <h1>멤버들과 채팅</h1>
+            <h2>멤버들과 대화를 나누며 설레는 여행을 기다려보세요</h2><br>
+            <div class="imgbox">
+                <img src="https://cdn-icons-png.flaticon.com/512/2665/2665393.png">
+            </div>
+        </div>
+        <div class="coment">
+            <h1>스페이스는 준비되어있습니다.</h1>
+            <h2>지금바로 여행을 떠나보세요</h2>
+            <div class="imgbox">
+                <img src="https://cdn-icons-png.flaticon.com/512/2733/2733040.png">
+            </div><br>
+            <button>스페이스 생성하기</button>
+            
+        </div>
+        
+    </div>
+
+    <script>
+        let observer = new IntersectionObserver((e)=>{
+            e.forEach((box)=>{
+                if(box.isIntersecting){
+                    box.target.style.opacity = 1;
+                    box.target.style.transform = 'translateY(-25%)';
+                }else{
+                    box.target.style.opacity = 0;
+                    box.target.style.transform = 'translateY(-15%)';
+                }
+            })
+        })
+        let box = document.querySelectorAll(".coment")
+        observer.observe(box[0])
+        observer.observe(box[1])
+        observer.observe(box[2])
+        observer.observe(box[3])
+        //감시해주는 객체
+
+    </script>
 </body>
 </html>
