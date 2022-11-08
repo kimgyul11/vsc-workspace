@@ -1,5 +1,15 @@
+@font-face {
+    font-family: 'SUIT-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+}
 *{
     margin: 0;
+    font-family: 'SUIT-Medium';
+    box-sizing: border-box;
 }
 ul{
     padding-left: 0;
@@ -11,50 +21,78 @@ p{
     font-size: 1.5rem;
     font-weight: bold;
 }
-.spaceWrap{
-    margin: auto;
-    width: 50%;
+a{
+    text-decoration: none;
+}
+nav{
+    height: 70px;
+    border-top: 2px solid #e0e0e0;
+    border-bottom: 2px solid #e0e0e0;
+    background: #fafafa;
+    margin: 2px 0px;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.logo a{
+    font-size: 40px;
+    font-weight: 900;
+    margin-left: 200px;
+    color: #130d08;
+}
+.nav_item{
+    display: flex;
+    margin-right:200px;
+    font-size: 18px;
+}
+.nav_item li{
+    margin-left: 35px;
+    font-weight: 450;
+}
+.nav_item a{
+    color: #000;
+}
+.background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    background-color: red;
+    background-image:url(/AirLanguage/img/backimg.png);
+    background-size: cover;
+}
+.spaceWrap{
+    width: 50%;
+    background-color: rgba( 255, 255, 255, 0.1 );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border-radius: 15px;
 }
 .spaceEnter{
     flex: 1;
-    height: 600px;
-    border: 1px solid #e0e0e0;
     text-align: center;
-    margin: 20px;
-    padding: 15px;
 }
 .spaceEnter h1{
-    font-size: 1.2rem;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #fff;
 }
 .spaceEnter h2{
     font-size: 0.8rem;
     color: tomato;
 }
-.boardEnter{
-    flex: 1;
-    height: 600px;
-    border: 1px solid #e0e0e0;
-    text-align: center;
-    margin: 20px;
-    padding: 15px;   
-}
-.boardEnter h1{
-    font-size: 1.2rem
-}
-.boardEnter h2{
-    font-size: 0.8rem;
-    color: tomato;
-}
-.boarditembody{
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
+
+
 .itembody{
     width: 100%;
-    height: 500px;
+    height: 350px;
     overflow: auto;
 }
 
@@ -63,55 +101,83 @@ p{
     justify-content: center;
     align-items: center;
     display: flex;
-    width: 80%;
+    width: 50%;
     height: 45px;
-    border: 1px solid #e0e0e0;
+    border: 2px solid #e0e0e0;
+    background-color: rgba( 255, 255, 255, 0.1 );
     margin: auto;
     margin: 5px auto;
     border-radius: 5px;
+    color: #fff;
 }
 .item:hover{
     cursor: pointer;
+    background-color: #fff;
+    transition: all 0.5s;
+    color: #000;
 }
 
 .btnWrap{
+    height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.btnWrap button{
-    width: 100px;
-    height: 35px;
-    background: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 5px;
-    margin-top:10px;
-}
+.btnWrap a{
+    color: #bf360c;
+    font-size: 1.8rem;
+    font-weight: bold;
+}   
 .backimg{
     margin-top: 300px;
     height: 800px;
-    background: green;
+    background: #fff;
     
 }
 .comentWrap{
-    height: 5500px;
+    height: 1800px;
+    margin-top: 110px;
 }
 
 .coment{
     color: #000;
     text-align: center;
-    margin-top: 850px;
-    transition: all 3.7s;
+    margin:0 auto 0 auto;
+    transition: all 1.7s;
     opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    width: 100%;
 }
 .imgbox{
-    width: 50%;
     border-radius: 5px;
-    height: 500px;
-    margin: auto;
+    height: 450px;
+}
+.imgbox img{
+    width: 100%;
+    height: 100%;
+}
+.textbox{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    
+}
+.textbox h1{
+    font-size: 30px;
+}
+.textbox h2{
+    font-size: 26px;
+    font-weight: 300;
+}
+.textbox p{
+    font-size: 16px;
+    font-weight: lighter;
 }
 h2{
-    color: tomato;
+    color: #ff8a65;
 }
 .coment button{
     width: 200px;
@@ -121,6 +187,26 @@ h2{
     border-radius: 5px;
     font-weight: bold;
     font-size: 1.2rem;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 190px;
+    background: #000;
+    bottom: 0;
+}
+footer p{
+    color: #fff;
+    font-size: 16px;
+    font-weight: lighter;
+}
+.info{
+    display: flex;
+    color: #fff;
+    font-size: 16px;
+    font-weight: lighter;
 }
 
 /* 제일 작은사이즈 : 700px이하 */

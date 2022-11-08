@@ -9,79 +9,100 @@
 </head>
 <body>
 <nav>
-
-
+    <div class="logo">
+        <a href="">DODAM</a>
+    </div>
+    <ul class="nav_item">
+        <li><a href="">Login</a></li>
+        <li><a href="">Space</a></li>
+        <li><a href="">Board</a></li>        
+    </ul>
 </nav>
-
+<div class="background">
     <div class="spaceWrap">
         <div class="spaceEnter">
-            <h1>스페이스</h1>
-            <h2>나의 현재스페이스를 보여줍니다.</h2>
+            <h1>SPACE</h1>
             <ul class="itembody">
-                <li class="item">d</li>
+                <li class="item">리스트가 들어오는 구역</li>
+                <li class="item">리스트가 들어오는 구역</li>
+                <li class="item">리스트가 들어오는 구역</li>
+                <li class="item">리스트가 들어오는 구역</li>
+                <li class="item">리스트가 들어오는 구역</li>
+                <li class="item">리스트가 들어오는 구역</li>
+                <li class="item">리스트가 들어오는 구역</li>
+                <li class="item">리스트가 들어오는 구역</li>
+                <li class="item">리스트가 들어오는 구역</li>
+                <li class="item">리스트가 들어오는 구역</li>
+                <div class="btnWrap">
+                    <div class="item"><a href="#">+</a></div>
+                </div>
             </ul>
-            <div class="btnWrap">
-                <button>스페이스 생성</button>
-            </div>
-        </div>
-        <div class="boardEnter">
-            <h1>게시판</h1>
-            <h2>종료된 게시물들이 표시됩니다.</h2>
-            <ul class="itembody">
-                <li class="item">d</li>
-            </ul>
-            <div class="btnWrap">
-                <button>스페이스 생성</button>
-            </div>
+            
         </div>
     </div>
+</div>    
     <div class="backimg">
         이부분이 허전해서 이미지를 넣을려고 한다
     </div>
+
+
+    
     <div class="comentWrap">
         <div class="coment">
-            <h1>DODAM에서 여행 계획을 세워보세요</h1>
-            <h2>새로운 세상이 펼쳐집니다. </h2><br>
             <div class="imgbox">
-                <img src="https://cdn-icons-png.flaticon.com/512/502/502050.png">
+                <img src="https://cdn-icons-png.flaticon.com/512/2204/2204726.png">
             </div>
-            <p>여행을 계획하고 출발 할 준비가 되었나요? 지도에 핀을 꽂고 여행계획을 세워보세요</p>
-            
+            <div class="textbox">
+                <h1>DODAM에서 여행 계획을 세워보세요</h1>
+                <h2>새로운 세상이 펼쳐집니다. </h2><br>
+                <p>여행을 계획하고 출발 할 준비가 되었나요? <br>지도에 핀을 꽂고 여행계획을 세워보세요</p>
+            </div>
         </div>
-        <div class="coment">
-            <h1>DODAM에서는 경비계산 어렵지않습니다.</h1>
-            <h2>멤버들과 쉽게 나누고 분배하세요</h2>
-            <br>
+        <div class="coment" style="background:#f5f5f5;">
+            <div class="textbox">
+                <h1>DODAM에서는 경비계산 어렵지않습니다.</h1>
+                <h2>멤버들과 쉽게 나누고 분배하세요</h2>
+            </div>
             <div class="imgbox">
                 <img src="https://cdn-icons-png.flaticon.com/512/3136/3136007.png">
             </div>
             <br>
         </div>
         <div class="coment">
-            <h1>멤버들과 채팅</h1>
-            <h2>멤버들과 대화를 나누며 설레는 여행을 기다려보세요</h2><br>
             <div class="imgbox">
                 <img src="https://cdn-icons-png.flaticon.com/512/2665/2665393.png">
             </div>
+            <div class="textbox">
+                <h1>멤버들과 채팅</h1>
+                <h2>멤버들과 대화를 나누며 설레는 여행을 기다려보세요</h2><br>
+                <p>무료로 스페이스 멤버들과 채팅을 나눠보세요</p>
+            </div>
         </div>
-        <div class="coment">
-            <h1>스페이스는 준비되어있습니다.</h1>
-            <h2>지금바로 여행을 떠나보세요</h2>
+        <div class="coment" style="background:#f5f5f5;">
+            <div class="textbox">
+                <h1>스페이스는 준비되어있습니다.</h1>
+                <h2>지금바로 여행을 떠나보세요</h2>
+            </div>
             <div class="imgbox">
-                <img src="https://cdn-icons-png.flaticon.com/512/2733/2733040.png">
+                <img src="https://cdn-icons-png.flaticon.com/512/2687/2687017.png">
             </div><br>
             <button>스페이스 생성하기</button>
-            
         </div>
-        
     </div>
-
+<footer>
+    <p>DODAM</p>
+    <ul class="info">
+        <li>copyright © all rights reserved</li>
+        <li></li>
+        <li></li>
+    </ul>
+</footer>
     <script>
         let observer = new IntersectionObserver((e)=>{
             e.forEach((box)=>{
                 if(box.isIntersecting){
                     box.target.style.opacity = 1;
-                    box.target.style.transform = 'translateY(-25%)';
+                    box.target.style.transform = 'translateY(-26%)';
                 }else{
                     box.target.style.opacity = 0;
                     box.target.style.transform = 'translateY(-15%)';
