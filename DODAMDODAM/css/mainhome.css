@@ -24,7 +24,7 @@ p{
 a{
     text-decoration: none;
 }
-nav{
+.navbar{
     height: 70px;
     border-top: 2px solid #e0e0e0;
     border-bottom: 2px solid #e0e0e0;
@@ -38,29 +38,29 @@ nav{
     z-index: 1;
 }
 
-.logo a{
+.navbar__logo a{
     font-size: 40px;
     font-weight: 900;
     margin-left: 200px;
     color: #130d08;
 }
-.nav_item{
+.navbar__menu{
     display: flex;
     margin-right:200px;
     font-size: 18px;
 }
-.nav_item li{
+.navbar__menu li{
     margin-left: 35px;
     font-weight: 450;
 }
-.nav_item a{
+.navbar__menu a{
     color: #000;
 }
 .background{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 700px;
+    height: 1000px;
     background-color: red;
     background-image:url(/AirLanguage/img/backimg.png);
     background-size: cover;
@@ -87,8 +87,6 @@ nav{
     font-size: 0.8rem;
     color: tomato;
 }
-
-
 
 .itembody{
     width: 100%;
@@ -131,7 +129,6 @@ nav{
 .backimg{
     margin-top: 300px;
     height: 800px;
-    background: #fff;
     
 }
 .comentWrap{
@@ -143,7 +140,7 @@ nav{
     color: #000;
     text-align: center;
     margin:0 auto 0 auto;
-    transition: all 1.7s;
+    transition: all 2s;
     opacity: 0;
     display: flex;
     align-items: center;
@@ -151,6 +148,7 @@ nav{
     background: #fff;
     width: 100%;
 }
+
 .imgbox{
     border-radius: 5px;
     height: 450px;
@@ -208,21 +206,89 @@ footer p{
     font-size: 16px;
     font-weight: lighter;
 }
-
+.navbar__toogleBtn{
+    display: none;
+}
 /* 제일 작은사이즈 : 700px이하 */
-@media (max-width:700px){
-
-    .spaceWrap{
-        display: flex;
+@media (max-width:768px){
+    .navbar{
+        height: auto;
         flex-direction: column;
+        align-items: flex-start;
+        align-items: center;
+        margin: 0;
+        padding: 8px 24px;
     }
-    .imgbox{
+    .navbar__logo a{
+        margin-left: 0;
+    }
+    .navbar__menu{
+        display: none;
+        margin-right: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         width: 100%;
+    }
+    .navbar__menu li{
+        margin-left: 0%;
+        width: 100%;
+        font-size: 1.5rem;
+        padding: 8px 12px;
+        text-align: center;
+    }
+    .navbar__menu li:hover{
+        background: #130d08;
+        border-radius: 15px;
+        color: #fff;
+        cursor: pointer;
+    }
+    .hiddenMeun i{
+        display: block;
+        font-size: 30px;
+    }
+    .navbar__toogleBtn{
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 32px;
+        font-size: 28px;
+        color: #000;
+    }
+    .navbar__menu.active{
+        display: flex;
+    }
+    .background{
+        height: 600px;
     }
     .spaceWrap{
         width: 90%;
-    }    
-    p{
-        font-size: 1rem;
     }
+
+    .coment{
+        flex-direction: column;
+    }
+    .textbox{
+        width: 80%;
+        margin: 30px;
+    }
+    .textbox h1{
+        font-size:1.8rem;
+    }
+    .textbox h2{
+        font-size: 1.5rem;
+    }
+    .textbox p{
+        font-size: 1.2rem;
+    }
+    .backimg{
+        margin-top: 100px;
+        height: 800px;
+        background: #000;
+        
+    }
+    footer{
+        margin-top: 800px;
+    }
+
 }    
