@@ -4,7 +4,7 @@
     font-weight: normal;
     font-style: normal;
 }
-        * {
+        *{
             outline: none;
             box-sizing: border-box;
             font-family: 'SUIT-Medium';
@@ -355,7 +355,8 @@
         }
         
         .modal-content {
-            margin: 20% auto;
+            height: 350px;
+            margin:15% auto;
             max-width: 500px;
             background-color: #fff;
             padding: 20px;
@@ -365,7 +366,11 @@
             22.3px 22.3px 17.9px rgba(0, 0, 0, 0.03),
             100px 100px 80px rgba(0, 0, 0, 0.05);
         }
-        
+        .modal-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
         .modal-body {
             margin-top: 5px;
         }
