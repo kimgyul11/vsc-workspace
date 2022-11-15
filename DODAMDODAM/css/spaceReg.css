@@ -265,7 +265,6 @@
             border: 10px solid tomato;
             background-color: tomato;
             transition: all 0.3s;
-            z-index: 1;
             cursor: pointer;
             padding: 5px;
         }
@@ -294,9 +293,6 @@
             flex-direction: column;
             
         }
-        .itemown p{
-        
-        }   
             
         .friendWrap{
             width: 90%;
@@ -492,3 +488,7 @@
             background: tomato;
             
         }
+
+
+
+
