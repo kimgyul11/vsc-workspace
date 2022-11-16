@@ -32,6 +32,9 @@
         p{
             margin: 0;
         }
+        ul{
+            padding-left: 0;
+        }
         .addr{
             color: tomato;
         }
@@ -327,6 +330,8 @@
             display: flex;
             justify-content: center;
         }
+
+        /* 모달영역s */
         #open-modal {
             border: none;
             background-color: #000;
@@ -355,11 +360,11 @@
         }
         
         .modal-content {
-            height: 350px;
-            margin:15% auto;
+            height: 450px;
+            margin:10% auto;
             max-width: 500px;
             background-color: #fff;
-            padding: 20px;
+            padding: 15px;
             animation: scale 0.5s ease;
             border-radius: 10px;
             box-shadow: 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.02),
@@ -372,8 +377,50 @@
             align-items: center;
         }
         .modal-body {
-            margin-top: 5px;
+            margin-top: 15px;
+            width: 100%;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
         }
+        .modal-body input[type=text]{
+            border:none;
+            border-bottom: 2px solid;
+            width: 50%;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .modal-searchbox{
+            height: 150px;
+            border: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+        }
+        .userbox{
+            transition: all 0.3s;
+            width: 100px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            color: #212121;
+        }
+        .modal-searchbox input[type=checkbox]:checked + .userbox{
+            border-radius: 15px;
+            background: tomato;
+        }
+        .modal-searchbox input[type=checkbox]{
+            display: none;
+            width: 350px;
+        }
+        
         .modal-list{
             display: flex;
             list-style: none;
@@ -392,6 +439,17 @@
             background: #212121;
             color:#fafafa;
         }
+        .user{
+            display: flex;
+            width: 100%;
+        }
+        .userSelectBox{
+            border: 1px solid;
+            width: 100%;
+        }
+        #userSelect{
+            display: none;
+        }
         #close-modal {
             float: right;
             font-size: 1.8rem;
@@ -408,10 +466,38 @@
                 transform: scale(1);
             }
         }
-        .inputId{
-            width: 80%;
-            height: 30px;
+        .modal_footer{
+            display: flex;
+            justify-content: center;
         }
+        .modal_footer button{
+            height: 35px;
+            width: 100px;
+            border: 1px solid #e0e0e0;
+            background: #fff;
+        }
+        .modal-selectList{
+            width: 100%;
+            height: 50px;
+            border: 1px solid #e0e0e0;
+            display: flex;
+            align-items: center;
+        }
+        .modal-selectList-item{
+            width: 70px;
+            border: 1px solid #e0e0e0;
+            height: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+        }
+
+/* 모달영역e */
+
+
+
+
         .area_wrap{
             width: 90%;
             height: 150px;
