@@ -123,3 +123,36 @@ span{
     font-size: 16px;
     font-weight: lighter;
 }
+
+@media(max-width:768px){
+    .boxwrap li:nth-child(1){
+        font-size: 1.3rem;
+    }
+    .boxwrap li:nth-child(2){
+        font-size: 0.8rem;
+    }
+    .boxwrap li:nth-child(3){
+        font-size: 0.8rem;
+    }
+    .boxwrap li:nth-child(5){
+        width: 250px;
+        height: 250px;
+    }
+    
+    
+    
+    .boxwrap2{
+        flex-direction: column;
+    }
+    .mimgbox{
+        width: 250px;
+        height: 250px;
+        position: relative;
+        right: -150px;
+    }
+    .mtextbox{
+        position: relative;
+        right: -150px;
+        font-size: 1.2rem;
+    }
+}
