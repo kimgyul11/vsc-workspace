@@ -6,26 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/AirLanguage/backupcss/modalrensyu.css">
+    <link rel="stylesheet" href="/DODAMDODAM/css/mainmodal.css">
     <style>
 
     </style>
 </head>
 <body>
-    <button type="button" id="open-modal">Open Modal</button>
+    <div id="open-modal"><img src="https://cdn-icons-png.flaticon.com/512/2058/2058148.png"></div>
     <div class="modal">
         <div class="modal-content">
             <ul class="HeaderList">
-                <li><h3>경고!</h3></li>
+                <li><h3>초대장</h3></li>
                 <li><span id="close-modal">&times;</span></li>
             </ul>    
-            <div class="modal-header">
-                <p>정말로 삭제하시겠습니까?</p>
-            </div>
-            <div class="modal-body">
-                <button>취소</button>
-                <button>삭제</button>
-            </div>
+            <ul class="modal-list">
+                <li class="modal-list-item">
+                    <div class="spaceName">스페이스명</div>
+                    <div class="item-btnWrap">
+                        <button onclick="">거절</button>
+                        <button onclick="">수락</button>
+                    </div>
+                </li>
+            </ul>    
         </div>
     </div>
 </body>
@@ -36,6 +38,8 @@
 const modal = document.querySelector(".modal");
 const openModalBtn = document.querySelector("#open-modal");
 const closeModalBtn = document.querySelector("#close-modal");
+const closeBtn = document.querySelector("#closeBtn");
+
 
 openModalBtn.addEventListener("click", function () {
 modal.style.display = "block";
@@ -45,4 +49,14 @@ closeModalBtn.addEventListener("click", function () {
 modal.style.display = "none";
 });
 
+closeBtn.addEventListener("click", function () {
+modal.style.display = "none";
+});
+const vibration = (target) => {
+  target.classList.add("vibration");
+
+  setTimeout(function() {
+    target.classList.remove("vibration");
+  }, 400);
+}
 </script>

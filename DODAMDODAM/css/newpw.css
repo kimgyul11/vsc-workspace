@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'SUIT-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'SUIT-Medium';
+}
+ul{
+    padding-left: 0;
+}
+li{
+    list-style: none;
+}
+
+
+
+/* 제일 작은사이즈 : 700px이하 */
+@media (max-width:700px){
+    .containerWrap{
+        width: 100%;
+        border: 1px solid;
+        min-height: 500px;
+        text-align: center;
+    }
+    .containerWrap p{
+        margin-top: 25px;
+        
+    }
+    .containerWrap input{
+        width: 95%;
+        height: 35px;
+        border: 1px solid #e0e0e0;
+        border-radius: 5px;
+        outline: none;
+    }
+}
+@media (min-width:700px )and (max-width:1439px){
+
+}
+@media (min-width:1440px){
+
+}

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/AirLanguage/backupcss/modalrensyu.css">
+    <link rel="stylesheet" href="/myproject/CSS/modal-delete.css">
     <style>
 
     </style>
@@ -20,11 +20,14 @@
                 <li><span id="close-modal">&times;</span></li>
             </ul>    
             <div class="modal-header">
-                <p>정말로 삭제하시겠습니까?</p>
-            </div>
+                <p>정말로 탈퇴하시겠습니까?</p>
+                <p>탈퇴하려면 비밀번호를 입력해주세요.</p><br>
+                <input type="password">
+                <!-- 비밀번호 ajax처리할것. -->
+            </div><br>
             <div class="modal-body">
                 <button>취소</button>
-                <button>삭제</button>
+                <button id="closeBtn">확인</button>
             </div>
         </div>
     </div>
@@ -36,12 +39,18 @@
 const modal = document.querySelector(".modal");
 const openModalBtn = document.querySelector("#open-modal");
 const closeModalBtn = document.querySelector("#close-modal");
+const closeBtn = document.querySelector("#closeBtn");
+
 
 openModalBtn.addEventListener("click", function () {
 modal.style.display = "block";
 });
 
 closeModalBtn.addEventListener("click", function () {
+modal.style.display = "none";
+});
+
+closeBtn.addEventListener("click", function () {
 modal.style.display = "none";
 });
 

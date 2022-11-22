@@ -4,7 +4,7 @@
     font-weight: normal;
     font-style: normal;
 }
-        * {
+        *{
             outline: none;
             box-sizing: border-box;
             font-family: 'SUIT-Medium';
@@ -31,6 +31,9 @@
         }
         p{
             margin: 0;
+        }
+        ul{
+            padding-left: 0;
         }
         .addr{
             color: tomato;
@@ -193,6 +196,18 @@
             margin:30px auto 0px auto;
             text-align: center;
         }
+        .nameWrap{
+            width: 100%;
+            text-align: center;
+            font-size: 1.5rem
+        }
+        .nameWrap input{
+            width: 50%;
+            height: 35px;
+            border:  1px solid #e0e0e0;
+            border-radius: 55px;
+            text-align: center;
+        }
         .dateWrap p{
             font-size: 24px;
             margin: 0;
@@ -238,21 +253,50 @@
             width: 90%;
             margin-top: 50px;
             height: 150px;
-            border: 1px solid #e0e0e0;
             margin: 0px auto 30px auto;
             display: flex;
             justify-content: space-around;
             align-items: center;
             padding-left: 0;
         }
-        
-        .itemown{
+        .catagoryWrap input{
+            display: none;
+        }
+        .itemown input[type=radio]:checked + .listitem{
+            display: flex;
+            border-radius: 50%;
+            border: 10px solid tomato;
+            background-color: tomato;
+            transition: all 0.3s;
+            cursor: pointer;
+            padding: 5px;
+        }
+        .listitem{
             width: 100px;
             height: 100px;
             border-radius: 50%;
-            text-align: center;
-            background: tomato;   
+            background: #e0e0e0;
+            border: 2px solid #e0e0e0;
+            padding: 5px;
         }
+        .listitem img{
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .listitem:hover{
+            border: 15px unset #000;
+            transition: all 0.7s;
+        }
+        .itemown{
+            overflow: hidden;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            
+        }
+            
         .friendWrap{
             width: 90%;
             height: 150px;
@@ -286,6 +330,8 @@
             display: flex;
             justify-content: center;
         }
+
+        /* 모달영역s */
         #open-modal {
             border: none;
             background-color: #000;
@@ -314,20 +360,67 @@
         }
         
         .modal-content {
-            margin: 20% auto;
+            height: 450px;
+            margin:10% auto;
             max-width: 500px;
             background-color: #fff;
-            padding: 20px;
+            padding: 15px;
             animation: scale 0.5s ease;
             border-radius: 10px;
             box-shadow: 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.02),
             22.3px 22.3px 17.9px rgba(0, 0, 0, 0.03),
             100px 100px 80px rgba(0, 0, 0, 0.05);
         }
-        
-        .modal-body {
-            margin-top: 5px;
+        .modal-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
+        .modal-body {
+            margin-top: 15px;
+            width: 100%;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        .modal-body input[type=text]{
+            border:none;
+            border-bottom: 2px solid;
+            width: 50%;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .modal-searchbox{
+            height: 150px;
+            border: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+        }
+        .userbox{
+            transition: all 0.3s;
+            width: 100px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            color: #212121;
+        }
+        .modal-searchbox input[type=checkbox]:checked + .userbox{
+            border-radius: 15px;
+            background: tomato;
+        }
+        .modal-searchbox input[type=checkbox]{
+            display: none;
+            width: 350px;
+        }
+        
         .modal-list{
             display: flex;
             list-style: none;
@@ -346,6 +439,17 @@
             background: #212121;
             color:#fafafa;
         }
+        .user{
+            display: flex;
+            width: 100%;
+        }
+        .userSelectBox{
+            border: 1px solid;
+            width: 100%;
+        }
+        #userSelect{
+            display: none;
+        }
         #close-modal {
             float: right;
             font-size: 1.8rem;
@@ -362,10 +466,38 @@
                 transform: scale(1);
             }
         }
-        .inputId{
-            width: 80%;
-            height: 30px;
+        .modal_footer{
+            display: flex;
+            justify-content: center;
         }
+        .modal_footer button{
+            height: 35px;
+            width: 100px;
+            border: 1px solid #e0e0e0;
+            background: #fff;
+        }
+        .modal-selectList{
+            width: 100%;
+            height: 50px;
+            border: 1px solid #e0e0e0;
+            display: flex;
+            align-items: center;
+        }
+        .modal-selectList-item{
+            width: 70px;
+            border: 1px solid #e0e0e0;
+            height: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+        }
+
+/* 모달영역e */
+
+
+
+
         .area_wrap{
             width: 90%;
             height: 150px;
@@ -447,3 +579,7 @@
             background: tomato;
             
         }
+
+
+
+

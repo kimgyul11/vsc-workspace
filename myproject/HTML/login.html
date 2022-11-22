@@ -1,13 +1,16 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="kr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/backupcss/userLogin.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="/myproject/CSS/style.css">
+    <link rel="stylesheet" href="/myproject/CSS/login.css">
+    <title>AirLanguage</title>
 </head>
 <body>
+<form autocomplete="off">
     <div class="loginWrap">
         <div class="login_img">
             <div class="imgmove">
@@ -49,26 +52,25 @@
         </div>
         <div class="login_input_wrap">
             <div class="input_box">
-                    <div class="headerimg"><img src="https://cdn-icons-png.flaticon.com/512/3282/3282340.png" alt=""></div>
                     <h1>로그인</h1>
                 <ul class="input_item">
-                    <li><input type="text" placeholder="아이디를 입력해주세요"></li>
-                    <li><input type="password" placeholder="비밀번호를 입력해주세요"></li>
+                    <li><input type="text" id="user_id" placeholder="아이디를 입력해주세요"></li>
+                    <li><input type="password" id="user_pw" placeholder="비밀번호를 입력해주세요"></li>
                     <ul class="input_itembtn">
                         <li>
-                        <label class="switch">
-                            <input type="checkbox">
-                            <span class="slider round"></span>
-                        </label>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
                         </li>
-                        <li><button>로그인</button></li>
+                        <li><button type="button" id="btnLogin">로그인</button></li>
                     </ul>
                     <li>OR</li><br>
                     <li>
                         <ul class="loginbtnWrap">
                             <li class="loginbtn"><a href="#"><img class="loginbtn_img" src="https://cdn-icons-png.flaticon.com/512/8142/8142645.png"></a></li>
                             <li class="loginbtn"><img class="loginbtn_img" src="https://cdn-icons-png.flaticon.com/512/4494/4494622.png"></li>
-                            <li class="loginbtn"><img class="loginbtn_img" src="https://cdn-icons-png.flaticon.com/512/6159/6159448.png"></li>
+                            <li class="loginbtn"><a href="/member/airSignupView"><img class="loginbtn_img" src="https://cdn-icons-png.flaticon.com/512/6159/6159448.png"></a></li>
                         </ul>
                     </li>
                     <li>
@@ -77,17 +79,20 @@
                             <br>
                             <li><a href="#">비밀번호 찾기</a></li>
                             <br>
-                            <li><a href="#">HOME</a></li>
+                            <li><a href="airLanguageHome">HOME</a></li>
                         </ul>
                     </li>
                 </ul>
-                <div class="footerimg"><img src="https://cdn-icons-png.flaticon.com/512/2028/2028454.png" alt=""></div>
             </div>
         </div>
     </div>
+    </form>
     <script src="https://kit.fontawesome.com/86d85c3d85.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
     <script>
+
+    
+
         $("#btnLogin").on("click", function(){
     
             $.ajax({

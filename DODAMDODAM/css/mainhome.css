@@ -1,0 +1,341 @@
+@font-face {
+    font-family: 'SUIT-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+}
+*{
+    margin: 0;
+    font-family: 'SUIT-Medium';
+    box-sizing: border-box;
+}
+ul{
+    padding-left: 0;
+}
+li{
+    list-style: none;
+}
+p{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+}
+.navbar{
+    height: 70px;
+    border-top: 2px solid #e0e0e0;
+    border-bottom: 2px solid #e0e0e0;
+    background: #fafafa;
+    margin: 2px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.navbar__logo a{
+    font-size: 40px;
+    font-weight: 900;
+    margin-left: 200px;
+    color: #130d08;
+}
+.navbar__menu{
+    display: flex;
+    margin-right:200px;
+    font-size: 18px;
+}
+.navbar__menu li{
+    margin-left: 35px;
+    font-weight: 450;
+}
+.navbar__menu a{
+    color: #000;
+}
+.background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1000px;
+    background-color: red;
+    background-image:url(/AirLanguage/img/backimg.png);
+    background-size: cover;
+}
+.spaceWrap{
+    width: 50%;
+    background-color: rgba( 255, 255, 255, 0.1 );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border-radius: 15px;
+}
+.spaceEnter{
+    flex: 1;
+    text-align: center;
+}
+.spaceEnter h1{
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #fff;
+}
+.spaceEnter h2{
+    font-size: 0.8rem;
+    color: tomato;
+}
+
+.itembody{
+    width: 100%;
+    height: 350px;
+    overflow: auto;
+}
+
+.item{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 50%;
+    height: 45px;
+    border: 2px solid #e0e0e0;
+    background-color: rgba( 255, 255, 255, 0.1 );
+    margin: auto;
+    margin: 5px auto;
+    border-radius: 5px;
+    color: #fff;
+}
+.item:hover{
+    cursor: pointer;
+    background-color: #fff;
+    transition: all 0.5s;
+    color: #000;
+}
+
+.btnWrap{
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btnWrap a{
+    color: #bf360c;
+    font-size: 1.8rem;
+    font-weight: bold;
+}   
+.board__wrap{
+    margin-top: 300px;
+    height: 1000px;
+    width: 100%;
+}
+.board__wrap h1{
+    color: #e0e0e0;
+}
+.board__box{
+    display: flex;
+    padding: 55px;
+}
+.board__item{
+    width: 25%;
+    height: 500px;
+    margin: 15px;
+    display: flex;
+    flex-direction: column; 
+}
+.item_head{
+    height: 50px;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+.item_body{
+    width: 100%;
+    height: 350px;
+    border-radius: 15px;
+    background: #130d08;
+    opacity:0.8;
+}
+.item_body img{
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+}
+.item__footer{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 15px;
+}
+.item__footer p{
+    font-weight: 200;
+    font-size: 1.2rem;
+}
+
+
+.comentWrap{
+    height: 1800px;
+    margin-top: 110px;
+}
+
+.coment{
+    color: #000;
+    text-align: center;
+    margin:0 auto 0 auto;
+    transition: all 2s;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    width: 100%;
+}
+
+.imgbox{
+    border-radius: 5px;
+    height: 450px;
+}
+.imgbox img{
+    width: 100%;
+    height: 100%;
+}
+.textbox{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    
+}
+.textbox h1{
+    font-size: 30px;
+}
+.textbox h2{
+    font-size: 26px;
+    font-weight: 300;
+}
+.textbox p{
+    font-size: 16px;
+    font-weight: lighter;
+}
+h2{
+    color: #ff8a65;
+}
+.coment button{
+    width: 200px;
+    height: 50px;
+    border: 1px solid #e0e0e0;
+    background: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 190px;
+    background: #000;
+    bottom: 0;
+}
+footer p{
+    color: #fff;
+    font-size: 16px;
+    font-weight: lighter;
+}
+.info{
+    display: flex;
+    color: #fff;
+    font-size: 16px;
+    font-weight: lighter;
+}
+.navbar__toogleBtn{
+    display: none;
+}
+/* 제일 작은사이즈 : 700px이하 */
+@media (max-width:768px){
+    .navbar{
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        align-items: center;
+        margin: 0;
+        padding: 8px 24px;
+    }
+    .navbar__logo a{
+        margin-left: 0;
+    }
+    .navbar__menu{
+        display: none;
+        margin-right: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .navbar__menu li{
+        margin-left: 0%;
+        width: 100%;
+        font-size: 1.5rem;
+        padding: 8px 12px;
+        text-align: center;
+    }
+    .navbar__menu li:hover{
+        background: #130d08;
+        border-radius: 15px;
+        color: #fff;
+        cursor: pointer;
+    }
+    .hiddenMeun i{
+        display: block;
+        font-size: 30px;
+    }
+    .navbar__toogleBtn{
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 32px;
+        font-size: 28px;
+        color: #000;
+    }
+    .navbar__menu.active{
+        display: flex;
+    }
+    .background{
+        height: 600px;
+    }
+    .spaceWrap{
+        width: 90%;
+    }
+
+    .coment{
+        flex-direction: column;
+    }
+    .textbox{
+        width: 80%;
+        margin: 30px;
+    }
+    .textbox h1{
+        font-size:1.8rem;
+    }
+    .textbox h2{
+        font-size: 1.5rem;
+    }
+    .textbox p{
+        font-size: 1.2rem;
+    }
+    .backimg{
+        margin-top: 100px;
+        height: 800px;
+        background: #000;
+        
+    }
+    footer{
+        margin-top: 800px;
+    }
+
+}    
