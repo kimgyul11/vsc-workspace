@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<meta charset="uTF-8"> 
+		<meta name ="viewport" content="width=device-width, initial-scaLe=1.0">
+        <link rel="stylesheet" href="/DODAMDODAM/css/lastSpaceDuch.css">
+		<title>spacesample</title>
+	</head>
+	<body>
+	<form>
+        <nav class="header">
+            <div class="header-logo">
+                <a href="#">DODAM</a>
+            </div>
+            <ul class="accodian">
+                <li class="header-userbox">
+                    <img class="user-img" src="https://cdn-icons-png.flaticon.com/512/2352/2352167.png" alt="">
+                    <div class="user-name">스페이스 회원수</div>
+                    <div class="user_count">10명</div>
+                </li>
+                <li class="header-userlist">
+                    <div class="userwrap">아이디1</div>
+                    <div class="userwrap">아이디1</div>
+                    <div class="userwrap">아이디1</div>
+                    <div class="userwrap">아이디1</div>                    
+                </li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <div class="sidebar">
+                <div class="user_profile">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="">
+                </div>
+                <div class="user_name"><a href="#">아이디출력</a></div>
+                <ul class="side_menu_list">
+                    <h1>MENU</h1>
+                    <li>HOME</li>
+                    <li>CHATTIGN</li>
+                    <li>MAP</li>
+                    <li>ZOOM</li>
+                    <li>SETTING</li>
+                </ul>
+            </div>
+            <div class="mainWrap">
+                <h1>더치페이 시작하기</h1><br>
+                <div class="dutchTitle">
+                    <img class="titleImgbox"src="https://cdn-icons-png.flaticon.com/512/2867/2867924.png" alt="">
+                    <div class="titleContent">
+                    <p>여행중 사용한 금액을 멤버들과 나눠보세요<br><span style="color: tomato;">식대,교통,숙소,etc</span> 네가지로 분류 되어있습니다.</p>
+                    </div>
+                </div><br>
+                
+                <div class="tableWrap">
+                <table>
+                    <tr>
+                        <th class="th_checkbox">
+                            <input type="checkbox" name="" id="">
+                        </th>
+                        <th>사용분류</th>
+                        <th>인원수</th>
+                        <th>인당 예상비용</th>
+                        <th>영수증</th>
+                        <th>사용일</th>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="" id=""></th>
+                        <td>ㅁㄴㅇ</td>
+                        <td>ㅁㄴㅇ</td>
+                        <td>ㅁㄴㅇ</td>
+                        <td>ㅁㄴㅇ</td>
+                        <td>ㅁㄴㅇ</td>
+                    </tr>
+                </table>
+            </div>    
+            <div class="addbtnWrap">
+                <button type="button" >삭제하기</button>
+                    <div class="modal">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3>RECEIPT</h3>
+                                <span id="close-modal">&times;</span><hr>
+                            </div>
+                            <h4>리스트명을 입력하세요</h4>
+                            <div class="list_name">
+                                <input type="text" name="" id="">
+                            </div>
+                            <h4>어떤곳에 사용했나요?</h4>
+                            <div class="modal-body">
+                                <ul class="modal_catagory">
+                                    <li>분류1</li>
+                                    <li>분류2</li>
+                                    <li>분류3</li>
+                                    <li>분류4</li>
+                                </ul>                                        
+                            </div>
+                            <h4>누구랑 사용했나요?</h4>
+                            <div class="modal-body">
+                                <ul class="modal_people">
+                                    <li><input type="checkbox" name="" id="">멤버</li>
+                                    <li><input type="checkbox" name="" id="">데이터</li>
+                                    <li><input type="checkbox" name="" id="">받아오는</li>
+                                    <li><input type="checkbox" name="" id="">구역</li>
+                                </ul>                                        
+                            </div>
+                            <h4>영수증이 있다면 첨부해보세요</h4>
+                            <div class="modal-img">
+                                <span>영수증 사진 들어가는 곳</span>
+                                <input type="file" name="" id="">                                
+                            </div>
+                            <div class="modal-btn">
+                                <ul class="total">
+                                    <li>총 비용:</li>
+                                    <li>1인당 예상 비용:</li>
+                                </ul>
+                                <div class="btn">
+                                    <button>생성</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <button type="button" class="btn" id="open-modal">추가하기</button>
+            </div>
+            </div>
+
+
+        </div>    
+</form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/a1961b2393.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+const modal = document.querySelector(".modal");
+const openModalBtn = document.querySelector("#open-modal");
+const closeModalBtn = document.querySelector("#close-modal");
+
+openModalBtn.addEventListener("click", function () {
+modal.style.display = "block";
+});
+
+closeModalBtn.addEventListener("click", function () {
+modal.style.display = "none";
+});
+
+</script>
+</body>
+</html>

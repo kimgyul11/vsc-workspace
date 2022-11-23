@@ -20,8 +20,8 @@
             text-decoration: none;
         }
         body{
-            height: 100vh;
         }
+
 
         /* 헤더영역 s */
         
@@ -204,7 +204,6 @@
         .space-profile{
             width: 30%;
             height: auto;
-            border: 3px solid #e0e0e0;
             border-radius: 50%;
             overflow: hidden;
             margin-left: 15px;
@@ -248,7 +247,7 @@
             width: 100%;
             height: 40px;
             display: flex;
-            background: #424242;
+            background: #eceff1;
             margin-bottom: 15px;
             align-items: center;
             justify-content: space-between;

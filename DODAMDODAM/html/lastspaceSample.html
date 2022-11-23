@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<meta charset="uTF-8"> 
+		<meta name ="viewport" content="width=device-width, initial-scaLe=1.0">
+        <link rel="stylesheet" href="/DODAMDODAM/css/lastspacesample.css">
+		<title>spacesample</title>
+	</head>
+	<body>
+	<form>
+        <nav class="header">
+            <div class="header-logo">
+                <a href="#">DODAM</a>
+            </div>
+            <ul class="accodian">
+                <li class="header-userbox">
+                    <img class="user-img" src="https://cdn-icons-png.flaticon.com/512/2352/2352167.png" alt="">
+                    <div class="user-name">스페이스 회원수</div>
+                    <div class="user_count">10명</div>
+                </li>
+                <li class="header-userlist">
+                    <div class="userwrap">아이디1</div>
+                    <div class="userwrap">아이디1</div>
+                    <div class="userwrap">아이디1</div>
+                    <div class="userwrap">아이디1</div>                    
+                </li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <div class="sidebar">
+                <div class="user_profile">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="">
+                </div>
+                <div class="user_name"><a href="#">아이디출력</a></div>
+                <ul class="side_menu_list">
+                    <h1>MENU</h1>
+                    <li>HOME</li>
+                    <li>CHATTIGN</li>
+                    <li>MAP</li>
+                    <li>ZOOM</li>
+                    <li>SETTING</li>
+                </ul>
+            </div>
+        </div>    
+</form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/a1961b2393.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+$(function(){
+        $(".accodian>li").click(function(){
+        $(this).next(".header-userlist").slideToggle(200);
+        });
+    });
+</script>
+</body>
+</html>
