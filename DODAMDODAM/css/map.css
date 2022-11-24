@@ -1,0 +1,598 @@
+@font-face {
+    font-family: 'SUIT-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+        * {
+            box-sizing: border-box;
+            font-family: 'SUIT-Medium';
+            margin: 0;
+            padding: 0;
+        } 
+        img {
+            max-width: 100%;
+        } 
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        /* 헤더영역 s */
+        .header{
+            height: 50px;
+            display: flex;
+            background: #000;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header-logo a{
+            font-size: 1.4rem;
+            margin-left: 14px;
+            color: #fff;
+        }
+        .userwrap{
+            border: 1px solid;
+        }
+        .header-userlist{
+            display: none;
+            background: red;
+            position: relative;
+        }
+        .header-userbox{
+            display: flex;
+            align-items: center;
+            border: 1px solid ;
+            padding: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 15px;
+            
+        }
+        .user_count{
+            font-size: 14px;
+            color: #01579b;
+        }
+        .user-img {
+            width: 30px;
+            height: 30px;   
+            border-radius: 50%;
+            background: #fff;
+        }
+        .user-name {
+            font-size: 14px;
+            margin: 0 6px 0 12px;
+        }/* 헤더영역 e */
+
+
+/* 공통영역 */
+
+
+
+
+/* 사이드바s */
+        .sidebar {
+            width: 220px;
+            display: flex;
+            flex-direction: column;
+            border-right: 2px solid #e0e0e0;
+            background: #fff;
+        }
+        .sidebar-info{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            margin: auto;
+            border-radius: 2px;
+            width: 100%;
+            height: 70px;
+        }
+        .info-space{
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+        .info-dday{
+            font-size: 0.9rem;
+            color: tomato;
+        }
+        .side_menu_list{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            padding-left: 0;
+            font-size: 14px;
+            font-weight: lighter;
+        }
+        .side_menu_list li{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 50px;
+        }
+        .side_menu_list li:hover{
+            background-color: #000;
+            color: #fff;
+            cursor: pointer;
+        }
+        .side_menu_list h1{
+            margin-top: 50px;
+            margin-bottom: 50px;
+            font-weight: bold;
+            font-size: 8px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .side_menu_list a{
+            text-decoration: none;
+            color: #000;
+        }
+
+
+        .user_profile{
+            margin: 50px auto 0px auto;
+            width: 80px;
+            height: 80px;
+            border: 1px solid #e0e0e0;
+            border-radius:50%;
+            overflow: hidden;
+        }
+        .user_name {
+            text-align: center;
+            font-size: 0.9rem;   
+        }
+        .user_name a{
+            color: #000; 
+        }
+        /* 메인영역 */
+        .container {
+            width: 100%;
+            height: 100vh;
+            background-color: #fff;
+            display: flex;
+            overflow: hidden;
+        }
+
+
+/*  */
+.radio {
+	margin: 0.5rem;
+	height: 50px;
+}
+
+.radio input[type=radio] {
+	position: absolute;
+	opacity: 0;
+}
+
+.radio input[type=radio]+.radio-label:before {
+	content: "";
+	background: #f4f4f4;
+	border-radius: 100%;
+	border: 1px solid #b4b4b4;
+	display: inline-block;
+	width: 1.2em;
+	height: 1.2em;
+	position: relative;
+	top: -0.2em;
+	margin-right: 1em;
+	vertical-align: bottom;
+	cursor: pointer;
+	text-align: center;
+	transition: all 250ms ease;
+}
+
+.radio input[type=radio]:checked+.radio-label:before {
+	background-color: #FF4A4A;
+	box-shadow: inset 0 0 0 4px #f4f4f4;
+}
+
+.radio input[type=radio]:focus+.radio-label:before {
+	outline: none;
+	border-color: #FF4A4A;
+}
+
+.radio input[type=radio]:disabled+.radio-label:before {
+	box-shadow: inset 0 0 0 4px #f4f4f4;
+	border-color: #b4b4b4;
+	background: #b4b4b4;
+}
+
+.radio input[type=radio]+.radio-label:empty:before {
+	margin-right: 0;
+}
+
+/*  */
+/*  */
+
+
+
+div {
+	display: inline-block;
+}
+
+.disIn {
+	display: inline-block;
+}
+
+.wP {
+	width: 100%;
+}
+
+
+.mapbody{
+    width: 100%;
+    height: 100%;
+    display: flex;   
+}
+.addr {
+	color: tomato;
+}
+
+
+
+
+
+
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	padding: 12px;
+	color: #fff;
+	background: #000;
+}
+
+.fontwrap {
+	display: flex;
+}
+
+.fontwrap p {
+	margin-left: 15px;
+}
+
+.user_profile {
+	margin: 50px auto 0px auto;
+	width: 100px;
+	height: 100px;
+	border: 1px solid #e0e0e0;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.profile-img {
+	width: 100%;
+	height: 100%;
+}
+
+.menu_item {
+	width: 218px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.menu_item:hover {
+	background: #000;
+	color: #fff;
+}
+
+.space_wrap {
+	display: flex;
+	width: 13%;
+	height: 50px;
+	border: 1px solid #000;
+	background: #fff;
+	border-radius: 15px;
+	align-items: center;
+	padding-left: 20px;
+	margin-left: auto;
+	color: #000;
+}
+
+.user_count {
+	font-size: 14px;
+	color: #01579b;
+}
+
+.user-img {
+	width: 40px;
+	height: 40px;
+	flex-shrink: 0;
+	object-fit: cover;
+	border: 1px solid #000;
+	border-radius: 50%;
+	background: #fff;
+}
+
+.user-name {
+	font-size: 14px;
+	margin: 0 6px 0 12px;
+}
+
+
+.map {
+	width: 50%;
+	height: 100%;
+	display: inline-block;
+}
+
+
+
+.mapReg {
+	float: right;
+	width: 50%;
+	height: 90%;
+	/* display: inline-block; */
+	margin-left: 1.5%;
+}
+
+.mapRegTitle {
+	width: 70%;
+	height: 10%;
+}
+
+.mapDetail {
+	width: 70%;
+	height: 70%;
+	margin-left: 15%;
+	margin-top: 3%;
+	background-color: gray;
+}
+
+.mapRegDetail {
+	width: 90%;
+	height: 70%;
+	margin-top: 3%;
+}
+
+.box {
+	width: 194px;
+	height: 40px;
+}
+
+.textBox {
+	width: 400px;
+	height: 40px;
+}
+
+.textBoxTwo {
+	width: 300px;
+	height: 40px;
+}
+
+.btnBox {
+	width: 80px;
+	height: 40px;
+	margin-left: 10px;
+}
+
+.regBtn {
+	width: 200px;
+	height: 40px;
+}
+/*____________________________ */
+/* test */
+
+
+/* 221120 s*/
+.dateBox {
+	width: 100%;
+	height: 100%;
+	color: grey;
+	display: flex;
+	display: inline-block;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 194px;
+	height: 40px;
+}
+/* 221120 e*/
+
+.map_wrap, .map_wrap * {
+	margin: 0;
+	padding: 0;
+	font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;
+	font-size: 12px;
+
+}
+
+.map_wrap a, .map_wrap a:hover, .map_wrap a:active {
+	color: #000;
+	text-decoration: none;
+}
+
+.map_wrap {
+	position: relative;
+	width: 80%;
+	height: 500px;
+}
+
+#menu_wrap {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 250px;
+	margin: 10px 0 30px 10px;
+	padding: 5px;
+	overflow-y: auto;
+	background: rgba(255, 255, 255, 0.7);
+	z-index: 1;
+	font-size: 12px;
+	border-radius: 10px;
+}
+
+.bg_white {
+	background: #fff;
+}
+
+#menu_wrap hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 2px solid #5F5F5F;
+	margin: 3px 0;
+}
+
+#menu_wrap .option {
+	text-align: center;
+}
+
+#menu_wrap .option p {
+	margin: 10px 0;
+}
+
+#menu_wrap .option button {
+	margin-left: 5px;
+}
+
+#placesList li {
+	list-style: none;
+}
+
+#placesList .item {
+	position: relative;
+	border-bottom: 1px solid #888;
+	overflow: hidden;
+	cursor: pointer;
+	min-height: 65px;
+}
+
+#placesList .item span {
+	display: block;
+	margin-top: 4px;
+}
+
+#placesList .item h5, #placesList .item .info {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+#placesList .item .info {
+	padding: 10px 0 10px 55px;
+}
+
+#placesList .info .gray {
+	color: #8a8a8a;
+}
+
+#placesList .info .jibun {
+	padding-left: 26px;
+	background:
+		url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/places_jibun.png)
+		no-repeat;
+}
+
+#placesList .info .tel {
+	color: #009900;
+}
+
+#placesList .item .markerbg {
+	float: left;
+	position: absolute;
+	width: 36px;
+	height: 37px;
+	margin: 10px 0 0 10px;
+	background:
+		url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_number_blue.png)
+		no-repeat;
+}
+
+#placesList .item .marker_1 {
+	background-position: 0 -10px;
+}
+
+#placesList .item .marker_2 {
+	background-position: 0 -56px;
+}
+
+#placesList .item .marker_3 {
+	background-position: 0 -102px
+}
+
+#placesList .item .marker_4 {
+	background-position: 0 -148px;
+}
+
+#placesList .item .marker_5 {
+	background-position: 0 -194px;
+}
+
+#placesList .item .marker_6 {
+	background-position: 0 -240px;
+}
+
+#placesList .item .marker_7 {
+	background-position: 0 -286px;
+}
+
+#placesList .item .marker_8 {
+	background-position: 0 -332px;
+}
+
+#placesList .item .marker_9 {
+	background-position: 0 -378px;
+}
+
+#placesList .item .marker_10 {
+	background-position: 0 -423px;
+}
+
+#placesList .item .marker_11 {
+	background-position: 0 -470px;
+}
+
+#placesList .item .marker_12 {
+	background-position: 0 -516px;
+}
+
+#placesList .item .marker_13 {
+	background-position: 0 -562px;
+}
+
+#placesList .item .marker_14 {
+	background-position: 0 -608px;
+}
+
+#placesList .item .marker_15 {
+	background-position: 0 -654px;
+}
+
+#pagination {
+	margin: 10px auto;
+	text-align: center;
+}
+
+#pagination a {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+#pagination .on {
+	font-weight: bold;
+	cursor: default;
+	color: #777;
+}
+
+.searchBox {
+	vertical-align: middle;
+}
+.category {
+	
+}
+
+/* test */

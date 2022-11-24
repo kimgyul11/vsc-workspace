@@ -8,7 +8,7 @@
 		<title>spaceReg</title>
 	</head>
 	<body>
-	<form>
+	<form name="form" id="form">
         <nav class="navbar">
             <div class="navbar__logo">
                 <a href="">DODAM</a>
@@ -36,7 +36,7 @@
                 <h3>스페이스 이름을 정해주세요</h3>
             </div>
             <div class="spacetitle-input">
-                <input type="text" name="zbspName" placeholder="스페이스명 입력">
+                <input type="text" id="zbspName"name="zbspName" placeholder="스페이스명 입력">
             </div>
             <!-- 3.기간설정 -->
             <div class="title">
@@ -170,7 +170,6 @@
                 <button type="submit">생성</button>
             </div>
         </div>
-        
 </form>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/a1961b2393.js" crossorigin="anonymous"></script>
@@ -247,6 +246,50 @@ $(document).ready(function () {
         toggleBtn.addEventListener('click', () =>{
             menu.classList.toggle('active');
         });
+
+        // 이미지 업로드
+        const fileDOM = document.querySelector('#spaceImg');
+        const preview = document.querySelector('.spaceProfileBox');
+
+        fileDOM.addEventListener('change', () => {
+        const reader = new FileReader();
+        reader.onload = ({ target }) => {
+            preview.src = target.result;
+        };
+        reader.readAsDataURL(fileDOM.files[0]);
+        });
+
+
+
+        //---------유효성검사-------------
+        window.onload = function() {
+        // 폼에서 id가 joinForm인 폼의 submit 버튼이 눌러졌을 때 수행되는 이벤트 처리
+        document.getElementById('form').onsubmit = function() {
+
+            // 성명을 입력하지 않은 경우 경고창 띄우기
+        // 성명 입력 칸의 id를 찾아오기
+        var name = document.getElementById('zbspName')
+        // 값이 비었는지 확인 후 비었으면 경고 출력, 입력란에 포커스, 서버로 전송되지 않게(다음 페이지로 이동 못하게)
+        if(name.value == "") {
+            alert("스페이스 이름을 입력해주세요");
+            name.focus();
+            return false; // 서버로 전송되지 않게 함.
+        } // 이름 검증 끝
+        var stdate = document.getElementById('startDate')
+        var eddate = document.getElementById('zbspEndDate')
+        // 값이 비었는지 확인 후 비었으면 경고 출력, 입력란에 포커스, 서버로 전송되지 않게(다음 페이지로 이동 못하게)
+        if(stdate.value == "" || eddate.value =="") {
+            alert("여행기간을 입력해주세요");
+            return false; // 서버로 전송되지 않게 함.
+        } // 이름 검증 끝
+
+        
+        if($('input:radio[name=zbskKeywordCode]:checked').length < 1 ){   
+        alert('고객부담 청구방식을 선택해 주세요');
+        return false;  
+        }
+    };
+}; // window.onload 끝
 </script>
 </body>
 </html>
