@@ -1,557 +1,361 @@
 @font-face {
-    font-family: 'SUIT-Medium';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+font-family: 'SUIT-Medium';
+src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2') format('woff2');
+font-weight: normal;
+font-style: normal;
 }
-        * {
-            box-sizing: border-box;
-            font-family: 'SUIT-Medium';
-            margin: 0;
-            padding: 0;
-        } 
-        img {
-            max-width: 100%;
-        } 
-        li{
-            list-style: none;
-        }
-        a{
-            text-decoration: none;
-        }
-        body{
-        }
+* {
+    box-sizing: border-box;
+    font-family: 'SUIT-Medium';
+    margin: 0;
+    padding: 0;
+} 
+img {
+    max-width: 100%;
+} 
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+}
 
 
-        /* 헤더영역 s */
-        
-        .header{
-            height: 50px;
-            display: flex;
-            background: #000;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .header-logo a{
-            font-size: 1.4rem;
-            margin-left: 14px;
-            color: #fff;
-        }
-        .accodian{
-        }
-        .userwrap{
-            border: 1px solid;
-        }
-        .header-userlist{
-            display: none;
-            background: red;
-            position: relative;
-        }
-        .header-userbox{
-            display: flex;
-            align-items: center;
-            border: 1px solid ;
-            padding: 5px;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-right: 15px;
-            
-        }
-        .user_count{
-            font-size: 14px;
-            color: #01579b;
-        }
-        .user-img {
-            width: 30px;
-            height: 30px;   
-            border-radius: 50%;
-            background: #fff;
-        }
-        .user-name {
-            font-size: 14px;
-            margin: 0 6px 0 12px;
-        }/* 헤더영역 e */
+/* 헤더영역 s */
 
+.header{
+    height: 50px;
+    display: flex;
+    background: #000;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-logo a{
+    font-size: 1.4rem;
+    margin-left: 14px;
+    color: #fff;
+}
+.accodian{
+}
+.userwrap{
+    border: 1px solid;
+}
+.header-userlist{
+    display: none;
+    background: red;
+    position: relative;
+}
+.header-userbox{
+    display: flex;
+    align-items: center;
+    border: 1px solid ;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 15px;
+    
+}
+.user_count{
+    font-size: 14px;
+    color: #01579b;
+}
+.user-img {
+    width: 30px;
+    height: 30px;   
+    border-radius: 50%;
+    background: #fff;
+}
+.user-name {
+    font-size: 14px;
+    margin: 0 6px 0 12px;
+}/* 헤더영역 e */
+/* 사이드바s */
+.sidebar {
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid #e0e0e0;
+    background: #fff;
+}
+.sidebar-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    border-radius: 2px;
+    width: 100%;
+    height: 70px;
+}
+.info-space{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.info-dday{
+    font-size: 0.9rem;
+    color: tomato;
+}
+.side_menu_list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding-left: 0;
+    font-size: 14px;
+    font-weight: lighter;
+}
+.side_menu_list li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+}
+.side_menu_list li:hover{
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+.side_menu_list h1{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-weight: bold;
+    font-size: 8px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.side_menu_list a{
+    text-decoration: none;
+    color: #000;
+}
+
+
+.user_profile{
+    margin: 50px auto 0px auto;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #e0e0e0;
+    border-radius:50%;
+    overflow: hidden;
+}
+.user_name {
+    text-align: center;
+    font-size: 0.9rem;   
+}
+.user_name a{
+    color: #000; 
+}
+/* 메인영역 */
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    overflow: hidden;
+}
+
+/* 여행계획영역s*/
+.flag-Wrap{
+    width: 50%;
+}
+.flag-Wrap p{
+    text-align: center;
+    font-size: 0.8rem;
+    color: tomato;
+    font-weight: bold;
+}
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 45px;
+}
+.title h3{
+    text-align: center;
+}
+.titleimg{
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+}
+.titleimg img{
+    width: 100%;
+    height: 100%;
+}
+
+.sapaceInfo{
+    width: 60%;
+    height: 150px;
+    border-radius: 5px;
+    margin: 90px auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+}
+.space-profile{
+    width: 20%;
+    height: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 15px;
+}
+.space-profile img{
+    width: 100%;
+    height: 100%;
+}
+.space-content{
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+    /* 조건문.. */
+.catagory_item1,.catagory_item2,.catagory_item3,.catagory_item4{
+    overflow: hidden;
+    width: 70px;
+    height: 70px;
+    border: 1px solid #bdbdbd;
+    border-radius: 50%;
+    background: #fff;
+    margin: 0 15px;
+}
+.catagory_item img{
+    width: 100%;
+    height: 100%;
+}
+.spaceFlag{
+    width: 60%;
+    height: 500px;
+    margin: auto;
+    list-style: none;
+    padding-left: 0;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+}
+.spaceFlag-nav{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    background: #eceff1;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+}
+.spaceFlag-main{
+    height: 85%;
+    margin-bottom: 5px;
+    overflow: auto;
+}
+.spaceFlag-nav select{
+    width: 100px;
+    height: 30px;
+    border: none;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+.spaceFlag-nav button{
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    background: #fff;
+}
+/* 여행기록 */
+.memory-Wrap{
+    width: 50%;
+}
+.memory-Wrap p{
+    text-align: center;
+    font-size: 0.8rem;
+    color: tomato;
+    font-weight: bold;
+}
+.memory-box{
+    width: 60%;
+    height: 700px;
+    margin: auto;
+    list-style: none;
+    padding-left: 0;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+}
+.memory-nav{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    background: #eceff1;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+}
+.memory-nav select{
+    width: 100px;
+    height: 30px;
+    border: none;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+.memory-nav button{
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    background: #fff;
+}
 
 /* 공통영역 */
+/* 계획,기록에 들어가는 리스트 목록 */
+.item{
+    width: 80%;
+    height: 70px;
+    margin: 15px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #e0e0e0;
+}   
+/* .item:hover{
+    background: #bbdefb;
+    border: 3px solid #212121;
+    color: #000;
+    font-weight: bold;
+} */
+.item_category_wrap{
+    display: flex;
+}
+.item_category_wrap li{
+    margin-left: 10px;
+}
+.item_category{
+    width: 50px;
+    height: 50px;
+    border: 1px solid #e0e0e0;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #fff;
+}
+.item_category img{
+    width: 100%;
+    height: 100%;
+}
+.item_map{
+    padding-left: 10px;
+    line-height:1.5;
+}
 
 
-
-
-/* 사이드바s */
-        .sidebar {
-            width: 220px;
-            display: flex;
-            flex-direction: column;
-            border-right: 2px solid #e0e0e0;
-            background: #fff;
-        }
-        .sidebar-info{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
-            margin: auto;
-            border-radius: 2px;
-            width: 100%;
-            height: 70px;
-        }
-        .info-space{
-            font-size: 1.2rem;
-            font-weight: 700;
-        }
-        .info-dday{
-            font-size: 0.9rem;
-            color: tomato;
-        }
-        .side_menu_list{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            list-style: none;
-            padding-left: 0;
-            font-size: 14px;
-            font-weight: lighter;
-        }
-        .side_menu_list li{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 50px;
-        }
-        .side_menu_list li:hover{
-            background-color: #000;
-            color: #fff;
-            cursor: pointer;
-        }
-        .side_menu_list h1{
-            margin-top: 50px;
-            margin-bottom: 50px;
-            font-weight: bold;
-            font-size: 8px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        .side_menu_list a{
-            text-decoration: none;
-            color: #000;
-        }
-
-
-        .user_profile{
-            margin: 50px auto 0px auto;
-            width: 80px;
-            height: 80px;
-            border: 1px solid #e0e0e0;
-            border-radius:50%;
-            overflow: hidden;
-        }
-        .user_name {
-            text-align: center;
-            font-size: 0.9rem;   
-        }
-        .user_name a{
-            color: #000; 
-        }
-        
-
-
-
-
-
-
-        /* 메인영역 */
-        .container {
-            width: 100%;
-            height: 100vh;
-            background-color: #fff;
-            display: flex;
-            overflow: hidden;
-        }
-
-        /* 여행계획영역s*/
-        .flag-Wrap{
-            width: 50%;
-        }
-        .flag-Wrap p{
-            text-align: center;
-            font-size: 0.8rem;
-            color: tomato;
-            font-weight: bold;
-        }
-        .title{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 45px;
-        }
-        .title h3{
-            text-align: center;
-        }
-        .titleimg{
-            width: 40px;
-            height: 40px;
-            overflow: hidden;
-        }
-        .titleimg img{
-            width: 100%;
-            height: 100%;
-        }
-        
-        .sapaceInfo{
-            width: 80%;
-            height: 150px;
-            border-radius: 5px;
-            margin: 90px auto 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
-        }
-        .space-profile{
-            width: 20%;
-            height: auto;
-            border-radius: 50%;
-            overflow: hidden;
-            margin-left: 15px;
-        }
-        .space-profile img{
-            width: 100%;
-            height: 100%;
-        }
-        .space-content{
-            width: 65%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-            /* 조건문.. */
-        .catagory_item1,.catagory_item2,.catagory_item3,.catagory_item4{
-            overflow: hidden;
-            width: 70px;
-            height: 70px;
-            border: 1px solid #bdbdbd;
-            border-radius: 50%;
-            background: #fff;
-            margin: 0 15px;
-        }
-        .catagory_item img{
-            width: 100%;
-            height: 100%;
-        }
-        .spaceFlag{
-            width: 80%;
-            height: 500px;
-            margin: auto;
-            list-style: none;
-            padding-left: 0;
-            overflow: auto;
-            border-radius: 5px;
-            box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
-
-        }
-        .spaceFlag-nav{
-            width: 100%;
-            height: 40px;
-            display: flex;
-            background: #eceff1;
-            margin-bottom: 15px;
-            align-items: center;
-            justify-content: space-between;
-            position: sticky;
-            top: 0;
-        }
-        .spaceFlag-nav select{
-            width: 100px;
-            height: 30px;
-            border: none;
-            margin-right: 10px;
-            border-radius: 5px;
-        }
-        .spaceFlag-nav button{
-            width: 100px;
-            height: 30px;
-            border-radius: 5px;
-            border: none;
-            cursor: pointer;
-            margin-left: 10px;
-            background: #fff;
-        }
-
-
-
-
-
-
-
-
-        /* 여행기록 */
-        .memory-Wrap{
-            width: 50%;
-        }
-        .memory-Wrap p{
-            text-align: center;
-            font-size: 0.8rem;
-            color: tomato;
-            font-weight: bold;
-        }
-        .memory-box{
-            width: 80%;
-            height: 750px;
-            margin: auto;
-            list-style: none;
-            padding-left: 0;
-            overflow: auto;
-            box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
-        }
-        .memory-nav{
-            width: 100%;
-            height: 40px;
-            display: flex;
-            background: #eceff1;
-            margin-bottom: 15px;
-            align-items: center;
-            justify-content: space-between;
-            position: sticky;
-            top: 0;
-        }
-        .memory-nav select{
-            width: 100px;
-            height: 30px;
-            border: none;
-            margin-right: 10px;
-            border-radius: 5px;
-        }
-        .memory-nav button{
-            width: 100px;
-            height: 30px;
-            border-radius: 5px;
-            border: none;
-            cursor: pointer;
-            margin-left: 10px;
-            background: #fff;
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-        .setting-wrap{
-            display: flex;
-            align-items: flex-end;
-        }
-        
-        .wrapper {
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-            
-        }
-        
-
-        .fontwrap{
-            display: flex;
-        }
-        .fontwrap p{
-            margin-left: 15px;
-        }
-
-
-
-        .space_wrap {
-            display: flex;
-            width: 13%;
-            height: 50px;
-            border: 1px solid #000;
-            background: #fff;
-            border-radius: 15px;
-            align-items: center;
-            padding-left: 20px;
-            margin-left: auto;
-            color: #000;
-        }
-
-
-
-
-        .main-container{
-            display: flex;
-            width: 100%;
-        }
-        .left_area{
-            flex: 1;
-            height:1000px;
-            background: #fff;
-            display: flex;
-            align-items: flex-start;   
-        }
-
-        .box{
-            width: 100%;
-            height: 100%;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .catagory{
-            display: flex;
-            padding-left: 0;
-            list-style: none;
-        }
-
-
-        
-
-        .addWrap{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 35px;
-            height: 35px;
-            background: #fff;
-            color: #000;
-            border-radius: 50%;
-            border: 1px solid #e0e0e0;
-            margin-left: 15px;
-        }
-        .tag a{
-            color: #000;
-        }
-        .tag_list{
-            display: flex;
-            align-items: center;
-            padding-left: 0;
-        }
-        .addWrap:hover{
-            background: #ff8f00;
-            color: #000;
-        }
-        .body_itemwrap{
-            color:#000;
-            
-        }
-        .body_item{
-            width: 80%;
-            height: 70px;
-            border: 1px solid #e0e0e0;
-            margin: auto;
-            margin-bottom: 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-radius: 5px;
-
-        }
-        .body_item:hover{
-            background: #bbdefb;
-            border: 3px solid #212121;
-            color: #000;
-            font-weight: bold;
-        }
-        .item_category_wrap{
-            display: flex;
-        }
-        .item_category_wrap li{
-            margin-left: 10px;
-        }
-        .item_category{
-            width: 50px;
-            height: 50px;
-            border: 1px solid #e0e0e0;
-            border-radius: 50%;
-            overflow: hidden;
-            background: #fff;
-        }
-        .item_category img{
-            width: 100%;
-            height: 100%;
-        }
-        .item_map{
-            padding-left: 10px;
-            line-height:1.5;
-        }
-
-
-        .right_area{
-            flex: 1;
-            display: flex;
-            align-items: flex-start;   
-        }
-
-        .right_boxf{
-            width: 100%;
-            height: 100%;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            border: 1px solid;
-            padding: 20px;
-            margin:20px;
-        }
-        .right_boxf h1{
-            color: #000;
-            font-size: 3rem;
-
-        }
-        .right_boxf h1>p{
-            display: inline-flex;
-            color: tomato;
-        }
-        .right_boxf h2{
-            color: #000;
-            font-size: 1.5rem;
-            position: relative;
-            bottom: 5%;
-        }
-        .search_box{
-            width: 500px;
-            height: 250px;
-            border: 1px solid;
-            background: darkblue;
-        }
-
-        .memory_body{
-            width: 80%;
-            margin-top: 80px;
-            height: 800px;
-            list-style: none;
-            padding-left: 0;
-            overflow: auto;
-            border: 1px solid #eeeeee;
-        }
-        .memory_tag{
-            width: 80%;
-            margin:auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            position: ;
-        }
-        .memory_list{
-            display: flex;
-            align-items: center;
-            padding-left: 0;
-        }
-        .memory_tag h2{
-            color: #000;
-        }
-        .memory_tag select{
-            width: 100px;
-            height: 30px;
-            border: none;
-            border-bottom: 2px solid;
-        }

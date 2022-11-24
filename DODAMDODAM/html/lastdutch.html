@@ -123,9 +123,27 @@
                 <button type="button" class="btn" id="open-modal">추가하기</button>
             </div>
             </div>
-
-
-        </div>    
+        </div>
+        <!-- 반응형 버튼s -->
+        <div class="box-menu">
+            <div class="wrapper">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="menu">
+                <a href="#" class="active"><span class="icon fa fa-house-chimney"></span><span class="text">메인 홈으로</span></a>
+                <a href="#"><span class="icon fa fa-comments"></span><span class="text">CHATTIGN</span></a>
+                <a href="#"><span class="icon fa fa-location-dot"></span><span class="text">MAP</span></a>
+                <a href="#"><span class="icon fa fa-bag-shopping"></span><span class="text">PAY</span></a>
+                <a href="#"><span class="icon fa fa-video"></span><span class="text">ZOOM</span></a>
+                <a href="#"><span class="icon fa fa-gear"></span><span class="text">SETTING</span></a>
+            </div>
+        </div>
+        <!-- 반응형 버튼e -->      
 </form>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/a1961b2393.js" crossorigin="anonymous"></script>
@@ -145,6 +163,18 @@ closeModalBtn.addEventListener("click", function () {
 modal.style.display = "none";
 });
 
+$(function(){
+	$('.box-menu .wrapper').on('click', function(){
+        $('.mainWrap').toggleClass("opacity","0.1");
+		$('.box-menu').toggleClass('full-menu');
+		$('.hamburger').toggleClass('active');
+	});
+    
+	$('a').on('click', function(){
+		$(this).siblings('a').removeClass('active');
+		$(this).addClass('active');
+	});
+});
 </script>
 </body>
 </html>
