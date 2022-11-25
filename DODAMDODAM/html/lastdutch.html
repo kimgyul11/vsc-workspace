@@ -13,19 +13,29 @@
             <div class="header-logo">
                 <a href="#">DODAM</a>
             </div>
-            <ul class="accodian">
-                <li class="header-userbox">
-                    <img class="user-img" src="https://cdn-icons-png.flaticon.com/512/476/476700.png" alt="">
-                    <div class="user-name">스페이스 회원수</div>
-                    <div class="user_count">10명</div>
-                </li>
-                <li class="header-userlist">
-                    <div class="userwrap">아이디1</div>
-                    <div class="userwrap">아이디1</div>
-                    <div class="userwrap">아이디1</div>
-                    <div class="userwrap">아이디1</div>                    
-                </li>
-            </ul>
+            <div class="header-userbox" id="open-memberList-modal">
+                <img class="user-img" src="https://cdn-icons-png.flaticon.com/512/476/476700.png" alt="">
+                <div class="user-name">스페이스 회원수</div>
+                <div class="user_count">10명</div>
+            </div>
+            <!-- 멤버리스트 모달영역 -->
+            <div class="memberList-modal">
+                <div class="modalBox">
+                    <div class="modal-content3">
+                        <div class="modal-header">
+                            <h3>스페이스이름들어옵니다</h3>
+                            <span id="close-memberList-modal">&times;</span>
+                        </div>
+                        <ul class="modal-body">
+                            <li class="userBOX">
+                                <img class="userBOXImg"src="">
+                                <span class="userBOXId">아이디나오는 영역</span>
+                                <span class="userBOXName">이름나오는 영역</span>
+                            </li>
+                        </ul>
+                    </div>    
+                </div>
+            </div>
         </nav>
         <div class="container">
             <div class="sidebar">
@@ -175,6 +185,19 @@ $(function(){
 	});
 });
 
+
+// 멤버리스트 모달
+const listmodal = document.querySelector(".memberList-modal");
+const listopenModalBtn = document.querySelector("#open-memberList-modal");
+const listcloseModalBtn = document.querySelector("#close-memberList-modal");
+
+listopenModalBtn.addEventListener("click", function () {
+listmodal.style.display = "block";
+});
+
+listcloseModalBtn.addEventListener("click", function () {
+listmodal.style.display = "none";
+});
 </script>
 </body>
 </html>
