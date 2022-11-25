@@ -19,59 +19,26 @@
         a{
             text-decoration: none;
         }
-        body{
-            
-        }
-
-
         /* 헤더영역 s */
-        
+        .headerBox{
+            display: flex;
+        }
         .header{
+            width: 100%;
             height: 50px;
             display: flex;
-            background: #000;
+            background: #2196f3;
             justify-content: space-between;
             align-items: center;
+            border-bottom:2px solid #eeeeee ;
         }
         .header-logo a{
             font-size: 1.4rem;
             margin-left: 14px;
-            color: #fff;
+            color: #000;
         }
-        .accodian{
-        }
-        .userwrap{
-            border: 1px solid;
-        }
-        .header-userlist{
-            display: none;
-            background: red;
-            position: relative;
-        }
-        .header-userbox{
-            display: flex;
-            align-items: center;
-            border: 1px solid ;
-            padding: 5px;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-right: 15px;
-            
-        }
-        .user_count{
-            font-size: 14px;
-            color: #01579b;
-        }
-        .user-img {
-            width: 30px;
-            height: 30px;   
-            border-radius: 50%;
-            background: #fff;
-        }
-        .user-name {
-            font-size: 14px;
-            margin: 0 6px 0 12px;
-        }/* 헤더영역 e */
+    /* 헤더영역 e */
+
 
 
 /* 공통영역 */
@@ -84,8 +51,7 @@
             width: 200px;
             display: flex;
             flex-direction: column;
-            border-right: 2px solid #e0e0e0;
-            background: #fff;
+            background: #eeeeee;
         }
         .sidebar-info{
             display: flex;
@@ -162,4 +128,5 @@
             background-color: #fff;
             display: flex;
             overflow: hidden;
+
         }

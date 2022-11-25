@@ -13,21 +13,7 @@
             <div class="header-logo">
                 <a href="#">DODAM</a>
             </div>
-            <ul class="accodian">
-                <li class="header-userbox">
-                    <img class="user-img" src="https://cdn-icons-png.flaticon.com/512/2352/2352167.png" alt="">
-                    <div class="user-name">스페이스 회원수</div>
-                    <div class="user_count">10명</div>
-                </li>
-                <li class="header-userlist">
-                    <div class="userwrap">아이디1</div>
-                    <div class="userwrap">아이디1</div>
-                    <div class="userwrap">아이디1</div>
-                    <div class="userwrap">아이디1</div>                    
-                </li>
-            </ul>
         </nav>
-
         <div class="container">
             <div class="sidebar">
                 <div class="user_profile">
@@ -52,10 +38,15 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script>
-$(function(){
+    $(function(){
         $(".accodian>li").click(function(){
         $(this).next(".header-userlist").slideToggle(200);
         });
+    });
+    $(".acc").click(function() {
+    $(this).next(".anw").stop().slideToggle(300);
+	$(this).toggleClass('on').siblings().removeClass('on');
+	$(this).next(".anw").siblings(".anw").slideUp(300); // 1개씩 펼치기
     });
 </script>
 </body>

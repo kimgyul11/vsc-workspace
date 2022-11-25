@@ -13,19 +13,29 @@
             <div class="header-logo">
                 <a href="#">DODAM</a>
             </div>
-            <ul class="accodian">
-                <li class="header-userbox">
-                    <img class="user-img" src="https://cdn-icons-png.flaticon.com/512/2352/2352167.png" alt="">
-                    <div class="user-name">스페이스 회원수</div>
-                    <div class="user_count">10명</div>
-                </li>
-                <li class="header-userlist">
-                    <div class="userwrap">아이디1</div>
-                    <div class="userwrap">아이디1</div>
-                    <div class="userwrap">아이디1</div>
-                    <div class="userwrap">아이디1</div>                    
-                </li>
-            </ul>
+            <div class="header-userbox" id="open-memberList-modal">
+                <img class="user-img" src="https://cdn-icons-png.flaticon.com/512/476/476700.png" alt="">
+                <div class="user-name">스페이스 회원수</div>
+                <div class="user_count">10명</div>
+            </div>
+            <!-- 멤버리스트 모달영역 -->
+            <div class="memberList-modal">
+                <div class="modalBox">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3>스페이스이름들어옵니다</h3>
+                            <span id="close-memberList-modal">&times;</span>
+                        </div>
+                        <ul class="modal-body">
+                            <li class="userBOX">
+                                <img class="userBOXImg"src="">
+                                <span class="userBOXId">아이디나오는 영역</span>
+                                <span class="userBOXName">이름나오는 영역</span>
+                            </li>
+                        </ul>
+                    </div>    
+                </div>
+            </div>
         </nav>
 
         <div class="container">
@@ -67,10 +77,7 @@
                 <p>여행 계획을 세워보세요.</p><br>
                 <div class="spaceFlag">
                     <div class="spaceFlag-nav">
-                        <button>등록하기</button>
-                        <select>
-                            <option value="">일정으로 검색</option>
-                        </select>
+                        <button><i class="fa-regular fa-pen-to-square"></i></button>
                     </div>
                     <div class="spaceFlag-main">
                         <div class="item">
@@ -86,17 +93,16 @@
                 </div>    
             </div>
             <div class="memory-Wrap">
-                <div class="title">
-                    <h3>TRAVLE MEMORY</h3>
-                    <img class="titleimg"src="https://cdn-icons-png.flaticon.com/512/1387/1387852.png" alt="">
+                <div class="memorytitle">
+                    <div class="title">
+                        <h3>TRAVLE MEMORY</h3>
+                        <img class="titleimg"src="https://cdn-icons-png.flaticon.com/512/1387/1387852.png" alt="">
+                    </div>
+                    <p>여행을 자유롭게 기록해보세요</p><br>
                 </div>
-                <p>여행을 자유롭게 기록해보세요</p><br>
                 <div class="memory-box">
                     <div class="memory-nav">
-                        <button>등록하기</button>
-                        <select>
-                            <option value="">일정으로 검색</option>
-                        </select>
+                        <button><i class="fa-regular fa-pen-to-square"></i></button>
                     </div>
                     <div class="spaceFlag-main">
                         <div class="item button-four">
@@ -112,6 +118,7 @@
                 </div>
             </div>
         </div>
+        
 </form>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/a1961b2393.js" crossorigin="anonymous"></script>
@@ -119,11 +126,17 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script>
-$(function(){
-        $(".accodian>li").click(function(){
-        $(this).next(".header-userlist").slideToggle(200);
-        });
-    });
+const modal = document.querySelector(".memberList-modal");
+const openModalBtn = document.querySelector("#open-memberList-modal");
+const closeModalBtn = document.querySelector("#close-memberList-modal");
+
+openModalBtn.addEventListener("click", function () {
+modal.style.display = "block";
+});
+
+closeModalBtn.addEventListener("click", function () {
+modal.style.display = "none";
+});
 </script>
 </body>
 </html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/DODAMDODAM/css/acc.css">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<title>Accordion Menu</title>
+</head>
+<body>
+    <div class="acc">
+        <img class="imgbox"src="https://cdn-icons-png.flaticon.com/512/2812/2812560.png">
+        <span>스페이스 멤버 수 :</span>
+        <span>10명</span>
+    </div>
+    <ul class="anw">
+        <li class="userWrap">유저1</li>
+    </ul>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/a1961b2393.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+    $(".acc").click(function() {
+    $(this).next(".anw").stop().slideToggle(300);
+	$(this).toggleClass('on').siblings().removeClass('on');
+	$(this).next(".anw").siblings(".anw").slideUp(300); // 1개씩 펼치기
+    });
+</script>
+</body>
+
+</html>

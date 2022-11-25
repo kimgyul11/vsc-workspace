@@ -1,0 +1,42 @@
+*{
+box-sizing: border-box;
+margin: 0;
+}
+li{
+    list-style: none;
+}
+ul{
+    padding-left: 0;
+}
+
+.acc{
+    width: 220px;
+    height: 35px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.anw {
+    display: none;
+    overflow: hidden;
+    width: 220px;
+    font-size: 14px;
+}
+.imgbox{
+    width: 30px;
+    height: 30px;
+}
+.userWrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 30px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    margin: 5px auto;
+}
+
