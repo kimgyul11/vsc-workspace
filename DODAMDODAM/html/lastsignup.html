@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/DODAMDODAM/css/lastSignup.css">
+    <title>sigup</title>
+</head>
+<body>
+    <div class="container">
+        <div class="loginBox">
+            <div class="profileWrap">
+                <div class="profileCircle">
+                    <img class="profileImg" src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png">
+                </div>
+                <div class="profileImgUpload">
+                    <input id="uploadedImage" name="uploadedImage" type="file" accept="image/*"  >
+                    <label for="uploadedImage">이미지선택<i class="fa-regular fa-file-image"></i></label>
+                </div>
+            </div>
+            <div class="box-input">
+                <input type="text" id="id" placeholder="아이디">
+                <input type="password" id="pw" placeholder="비밀번호">
+                <input type="password" id="pw" placeholder="비밀번호 재입력">
+                <input type="text" id="" placeholder="이름">
+                <div class="emailbox">
+                    <input type="text" id="" placeholder="이메일">
+                </div>
+                <input type="text" id="" placeholder="휴대전화">
+                
+            </div>
+        </div>
+    </div>
+    <script>
+    // 이미지 업로드
+    const fileDOM = document.querySelector('#uploadedImage');
+    const preview = document.querySelector('.profileImg');
+
+    fileDOM.addEventListener('change', () => {
+    const reader = new FileReader();
+    reader.onload = ({ target }) => {
+        preview.src = target.result;
+    };
+    reader.readAsDataURL(fileDOM.files[0]);
+    });
+    
+    </script>
+</body>
+</html>

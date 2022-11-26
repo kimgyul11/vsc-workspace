@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'SUIT-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    box-sizing: border-box;
+    font-family: 'SUIT-Medium';
+    margin: 0;
+    padding: 0;
+}
+img {
+    max-width: 100%;
+} 
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.loginBox{
+    width: 100%; 
+    max-width: 520px;
+    height: 600px;
+    border: 1px solid #e0e0e0;
+    border-radius:5px ;
+}
+.profileWrap{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.profileCircle{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profileImg{
+    display: flex;
+    width:100%;
+    height:100%;
+    justify-content: center;
+    align-items: center;
+}
+.profileImgUpload #uploadedImage{
+    display:none;
+}
+
+.profileImgUpload label{
+    font-size: 15px;
+    font-weight: 200;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 30px;
+}
+.profileImgUpload label:hover{
+    color: #ff5722;
+}
