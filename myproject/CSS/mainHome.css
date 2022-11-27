@@ -11,12 +11,13 @@ li{
 span{
     color: yellow;
 }
+
 .bin{
     height: 2000px;
 
 }
 .showbox{
-    height: 7000px;
+    height: 3750px;
     background: black;
     width: 100%;
     
@@ -35,6 +36,31 @@ span{
 .mtextbox{
     font-size: 1.5rem;
     color: #fff;
+}
+.mtextbox li{
+    margin-top: 15px;
+}
+.typing-demo {
+    width: 18ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+@keyframes typing {
+from {
+    width: 0
+}
+}
+
+@keyframes blink {
+50% {
+    border-color: transparent
+}
 }
 .box{
     color: #fff;
@@ -71,6 +97,10 @@ span{
 .mtextbox{
     font-size: 1.5rem;
     color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 24px;
 }
 .mimgbox{
     width: 550px;
@@ -95,6 +125,7 @@ span{
     justify-content: center;
     background: #fff;
     width: 100%;
+    padding: 15px;
     z-index: 2;
 }
 
@@ -153,6 +184,12 @@ span{
     .mtextbox{
         position: relative;
         right: -150px;
-        font-size: 1.2rem;
+        font-size: 0.7rem;
+    }
+    .coment{
+        flex-direction: column;
+    }
+    .textbox{
+        width: 100%;
     }
 }
