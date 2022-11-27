@@ -12,7 +12,7 @@
         <div class="loginBox">
             <div class="profileWrap">
                 <div class="profileCircle">
-                    <img class="profileImg" src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png">
+                    <img class="profileImg" src="https://cdn-icons-png.flaticon.com/512/547/547413.png">
                 </div>
                 <div class="profileImgUpload">
                     <input id="uploadedImage" name="uploadedImage" type="file" accept="image/*"  >
@@ -20,15 +20,29 @@
                 </div>
             </div>
             <div class="box-input">
-                <input type="text" id="id" placeholder="아이디">
-                <input type="password" id="pw" placeholder="비밀번호">
+                <p>아이디</p>
+                <input type="text" id="zbmmID" name="zbmmID" placeholder="아이디">
+                <p>비밀번호</p>
+                <input type="password" id="password"name="zbmmPW" placeholder="비밀번호">
+                <p>비밀번호 확인</p>
                 <input type="password" id="pw" placeholder="비밀번호 재입력">
+                <p>이름</p>
                 <input type="text" id="" placeholder="이름">
                 <div class="emailbox">
-                    <input type="text" id="" placeholder="이메일">
+                    <input type="text" id="email" placeholder="이메일">
+                    <p>@</p>
+                    <select class="emailSelect" id="domain-list">
+                        <option value="type">직접 입력</option>
+                        <option value="naver.com" selected>naver.com</option>
+                        <option value="gmail.com">gmail.com</option>
+                        <option value="daum.net">daum.net</option>
+                    </select>
+                    <button class="emailbtn">인증</button>
                 </div>
-                <input type="text" id="" placeholder="휴대전화">
-                
+                <input type="text" id="" placeholder="휴대전화 '-'없이 번호만 입력해주세요">
+            </div>
+            <div class="btnWrap">
+                가입하기
             </div>
         </div>
     </div>
@@ -44,7 +58,11 @@
     };
     reader.readAsDataURL(fileDOM.files[0]);
     });
-    
+    //이메일 정규식
+	  function email_check(email) {
+			var reg = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
+			return reg.test(email);
+		}
     </script>
 </body>
 </html>
