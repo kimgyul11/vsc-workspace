@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/DODAMDODAM/css/lastSignup.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <title>sigup</title>
 </head>
 <body>
-    <div class="container">
+    <form name="formIsrt" id="formIsrt" method="post" enctype="multipart/form-data"></form>
+    <div class="containerBox">
         <div class="loginBox">
             <div class="profileWrap">
                 <div class="profileCircle">
@@ -20,32 +22,58 @@
                 </div>
             </div>
             <div class="box-input">
-                <p>아이디</p>
-                <input type="text" id="zbmmID" name="zbmmID" placeholder="아이디">
-                <p>비밀번호</p>
-                <input type="password" id="password"name="zbmmPW" placeholder="비밀번호">
-                <p>비밀번호 확인</p>
-                <input type="password" id="pw" placeholder="비밀번호 재입력">
-                <p>이름</p>
-                <input type="text" id="" placeholder="이름">
+                <div class="form-group">
+                    <label for="id" class="form-label d-flex justify-content-start mb-2">아이디</label> <input id="zbmmID" name="zbmmID" type="text" class="form-control mb-4" placeholder="아이디"> <input type="hidden" id="idAllowedNy" type="text" name="idAllowedNy"> <input type="hidden" id="idAllowedNyTwo" type="text" name="idAllowedNyTwo">
+                    <div class='failure-message hide msg'>4자 이상의 영문 혹은 영문과 숫자를 조합</div>
+                    <div class='success-message hide msg success'>사용할 수 있는 아이디입니다.</div>
+                </div>
+                <div class="form-group">
+                    <label for="password" type="password" class="form-label d-flex justify-content-start">비밀번호</label> <input id="password" type="password" class="form-control mb-2" placeholder="비밀번호" name="zbmmPW">
+                    <div class='password-message-wrap'>
+                        <span class='password-failure-length hide msg'>7자 이상 입력</span> <span class='password-failure-comb hide msg'>영문/숫자/특수문자(공백 제외)만 허용하며, 2개 이상 조합</span> <span class='password-failure-contn hide msg'>동일한 숫자 3개 이상 연속 사용 불가</span> <span class='password-failure-upper hide msg'>영어 대문자 하나 이상 포함</span> <span class='password-success-message hide msg success'>사용할 수 있는 비밀번호입니다.</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="passwordCheck" class="form-label d-flex justify-content-start">비밀번호 확인</label> <input id="passwordCheck" type="password" class="form-control mb-2" placeholder="비밀번호 확인">
+                    <div class="mismatch-message hide msg">동일한 비밀번호를 입력해주세요.</div>
+                    <div class="match-message hide msg success">동일한 비밀번호가 입력되었습니다.</div>
+                </div>
+                <div class="form-group">
+                    <label for="name" class="form-label d-flex justify-content-start">이름</label> <input id="name" type="text" class="form-control mb-4" placeholder="이름" name="zbmmName">
+                </div>
                 <div class="emailbox">
-                    <input type="text" id="email" placeholder="이메일">
-                    <p>@</p>
-                    <select class="emailSelect" id="domain-list">
+                    <input type="text" id="email" name="zbmmEmail"placeholder="이메일">
+                    <span>@</span>
+                    <select class="form-select pt" id="domain-list">
                         <option value="type">직접 입력</option>
                         <option value="naver.com" selected>naver.com</option>
                         <option value="gmail.com">gmail.com</option>
                         <option value="daum.net">daum.net</option>
                     </select>
-                    <button class="emailbtn">인증</button>
+                    <button class="emailbtn" id="mailAuth" type="button">인증</button>
                 </div>
-                <input type="text" id="" placeholder="휴대전화 '-'없이 번호만 입력해주세요">
+                <div class="form-group hide" id="emailCheck">
+                    <div class="d-flex justify-content-start">
+                        <label for="emailA" class="form-label inline-block">인증번호</label>
+                        <p class="time d-flex inline-block text-danger ms-2"></p>
+                    </div>
+                    <div class="d-flex justify-content-start">
+                        <input type="text" id="emailAuth" class="form-control mb-3" placeholder="인증번호" style="display: inline-block;">
+                    </div>
+                    <p id="mailCheckMsg" class="d-flex justify-content-start"></p>
+                    <input id="hiddenCheck" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="numberPhone" class="form-label d-flex justify-content-start">휴대전화</label> <input id="numberPhone" type="tel" class="form-control mb-2" placeholder="휴대전화 '-'없이 번호만 입력해주세요" name="zbmmMobile">
+                </div>
             </div>
             <div class="btnWrap">
-                가입하기
+                <button class="signupbtn" type="button"onclick="isAllCheck()">가입하기</button>
             </div>
         </div>
+        <p>이미 아이디가 있다면?<a href="#">로그인하러 가기</a></p>
     </div>
+    </form>
     <script>
     // 이미지 업로드
     const fileDOM = document.querySelector('#uploadedImage');
@@ -58,8 +86,9 @@
     };
     reader.readAsDataURL(fileDOM.files[0]);
     });
+
     //이메일 정규식
-	  function email_check(email) {
+    function email_check(email) {
 			var reg = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
 			return reg.test(email);
 		}
