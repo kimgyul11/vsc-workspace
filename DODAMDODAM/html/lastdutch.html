@@ -9,6 +9,7 @@
 	</head>
 	<body>
 	<form>
+        <!-- 헤더영역s -->
         <nav class="header">
             <div class="header-logo">
                 <a href="#">DODAM</a>
@@ -16,17 +17,17 @@
             <div class="header-userbox" id="open-memberList-modal">
                 <img class="user-img" src="https://cdn-icons-png.flaticon.com/512/476/476700.png" alt="">
                 <div class="user-name">스페이스 회원수</div>
-                <div class="user_count">10명</div>
+                <div class="user_count"><c:out value="${item.xSpaceUser }"/>명</div>
             </div>
-            <!-- 멤버리스트 모달영역 -->
+            <!-- 멤버리스트 모달영역s -->
             <div class="memberList-modal">
                 <div class="modalBox">
-                    <div class="modal-content3">
+                    <div class="memberList-modal-content">
                         <div class="modal-header">
                             <h3>스페이스이름들어옵니다</h3>
                             <span id="close-memberList-modal">&times;</span>
                         </div>
-                        <ul class="modal-body">
+                        <ul class="memberList-modal-body">
                             <li class="userBOX">
                                 <img class="userBOXImg"src="">
                                 <span class="userBOXId">아이디나오는 영역</span>
@@ -36,22 +37,28 @@
                     </div>    
                 </div>
             </div>
+            <!-- 멤버리스트 모달영역e -->
         </nav>
+        <!-- 헤더영역e -->
+
         <div class="container">
+            <!-- 사이드메뉴 s -->
             <div class="sidebar">
                 <div class="user_profile">
                     <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="">
                 </div>
-                <div class="user_name"><a href="#">아이디출력</a></div>
+                <div class="user_name"><a href="#"><c:out value="${sessName }" /></a></div>
                 <ul class="side_menu_list">
                     <h1>MENU</h1>
-                    <li>HOME</li>
-                    <li>CHATTIGN</li>
-                    <li>MAP</li>
+                    <li><a onclick="href='/spaceMain?zbspSeq=<c:out value="${vo.zbspSeq }"/>'">HOME</a></li>
+                    <li><a onclick="href='/spaceChat?zbspSeq=<c:out value="${vo.zbspSeq }"/>'">CHATTING</a></li>
+                    <li><a onclick="href='/spaceMapRouteAjax?zbspSeq=<c:out value="${vo.zbspSeq }"/>'">MAP</a></li>
+                    <li><a onclick="href='/spaceDucthPay?zbspSeq=<c:out value="${vo.zbspSeq }"/>'">PAY</a></li>
                     <li>ZOOM</li>
                     <li>SETTING</li>
                 </ul>
             </div>
+            <!-- 사이드메뉴 e -->
             <div class="mainWrap">
                 <h1>더치페이 시작하기</h1><br>
                 <div class="dutchTitle">
@@ -62,75 +69,79 @@
                 </div><br>
                 
                 <div class="tableWrap">
-                <table>
-                    <tr>
-                        <th class="th_checkbox">
-                            <input type="checkbox" name="" id="">
-                        </th>
-                        <th>사용분류</th>
-                        <th>인원수</th>
-                        <th>인당 예상비용</th>
-                        <th>영수증</th>
-                        <th>사용일</th>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" name="" id=""></th>
-                        <td>ㅁㄴㅇ</td>
-                        <td>ㅁㄴㅇ</td>
-                        <td>ㅁㄴㅇ</td>
-                        <td>ㅁㄴㅇ</td>
-                        <td>ㅁㄴㅇ</td>
-                    </tr>
-                </table>
-            </div>    
-            <div class="addbtnWrap">
-                <button type="button" >삭제하기</button>
-                    <div class="modal">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h3>RECEIPT</h3>
-                                <span id="close-modal">&times;</span><hr>
-                            </div>
-                            <h4>리스트명을 입력하세요</h4>
-                            <div class="list_name">
-                                <input type="text" name="" id="">
-                            </div>
-                            <h4>어떤곳에 사용했나요?</h4>
-                            <div class="modal-body">
-                                <ul class="modal_catagory">
-                                    <li>분류1</li>
-                                    <li>분류2</li>
-                                    <li>분류3</li>
-                                    <li>분류4</li>
-                                </ul>                                        
-                            </div>
-                            <h4>누구랑 사용했나요?</h4>
-                            <div class="modal-body">
-                                <ul class="modal_people">
-                                    <li><input type="checkbox" name="" id="">멤버</li>
-                                    <li><input type="checkbox" name="" id="">데이터</li>
-                                    <li><input type="checkbox" name="" id="">받아오는</li>
-                                    <li><input type="checkbox" name="" id="">구역</li>
-                                </ul>                                        
-                            </div>
-                            <h4>영수증이 있다면 첨부해보세요</h4>
-                            <div class="modal-img">
-                                <span>영수증 사진 들어가는 곳</span>
-                                <input type="file" name="" id="">                                
-                            </div>
-                            <div class="modal-btn">
-                                <ul class="total">
-                                    <li>총 비용:</li>
-                                    <li>1인당 예상 비용:</li>
-                                </ul>
-                                <div class="btn">
-                                    <button>생성</button>
-                                </div>
+                    <table>
+                        <tr>
+                            <th class="th_checkbox">
+                                <input type="checkbox" name="" id="">
+                            </th>
+                            <th>사용분류</th>
+                            <th>인원수</th>
+                            <th>인당 예상비용</th>
+                            <th>영수증</th>
+                            <th>사용일</th>
+                        </tr>
+                        <c:forEach items="${dutchPay}" var="dutchPay">
+                            <tr>
+                                <td><input type="checkbox" name="" id=""></th>
+                                <td><c:out value="${dutchPay.zbdpDutchType}"/></td>
+                                <td><c:out value="${dutchPay.zbsiCnt}"/>명</td>
+                                <td><fmt:formatNumber value="${dutchPay.zbdpNcost}" pattern="###,###" />원</td>
+                                <td></td>
+                                <td><fmt:formatDate value="${dutchPay.zbdpDate}" pattern="yyyy-MM-dd"/>
+                                </td>
+                            </tr>
+                        </c:forEach>
+                    </table>
+                </div>    
+                <div class="addbtnWrap">
+                    <button type="button" >삭제하기</button>
+                    <button type="button" class="btn" id="open-modal">추가하기</button>
+                </div>
+                <!-- 모달s -->
+                <div class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3>RECEIPT</h3>
+                            <span id="close-modal">&times;</span><hr>
+                        </div>
+                        <h4>리스트명을 입력하세요</h4>
+                        <div class="list_name">
+                            <input type="text" name="" id="">
+                        </div>
+                        <h4>어떤곳에 사용했나요?</h4>
+                        <div class="modal-body">
+                            <ul class="modal_catagory">
+                                <li>분류1</li>
+                                <li>분류2</li>
+                                <li>분류3</li>
+                                <li>분류4</li>
+                            </ul>                                        
+                        </div>
+                        <h4>누구랑 사용했나요?</h4>
+                        <div class="modal-body">
+                            <ul class="modal_people">
+                                <li><input type="checkbox" name="" id="">멤버</li>
+                                <li><input type="checkbox" name="" id="">데이터</li>
+                                <li><input type="checkbox" name="" id="">받아오는</li>
+                                <li><input type="checkbox" name="" id="">구역</li>
+                            </ul>                                        
+                        </div>
+                        <h4>영수증이 있다면 첨부해보세요</h4>
+                        <div class="modal-img">
+                            <span>영수증 사진 들어가는 곳</span>
+                            <input type="file" name="" id="">                                
+                        </div>
+                        <div class="modal-btn">
+                            <ul class="total">
+                                <li>총 비용:</li>
+                                <li>1인당 예상 비용:</li>
+                            </ul>
+                            <div class="btn">
+                                <button>생성</button>
                             </div>
                         </div>
                     </div>
-                <button type="button" class="btn" id="open-modal">추가하기</button>
-            </div>
+                </div>
             </div>
         </div>
         <!-- 반응형 버튼s -->

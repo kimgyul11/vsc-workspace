@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/DODAMDODAM/css/lastboard.css">
+    <link rel="stylesheet" type="text/css" href="../rMateMapChartH5/Assets/rMateMapChartH5.css"/>
+    <script language="javascript" type="text/javascript" src="../LicenseKey/rMateMapChartH5License.js"></script>
+    <script language="javascript" type="text/javascript" src="../rMateMapChartH5/JS/rMateMapChartH5.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <input type="radio" id="keyword" name="abcd" value="00" onchange="setDisplay()">
+        <label for="keyword">키워드로검색</label> 
+        <input type="radio" id="area" name="abcd" value="10" onchange="setDisplay()">
+        <label for="area">지역으로 검색</label>
+        <div class="keywordWrap" id="keywordbox">
+            <ul class="keywordList">
+                <li class="Keyword-item"><img src="" alt=""></li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
+        </div>
+        
+        <div  class="areaWrap" id="areabox">
+            <ul class="areaList">
+
+            </ul>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        function setDisplay(){
+            if($('input:radio[id=keyword]').is(':checked')){
+                $('#areabox').hide();
+                $('#keywordbox').show();
+            }else if($('input:radio[id=area]').is(':checked')){
+                $('#keywordbox').hide();
+                $('#areabox').show();
+            }
+
+
+        }
+    </script>
+</body>
+</html>
