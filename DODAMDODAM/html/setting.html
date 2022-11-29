@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/DODAMDODAM/css/setting.css">
+    <title>DODAM</title>
+</head>
+<body>
+    <!-- 헤더영역s -->
+    <nav class="header">
+        <div class="header-logo">
+            <a href="main">DODAM</a><span class="spname"><c:out value="${item.zbspName }"/></span>
+        </div>
+        <div class="header-userbox" id="open-memberList-modal">
+            <img class="user-img" src="https://cdn-icons-png.flaticon.com/512/476/476700.png" alt="">
+            <div class="user-name">스페이스 회원수</div>
+            <div class="user_count"><c:out value="${item.xSpaceUser }"/>명</div>
+        </div>
+        <!-- 멤버리스트 모달영역s -->
+        <div class="memberList-modal">
+            <div class="modalBox">
+                <div class="memberList-modal-content">
+                    <div class="modal-header">
+                        <h3><c:out value="${item.zbspName }"/></h3>
+                        <span id="close-memberList-modal">&times;</span>
+                    </div>
+                    <ul class="memberList-modal-body">
+                        <li class="userBOX">
+                            <img class="userBOXImg"src="">
+                            <span class="userBOXId">아이디나오는 영역</span>
+                            <span class="userBOXName">이름나오는 영역</span>
+                        </li>
+                    </ul>
+                </div>    
+            </div>
+        </div>
+        <!-- 멤버리스트 모달영역e -->
+    </nav>
+    <!-- 헤더영역e -->
+    <div class="container">
+        <!-- 사이드메뉴 s -->
+        <div class="sidebar">
+            <div class="user_profile">
+                <img src="https://cdn-icons-png.flaticon.com/512/547/547413.png">
+            </div>
+            <div class="user_name"><a href="#"><c:out value="${sessName }" /></a></div>
+            <ul class="side_menu_list">
+                <h1>MENU</h1>
+                <li onclick="location.href='/spaceMain?zbspSeq=<c:out value="${vo.zbspSeq }"/>'">SPACE MAIN</li>
+                <li onclick="location.href='/spaceChat?zbspSeq=<c:out value="${vo.zbspSeq }"/>'">CHATTING</li>
+                <li onclick="location.href='/spaceMapRouteAjax?zbspSeq=<c:out value="${vo.zbspSeq }"/>'">MAP</li>
+                <li onclick="location.href='/spaceDucthPay?zbspSeq=<c:out value="${vo.zbspSeq }"/>'">PAY</li>
+                <li>ZOOM</li>
+                <li>SETTING</li>
+            </ul>
+        </div>
+        <!-- 사이드메뉴 e -->
+        <div class="settingWrap">
+            <ul class="spaceInfoBox">
+                <li class="spImgbox">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3049/3049617.png" class="spImg">
+                    <input type="file" id="spimg">
+                    <label class="spimgbtn" for="spimg">이미지 선택</label>
+                </li>
+                <li>스페이스 이름</li>
+                <li>스페이스 기간</li>
+            </ul>
+        </div>
+
+
+    </div>
+
+</body>
+</html>

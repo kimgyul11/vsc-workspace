@@ -1,0 +1,441 @@
+@font-face {
+    font-family: 'SUIT-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    box-sizing: border-box;
+    font-family: 'SUIT-Medium';
+    margin: 0;
+    padding: 0;
+} 
+img {
+    max-width: 100%;
+} 
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    height: 100%;    
+}
+
+
+/* 헤더영역 s */
+.header{
+    height: 50px;
+    display: flex;
+    background: #191970;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-logo a{
+    font-size: 1.4rem;
+    margin-left: 14px;
+    color: #fff;
+}
+.spname{
+    color:tomato;
+    font-size:0.8rem;
+    margin-left:15px;	
+}
+.userwrap{
+    border: 1px solid;
+}
+.header-userlist{
+    display: none;
+    background: red;
+    position: relative;
+}
+.header-userbox{
+    display: flex;
+    align-items: center;
+    background: #fafafa;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+.user_count{
+    font-size: 14px;
+    color: #01579b;
+}
+.user-img {
+    width: 30px;
+    height: 30px;   
+    border-radius: 50%;
+    border: 1px solid #e0e0e0;
+    background: #fff;
+}
+.user-name {
+    font-size: 14px;
+    margin: 0 6px 0 12px;
+}/* 헤더영역 e */   
+
+/* 사이드바s */
+.sidebar {
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    background: #fafafa;
+}
+.sidebar-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    border-radius: 2px;
+    width: 100%;
+    height: 70px;
+}
+.info-space{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.info-dday{
+    font-size: 0.9rem;
+    color: tomato;
+}
+.side_menu_list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding-left: 0;
+    font-size: 14px;
+    font-weight: lighter;
+}
+.side_menu_list li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+}
+.side_menu_list li:hover{
+    background-color: #191970;
+    color: #fff;
+    cursor: pointer;
+}
+.side_menu_list h1{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-weight: bold;
+    font-size: 8px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.side_menu_list a{
+    text-decoration: none;
+    color: #000;
+}
+.user_profile{
+    margin: 50px auto 0px auto;
+    width: 80px;
+    height: 80px;
+    border-radius:50%;
+    overflow: hidden;
+}
+.user_name {
+    text-align: center;
+    font-size: 0.9rem;   
+}
+.user_name a{
+    color: #000; 
+}
+/* 사이드바e */
+
+.container {
+    width: 100%;
+    min-height: 94.8vh;
+    background-color: #fff;
+    display: flex;
+    overflow: hidden;
+}
+
+.settingWrap{
+    width: 88.9%;
+    background: #01579b;
+    display: flex;
+}
+.spaceInfoBox{
+    border: 1px solid;
+    width: 500px;
+    height: 500px;
+}
+.spImgbox{
+    display: flex;
+    flex-direction: column;
+}
+.spImg{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+#spimg{
+    display: none;
+}
+.spimgbtn{
+    border: 1px solid;
+    width: 120px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+
+/* 모달영역s */
+#open-modal {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: #000;
+    border-radius: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fff;
+    user-select: none;
+    transition: all 0.3s ease-in-out;
+}
+
+#open-modal:hover {
+    background-color: tomato;
+    color: #fff;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal-content {
+    height: 450px;
+    margin:10% auto;
+    max-width: 500px;
+    background-color: #fff;
+    padding: 15px;
+    animation: scale 0.5s ease;
+    border-radius: 10px;
+    box-shadow: 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.02),
+    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.03),
+    100px 100px 80px rgba(0, 0, 0, 0.05);
+}
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.modal-body {
+    margin-top: 15px;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.modal-body input[type=text]{
+    border:none;
+    border-bottom: 2px solid;
+    width: 50%;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.modal-searchbox{
+    height: 150px;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+.userbox{
+    transition: all 0.3s;
+    width: 100px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #212121;
+}
+.modal-searchbox input[type=checkbox]:checked + .userbox{
+    border-radius: 15px;
+    background: tomato;
+}
+.modal-searchbox input[type=checkbox]{
+    display: none;
+    width: 350px;
+}
+
+.modal-list{
+    display: flex;
+    list-style: none;
+    margin: 5px;
+}
+.modal-list button{
+    width: 60px;
+    height: 45px;
+    font-size: 1.5rem;
+    margin-left: 15px;
+    border-radius: 5px;
+    background: white;
+    border: 1px solid #e0e0e0;
+}
+.modal-list button:hover{
+    background: #212121;
+    color:#fafafa;
+}
+.user{
+    display: flex;
+    width: 100%;
+}
+.userSelectBox{
+    border: 1px solid;
+    width: 100%;
+}
+#userSelect{
+    display: none;
+}
+#close-modal {
+    float: right;
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: red;
+}
+@keyframes scale {
+    from {
+    transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+.modal_footer{
+    display: flex;
+    justify-content: center;
+}
+.modal_footer button{
+    height: 35px;
+    width: 100px;
+    border: 1px solid #e0e0e0;
+    background: #fff;
+}
+.modal-selectList{
+    width: 100%;
+    height: 50px;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+}
+.modal-selectList-item{
+    width: 70px;
+    border: 1px solid #e0e0e0;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
+/* 모달영역e */
+
+
+
+
+
+/* 멤버리스트 모달영역s */
+.memberList-modal {
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+.modalBox{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+.memberList-modal-content {
+    width: 30%;
+    height: 80%;
+    background-color: #fff;
+    padding: 20px;
+    animation: scale 0.5s ease;
+    border-radius: 10px;
+    z-index: 10;
+}
+.modal-header h3{
+    display: inline-block;
+    font-size: 1.5rem;
+}
+.memberList-modal-body{
+    margin:25px auto;
+    border: 1px solid #e0e0e0;
+    height: 90%;
+    width: 80%;
+    overflow: auto;
+}
+.userBOX{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 24px;
+}
+.userBOXImg{
+    margin-right: 15px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+.userBOXId{
+    font-size: 1rem;
+    font-weight: bold;
+}
+.userBOXName{
+    font: .7rem;
+    margin-left: 15px;
+}
+
+#close-memberList-modal {
+    float: right;
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: tomato;
+}
+@keyframes scale {
+    from {
+    transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+/* 멤버리스트 모달영역e */
