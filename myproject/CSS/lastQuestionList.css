@@ -25,10 +25,12 @@ a{
     flex-direction: column;
     align-items: center;
 }
+
+/* 질문 리스트 s */
 .questionBox{
     width: 100%;
-    max-width: 70px;
-    height: 220px;
+    max-width: 700px;
+    min-height: 220px;
     border-radius: 5px;
     overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
@@ -59,11 +61,81 @@ a{
 }
 .questionBox-body{
     width: 100%;
-    height: 100%;
+    height: 150px;
     padding: 8px 16px;
     font-size: 0.8rem;
     cursor: pointer;
 }
 .header-date{
     font-size: 0.9rem;
+}
+.questionCount{
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+.countBox{
+    width: 45px;
+    height: 45px;
+    border: 1px solid #e0e0e0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+/* 질문 리스트 e */
+
+
+
+.prifileBox{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 25px 6px;
+    max-width: 600px;
+    min-height: 500px;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+}
+
+.profile-head{
+    display: flex;
+    padding: 12px 0px;
+    justify-content: center;
+    align-items: center;
+}
+.profile-head_img{
+    width:150px;
+    border-radius: 50%;
+    border: 3px solid;
+
+}
+.profile-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profile-body_item{
+    width: 100%;
+    margin-bottom: 12px;
+    height: 40px;
+    max-width: 400px;
+    display: flex;
+    background: #eeeeee;
+    align-items: center;
+    justify-content: space-around;
+}
+.profile-body_item span{
+    color: red;
+}
+.profile-introduce{
+    width: 100%;
+    max-width: 400px;
+    height: 100px;
+    border: 1px solid #e0e0e0;
+    margin: auto;
+    padding: 12px 6px;
+    font-size:0.8rem;
 }
