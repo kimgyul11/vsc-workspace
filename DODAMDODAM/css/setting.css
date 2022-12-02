@@ -159,17 +159,43 @@ body{
 
 .settingWrap{
     width: 88.9%;
-    background: #01579b;
     display: flex;
+    overflow: auto;
 }
 .spaceInfoBox{
-    border: 1px solid;
-    width: 500px;
-    height: 500px;
+    width: 30%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+}
+.spaceInfoBox p{
+    font-size: 1.2rem;
+    margin: 12px 0px;
+    font-weight: bold;
+}
+.spcaeInfoBox2{
+    width: 40%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+}
+.spcaeInfoBox2 p{
+    font-size: 1.2rem;
+    margin: 12px 0px;
+    font-weight: bold;
 }
 .spImgbox{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 .spImg{
     width: 150px;
@@ -177,13 +203,41 @@ body{
     border-radius: 50%;
     overflow: hidden;
 }
+.spDate{
+    display: flex;
+}
+.dateinput{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinput{
+    width: 100%;
+    max-width: 500px;
+    min-height: 60px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.spinput input{
+    height: 30px;
+    margin: auto;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #e0e0e0;
+    
+}
 #spimg{
     display: none;
 }
 .spimgbtn{
-    border: 1px solid;
-    width: 120px;
-    padding: 5px;
+    border: 1px solid #e0e0e0;
+    width: 100px;
+    padding: 2px;
     text-align: center;
     border-radius: 15px;
     cursor: pointer;
@@ -191,6 +245,112 @@ body{
 }
 
 
+
+        /* 4.카테고리s */
+        .catagoryWrap{
+            width: 100%;
+            min-width: 500px;
+            height: 150px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 5px;
+        }
+        .catagoryWrap input{
+            display: none;
+        }
+        .itemown input[type=radio]:checked + .listitem{
+            display: flex;
+            border-radius: 50%;
+            border: 10px solid tomato;
+            background-color: tomato;
+            transition: all 0.3s;
+            cursor: pointer;
+            padding: 5px;
+        }
+        .listitem{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: #e0e0e0;
+            border: 2px solid #e0e0e0;
+            padding: 5px;
+        }
+        .listitem img{
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .listitem:hover{
+            border: 15px unset #000;
+            transition: all 0.7s;
+        }
+        .itemown{
+            overflow: hidden;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+        /* 4.카테고리e */
+/* 6.지역선택s */
+.keytitle{
+    text-align: center;
+    margin-top: 50px;
+}
+.keytitle h4{
+    font-size: 0.8rem;
+    color: tomato;
+}
+.area_wrap{
+    width: 100%;
+    height: 150px;
+    border: 2px solid #e0e0e0;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 0;
+}
+.toggle3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 0;
+    width: 70%;
+}
+.addrLabel{
+    width: 150px;
+    height: 150px;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.toggle3 input[type=checkbox]{
+    display: none;
+}
+.toggle3 input[type=checkbox] + label {
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color: #000;
+    border-radius: 15px;
+    width: 50%;
+    height: 50px;
+    border: 1px solid #e0e0e0;
+    margin: 5px;
+    
+}
+.toggle3 input[type=checkbox]:checked + label {
+    color: #fff;
+    background: tomato;
+}
+/* 6.지역선택e */
 /* 모달영역s */
 #open-modal {
     width: 30px;
