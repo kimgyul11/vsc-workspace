@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+}
+body{
+    background: darkblue;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+ul{
+    padding-left: 0%;
+}
+li{
+    list-style: none;
+
+}
+.Answer-Box
+{
+position: relative;
+width: 525px;
+height: 195px;
+padding: 0px;
+background: #FFFFFF;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+}
+
+.Answer-Box:after
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 25px 21px 25px 0;
+border-color: transparent #FFFFFF;
+display: block;
+width: 0;
+z-index: 1;
+left: -21px;
+top: 37px;
+}
+
+.answer-Wrap{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.box_info
+{
+    display: flex;
+    font-size: 0.8rem;
+
+}
